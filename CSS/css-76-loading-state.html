@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading-state Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 76</p>
+    <h1>Loading-state Component</h1>
+    <p class="desc">A full-panel loading indicator with a spinner and a status message.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .load-state{ text-align:center; padding:2.2rem 1rem; border:1px solid var(--rule); border-radius:10px; max-width:320px; }
+      .load-spin{ width:36px; height:36px; border:4px solid var(--rule); border-top-color:var(--pine); border-radius:50%;
+                  margin:0 auto 0.8rem; animation:spin76 0.9s linear infinite; }
+      @keyframes spin76{ to{ transform:rotate(360deg); } }
+    </style>
+    <div class="load-state">
+      <div class="load-spin"></div>
+      <p style="color:#55605B; font-size:0.9rem;">Loading your dashboard&hellip;</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.load-spin{ border:4px solid #C9C2AE; border-top-color:#3F6C5D; border-radius:50%;
+            animation: spin 0.9s linear infinite; }
+@keyframes spin{ to{ transform: rotate(360deg); } }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

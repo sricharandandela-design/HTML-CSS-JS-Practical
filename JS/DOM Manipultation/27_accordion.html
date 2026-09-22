@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+.answer{display:none;padding:10px;border:1px solid #ccc}
+</style></head>
+<body>
+<button onclick="toggle(this)">What is JavaScript?</button>
+<div class="answer">JavaScript is a programming language used to make web pages interactive.</div>
+<button onclick="toggle(this)">What is DOM?</button>
+<div class="answer">DOM represents the structure of an HTML document as objects.</div>
+<script>
+function toggle(button) {
+    const answer = button.nextElementSibling;
+    answer.style.display = answer.style.display === "block" ? "none" : "block";
+}
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body>
+</html>

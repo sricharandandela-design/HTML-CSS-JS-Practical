@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area Chart Analytics Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 107</p>
+    <h1>Area Chart Analytics Component</h1>
+    <p class="desc">A line chart with the region beneath it filled in, emphasising cumulative volume.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <svg viewBox="0 0 320 130" width="100%" style="max-width:360px;">
+      <polygon fill="rgba(63,108,93,0.25)" stroke="none"
+        points="30,110 30,80 80,60 130,75 180,40 230,55 280,25 280,110" />
+      <polyline fill="none" stroke="#3F6C5D" stroke-width="2.5"
+        points="30,80 80,60 130,75 180,40 230,55 280,25" />
+      <line x1="30" y1="110" x2="280" y2="110" stroke="#C9C2AE"/>
+    </svg>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;polygon fill="rgba(63,108,93,0.25)" points="30,110 30,80 80,60 ... 280,110" /&gt; &lt;!-- filled area --&gt;
+&lt;polyline fill="none" stroke="#3F6C5D" points="30,80 80,60 ..." /&gt; &lt;!-- outline on top --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

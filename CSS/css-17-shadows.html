@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box-shadow and Text-shadow Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 17</p>
+    <h1>Box-shadow and Text-shadow Properties</h1>
+    <p class="desc">A raised card and glowing text, both created purely with shadow offsets, blur and colour.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="width:200px; padding:1rem; margin:1rem 0; background:#fff;
+                box-shadow: 0 6px 16px rgba(26,35,50,0.25);">
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25)
+    </div>
+    <p style="font-size:1.6rem; font-weight:700; color:var(--pine);
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
+      text-shadow: 2px 2px 4px</p>
+    <p style="font-size:1.6rem; font-weight:700; color:#fff; background:var(--ink); display:inline-block; padding:0.4rem 0.8rem;
+              text-shadow: 0 0 8px var(--amber);">glow via text-shadow</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.raised-card{ box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
+.soft-text  { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+.glow-text  { text-shadow: 0 0 8px #E8A33D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

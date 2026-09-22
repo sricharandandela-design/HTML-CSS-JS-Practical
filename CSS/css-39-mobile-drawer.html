@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Sidebar Navigation Drawer</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 39</p>
+    <h1>Mobile Sidebar Navigation Drawer</h1>
+    <p class="desc">A sidebar that slides in from off-screen when opened, and slides back out when closed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .drawer-demo{ position:relative; height:220px; border:1px solid var(--rule); overflow:hidden; border-radius:8px; }
+      .drawer-panel{ position:absolute; top:0; left:0; height:100%; width:200px; background:var(--ink); color:#fff;
+                     padding:1rem; transform:translateX(-100%); transition:transform 0.3s ease; }
+      .drawer-panel.open{ transform:translateX(0); }
+      .drawer-overlay{ padding:1rem; }
+    </style>
+    <div class="drawer-demo">
+      <div class="drawer-panel" id="drawerPanel">
+        <strong>Menu</strong>
+        <p style="color:#C9C2AE; font-size:0.85rem;">Dashboard · Projects · Settings</p>
+      </div>
+      <div class="drawer-overlay">
+        <button class="btn" onclick="document.getElementById('drawerPanel').classList.toggle('open')">Toggle Drawer</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.drawer{
+  position:absolute; left:0; top:0; height:100%; width:200px;
+  transform: translateX(-100%);      /* hidden off-screen by default */
+  transition: transform 0.3s ease;
+}
+.drawer.open{ transform: translateX(0); } /* slides fully into view */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

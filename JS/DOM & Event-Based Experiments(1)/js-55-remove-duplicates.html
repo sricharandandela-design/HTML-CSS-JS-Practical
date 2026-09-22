@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove Duplicate Elements from an Array</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 55</p>
+    <h1>Remove Duplicate Elements from an Array</h1>
+    <p class="desc">Uses a Set, which automatically discards repeated values, then converts back to an array.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Comma-separated numbers</label><input type="text" id="rd55" value="1, 2, 2, 3, 4, 4, 4, 5"></div>
+    <button class="btn" onclick="runRemoveDupes55()">Remove duplicates</button>
+    <div class="output-box" id="out55"></div>
+    <script>
+      function runRemoveDupes55(){
+        const nums = document.getElementById('rd55').value.split(",").map(s => s.trim());
+        const unique = [...new Set(nums)];
+        document.getElementById('out55').textContent = `Unique values: ${unique.join(", ")}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const unique = [...new Set(array)]; // Set stores only unique values automatically
+console.log([...new Set([1,2,2,3,4,4,4,5])]); // [1,2,3,4,5]</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

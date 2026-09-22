@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change an Image When a Button Is Clicked</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 25</p>
+    <h1>Change an Image When a Button Is Clicked</h1>
+    <p class="desc">Clicking Next cycles the image's src through a small array of URLs.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <img id="imgSwap25" src="https://placehold.co/200x120/3F6C5D/ffffff?text=Image+1" style="display:block; margin-bottom:0.6rem;">
+    <button class="btn" onclick="nextImage25()">Next image</button>
+    <script>
+      const imgs25 = [
+        'https://placehold.co/200x120/3F6C5D/ffffff?text=Image+1',
+        'https://placehold.co/200x120/E8A33D/1A2332?text=Image+2',
+        'https://placehold.co/200x120/B14B3F/ffffff?text=Image+3'
+      ];
+      let idx25 = 0;
+      function nextImage25(){
+        idx25 = (idx25 + 1) % imgs25.length;
+        document.getElementById('imgSwap25').src = imgs25[idx25];
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const images = ['img1.jpg', 'img2.jpg', 'img3.jpg'];
+let index = 0;
+function nextImage(){
+  index = (index + 1) % images.length;
+  imgEl.src = images[index];
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

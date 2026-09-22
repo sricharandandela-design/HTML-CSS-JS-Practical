@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Store and Retrieve Data Using localStorage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 43</p>
+    <h1>Store and Retrieve Data Using localStorage</h1>
+    <p class="desc">Saves a value to the browser's localStorage and reads it back, persisting across page reloads.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Your name</label><input type="text" id="lsInput43"></div>
+    <button class="btn" onclick="localStorage.setItem('demoName43', document.getElementById('lsInput43').value); document.getElementById('lsOut43').textContent = 'Saved!';">Save</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('lsOut43').textContent = 'Stored value: ' + (localStorage.getItem('demoName43') || '(nothing saved yet)');">Load</button>
+    <div class="output-box" id="lsOut43"></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>localStorage.setItem('demoName', nameInput.value);
+const stored = localStorage.getItem('demoName'); // persists even after the page reloads</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

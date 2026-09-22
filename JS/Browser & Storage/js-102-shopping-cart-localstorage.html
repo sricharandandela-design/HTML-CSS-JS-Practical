@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart Using localStorage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 102</p>
+    <h1>Shopping Cart Using localStorage</h1>
+    <p class="desc">Adds items to a cart array stored as JSON in localStorage, so it survives a page refresh.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="addToCart102('Notebook')">Add Notebook ($4)</button>
+    <button class="btn" onclick="addToCart102('Pen')">Add Pen ($1)</button>
+    <div class="output-box" id="cartOut102"></div>
+    <script>
+      function getCart102(){ return JSON.parse(localStorage.getItem('cart102') || '[]'); }
+      function addToCart102(item){
+        const cart = getCart102();
+        cart.push(item);
+        localStorage.setItem('cart102', JSON.stringify(cart));
+        renderCart102();
+      }
+      function renderCart102(){
+        document.getElementById('cartOut102').textContent = 'Cart: ' + getCart102().join(', ');
+      }
+      renderCart102();
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+cart.push(item);
+localStorage.setItem('cart', JSON.stringify(cart)); // arrays/objects need JSON.stringify</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

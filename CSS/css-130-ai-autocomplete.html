@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Autocomplete Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 130</p>
+    <h1>AI Autocomplete Interface</h1>
+    <p class="desc">A ghost-text autocomplete: the suggestion appears greyed out ahead of the cursor, press Tab to accept.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="position:relative; max-width:320px; font-family:var(--font-mono); font-size:0.95rem;">
+      <div style="border:1px solid var(--rule); border-radius:6px; padding:0.6rem;">
+        Dear team, thank you for<span style="color:#B7BDB5;"> your continued support this quarter.</span>
+      </div>
+      <p style="font-size:0.75rem; color:#8A9089; margin-top:0.4rem;">Press Tab to accept the greyed-out suggestion.</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.ghost-text{ color:#B7BDB5; } /* the suggested completion, not yet typed by the user */
+input.onkeydown = (e) =&gt; { if (e.key === "Tab") acceptSuggestion(); };</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

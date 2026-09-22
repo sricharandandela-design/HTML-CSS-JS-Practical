@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive SaaS Typography</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 234</p>
+    <h1>Responsive SaaS Typography</h1>
+    <p class="desc">A heading sized with clamp() so it scales fluidly between a minimum and maximum across screen widths.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <h1 style="font-size:clamp(1.4rem, 5vw, 2.6rem); margin:0;">Fluid heading text</h1>
+    <p style="font-size:clamp(0.9rem, 2vw, 1.1rem); color:#55605B;">Resize the browser window to see both scale smoothly.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>h1{ font-size: clamp(1.4rem, 5vw, 2.6rem); }
+p { font-size: clamp(0.9rem, 2vw, 1.1rem); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

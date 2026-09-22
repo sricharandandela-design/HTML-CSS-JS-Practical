@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 34</p>
+    <h1>Stopwatch Using JavaScript</h1>
+    <p class="desc">Start, pause, and reset a running stopwatch, displayed in seconds.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="swDisplay34" style="font-family:var(--font-mono); font-size:2rem;">0.0s</div>
+    <button class="btn" onclick="swStart34()">Start</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="swPause34()">Pause</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="swReset34()">Reset</button>
+    <script>
+      let swTime34 = 0, swInterval34 = null;
+      function swStart34(){
+        if (swInterval34) return;
+        swInterval34 = setInterval(() => {
+          swTime34 += 0.1;
+          document.getElementById('swDisplay34').textContent = swTime34.toFixed(1) + 's';
+        }, 100);
+      }
+      function swPause34(){ clearInterval(swInterval34); swInterval34 = null; }
+      function swReset34(){ swPause34(); swTime34 = 0; document.getElementById('swDisplay34').textContent = '0.0s'; }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>let time = 0, interval = null;
+function start(){ interval = setInterval(() =&gt; { time += 0.1; display.textContent = time.toFixed(1)+'s'; }, 100); }
+function pause(){ clearInterval(interval); interval = null; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

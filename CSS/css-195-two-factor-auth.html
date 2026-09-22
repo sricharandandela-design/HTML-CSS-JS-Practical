@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Two-factor Authentication Settings</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 195</p>
+    <h1>Two-factor Authentication Settings</h1>
+    <p class="desc">Enabling 2FA with a QR code placeholder and a 6-digit verification input.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:280px; text-align:center;">
+      <img src="https://placehold.co/120x120/1A2332/ffffff?text=QR" style="margin-bottom:0.6rem;">
+      <p style="font-size:0.85rem; color:#55605B;">Scan with your authenticator app, then enter the code:</p>
+      <input type="text" maxlength="6" placeholder="123456" style="width:100px; text-align:center; letter-spacing:0.3em; padding:0.5rem; margin-top:0.4rem;">
+      <br><button class="btn amber" style="margin-top:0.6rem;">Verify & enable</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>input[maxlength="6"]{ letter-spacing:0.3em; text-align:center; } /* classic 6-digit code style */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

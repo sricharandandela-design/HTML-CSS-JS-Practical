@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Subscription Upgrade and Downgrade</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 201</p>
+    <h1>Subscription Upgrade and Downgrade</h1>
+    <p class="desc">A plan switcher showing what changes (price and features) before confirming.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:320px;">
+      <select id="planSwitch" onchange="document.getElementById('planNote').textContent = this.value === 'enterprise' ? 'Upgrading adds SSO and priority support, billed $99/mo.' : 'Downgrading removes API access, billed $9/mo.'">
+        <option value="starter">Starter ($9/mo)</option>
+        <option value="pro" selected>Pro ($29/mo)</option>
+        <option value="enterprise">Enterprise ($99/mo)</option>
+      </select>
+      <p id="planNote" style="font-size:0.85rem; color:#55605B; margin-top:0.6rem;">Select a plan to see what changes.</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>planSelect.onchange = () =&gt; { noteEl.textContent = describeChange(planSelect.value); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

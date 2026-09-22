@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customizable Analytics Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 114</p>
+    <h1>Customizable Analytics Dashboard</h1>
+    <p class="desc">A dashboard with an 'Add widget' control that reveals a hidden widget on click.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cad-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:0.8rem; margin-bottom:0.8rem; }
+      .cad-widget{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.9rem; }
+      .cad-hidden{ display:none; }
+    </style>
+    <button class="btn" onclick="document.getElementById('extraWidget').classList.remove('cad-hidden')">+ Add widget</button>
+    <div class="cad-grid" style="margin-top:0.8rem;">
+      <div class="cad-widget">Sessions: 18.2k</div>
+      <div class="cad-widget cad-hidden" id="extraWidget">New widget: Bounce rate 34%</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>addBtn.onclick = () =&gt; extraWidget.classList.remove('hidden');
+.hidden{ display:none; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chat Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 117</p>
+    <h1>AI Chat Interface</h1>
+    <p class="desc">A full conversation thread with distinct user and assistant message bubbles.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .chat-thread{ display:flex; flex-direction:column; gap:0.6rem; max-width:340px; }
+      .msg{ padding:0.6rem 0.9rem; border-radius:12px; font-size:0.9rem; max-width:80%; }
+      .msg.user{ background:var(--pine); color:#fff; align-self:flex-end; border-bottom-right-radius:2px; }
+      .msg.ai{ background:var(--paper-raised); border:1px solid var(--rule); align-self:flex-start; border-bottom-left-radius:2px; }
+    </style>
+    <div class="chat-thread">
+      <div class="msg user">How do I invite a teammate?</div>
+      <div class="msg ai">Go to Settings &rarr; Team &rarr; Invite, then enter their email address.</div>
+      <div class="msg user">Thanks!</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.msg.user{ background:#3F6C5D; color:#fff; align-self:flex-end; }
+.msg.ai  { background:#F7F8F4; border:1px solid #C9C2AE; align-self:flex-start; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

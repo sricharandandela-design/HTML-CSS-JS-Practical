@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive SaaS Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 213</p>
+    <h1>Responsive SaaS Dashboard</h1>
+    <p class="desc">A dashboard grid that reflows from a multi-column layout to a single column on small screens.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .rdash{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; }
+      .rdash div{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.8rem; }
+      @media (max-width:600px){ .rdash{ grid-template-columns:1fr; } }
+    </style>
+    <div class="rdash"><div>Revenue</div><div>Users</div><div>Churn</div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.rdash{ display:grid; grid-template-columns:repeat(3,1fr); }
+@media (max-width:600px){ .rdash{ grid-template-columns:1fr; } }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Onboarding Page</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 250</p>
+    <h1>SaaS Onboarding Page</h1>
+    <p class="desc">A full-page onboarding step with a progress stepper at the top and a single question below.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:360px;">
+      <div style="display:flex; gap:0.4rem; margin-bottom:1rem;">
+        <div style="flex:1; height:4px; background:var(--pine); border-radius:2px;"></div>
+        <div style="flex:1; height:4px; background:var(--rule); border-radius:2px;"></div>
+        <div style="flex:1; height:4px; background:var(--rule); border-radius:2px;"></div>
+      </div>
+      <h3>What's your team size?</h3>
+      <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+        <button class="btn" style="background:var(--paper); color:var(--ink);">Just me</button>
+        <button class="btn" style="background:var(--paper); color:var(--ink);">2&ndash;10</button>
+        <button class="btn" style="background:var(--paper); color:var(--ink);">10+</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.onboarding-progress div{ flex:1; height:4px; } /* one segment per step, filled as completed */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pill Navigation Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 44</p>
+    <h1>Pill Navigation Component</h1>
+    <p class="desc">Rounded, fully-filled tabs — a common alternative to underlined tabs.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pill-nav{ display:inline-flex; background:var(--paper-raised); border:1px solid var(--rule); border-radius:999px; padding:4px; }
+      .pill-nav button{ border:none; background:none; padding:0.5rem 1.1rem; border-radius:999px; font-weight:600;
+                         color:var(--ink); cursor:pointer; }
+      .pill-nav button.active{ background:var(--pine); color:#fff; }
+    </style>
+    <div class="pill-nav">
+      <button class="active" onclick="pillSwitch(this)">Monthly</button>
+      <button onclick="pillSwitch(this)">Yearly</button>
+    </div>
+    <script>
+      function pillSwitch(btn){
+        btn.parentElement.querySelectorAll('button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.pill-nav{ border-radius:999px; padding:4px; display:inline-flex; }
+.pill-nav button{ border-radius:999px; padding:0.5rem 1.1rem; }
+.pill-nav button.active{ background:#3F6C5D; color:#fff; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

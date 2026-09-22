@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stopwatch with Lap Times (Mini Project)</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 106</p>
+    <h1>Stopwatch with Lap Times (Mini Project)</h1>
+    <p class="desc">Builds on program 34 by recording a lap time list each time you click Lap.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="swDisplay106" style="font-family:var(--font-mono); font-size:2rem;">0.0s</div>
+    <button class="btn" onclick="swStart106()">Start</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="swLap106()">Lap</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="swReset106()">Reset</button>
+    <ol id="lapList106" style="font-size:0.85rem; margin-top:0.6rem;"></ol>
+    <script>
+      let swTime106 = 0, swInterval106 = null;
+      function swStart106(){
+        if (swInterval106) return;
+        swInterval106 = setInterval(() => {
+          swTime106 += 0.1;
+          document.getElementById('swDisplay106').textContent = swTime106.toFixed(1) + 's';
+        }, 100);
+      }
+      function swLap106(){
+        const li = document.createElement('li');
+        li.textContent = swTime106.toFixed(1) + 's';
+        document.getElementById('lapList106').appendChild(li);
+      }
+      function swReset106(){
+        clearInterval(swInterval106); swInterval106 = null; swTime106 = 0;
+        document.getElementById('swDisplay106').textContent = '0.0s';
+        document.getElementById('lapList106').innerHTML = '';
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function recordLap(){
+  const li = document.createElement('li');
+  li.textContent = currentTime.toFixed(1) + 's';
+  lapList.appendChild(li);
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

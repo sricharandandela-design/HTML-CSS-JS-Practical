@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Flexbox Layout</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 211</p>
+    <h1>Responsive Flexbox Layout</h1>
+    <p class="desc">Three columns that sit side by side on wide screens and stack on narrow ones, using only flex-wrap.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .flex-layout{ display:flex; flex-wrap:wrap; gap:0.8rem; }
+      .flex-layout div{ flex:1 1 160px; background:var(--paper-raised); border:1px solid var(--rule); padding:1rem; }
+    </style>
+    <div class="flex-layout"><div>Column A</div><div>Column B</div><div>Column C</div></div>
+    <p style="font-size:0.8rem; color:#55605B; margin-top:0.5rem;">Resize the window — columns wrap once they can't fit at 160px each.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.flex-layout{ display:flex; flex-wrap:wrap; gap:0.8rem; }
+.flex-layout div{ flex:1 1 160px; } /* grow, shrink, but never below 160px before wrapping */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

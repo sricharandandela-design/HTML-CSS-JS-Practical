@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Analytics Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 217</p>
+    <h1>Responsive Analytics Dashboard</h1>
+    <p class="desc">A chart and its stats stack vertically on mobile instead of sitting side by side.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .rad{ display:flex; gap:1rem; }
+      @media (max-width:600px){ .rad{ flex-direction:column; } }
+      .rad > div{ flex:1; background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.8rem; }
+    </style>
+    <div class="rad"><div>Chart area</div><div>Key stats</div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.rad{ display:flex; }
+@media (max-width:600px){ .rad{ flex-direction:column; } }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

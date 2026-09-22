@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Filter and Sorting Panel</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 112</p>
+    <h1>Analytics Filter and Sorting Panel</h1>
+    <p class="desc">A side panel combining checkboxes for filtering and a dropdown for sort order.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="background:#fff; border:1px solid var(--rule); border-radius:8px; padding:1rem; max-width:220px;">
+      <h4 style="margin:0 0 0.5rem; font-size:0.9rem;">Filter</h4>
+      <label style="display:block; font-size:0.85rem; margin-bottom:0.3rem;"><input type="checkbox" checked> Active</label>
+      <label style="display:block; font-size:0.85rem; margin-bottom:0.3rem;"><input type="checkbox"> Trial</label>
+      <label style="display:block; font-size:0.85rem; margin-bottom:0.8rem;"><input type="checkbox"> Cancelled</label>
+      <h4 style="margin:0 0 0.4rem; font-size:0.9rem;">Sort by</h4>
+      <select style="width:100%; padding:0.3rem;"><option>Newest first</option><option>Revenue</option><option>Name</option></select>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.filter-panel label{ display:block; font-size:0.85rem; }
+.filter-panel select{ width:100%; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 26</p>
+    <h1>Digital Clock</h1>
+    <p class="desc">Displays the live time, updated every second with setInterval.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="clockOut26" style="font-family:var(--font-mono); font-size:2rem;"></div>
+    <script>
+      function tickClock26(){
+        document.getElementById('clockOut26').textContent = new Date().toLocaleTimeString();
+      }
+      tickClock26();
+      setInterval(tickClock26, 1000);
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function tick(){
+  clockEl.textContent = new Date().toLocaleTimeString();
+}
+setInterval(tick, 1000);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

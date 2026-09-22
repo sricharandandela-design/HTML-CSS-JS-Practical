@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modal and Dialog Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 68</p>
+    <h1>Modal and Dialog Component</h1>
+    <p class="desc">A centred dialog box with a dimmed backdrop, opened and closed with the native &lt;dialog&gt; element.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      dialog.modal{ border:none; border-radius:10px; padding:1.4rem; max-width:320px; box-shadow:0 20px 40px rgba(0,0,0,0.25); }
+      dialog.modal::backdrop{ background:rgba(26,35,50,0.55); }
+    </style>
+    <button class="btn" onclick="document.getElementById('modalEl').showModal()">Open Modal</button>
+    <dialog class="modal" id="modalEl">
+      <h3 style="margin-top:0;">Invite a teammate</h3>
+      <p style="font-size:0.9rem; color:#55605B;">They'll get an email with a link to join your workspace.</p>
+      <div style="display:flex; gap:0.6rem; justify-content:flex-end; margin-top:1rem;">
+        <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('modalEl').close()">Cancel</button>
+        <button class="btn amber" onclick="document.getElementById('modalEl').close()">Send invite</button>
+      </div>
+    </dialog>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;dialog id="modalEl"&gt; ... &lt;/dialog&gt;
+
+dialog::backdrop{ background: rgba(0,0,0,0.55); }
+
+openBtn.onclick  = () =&gt; modalEl.showModal(); // native browser support, no JS library needed
+closeBtn.onclick = () =&gt; modalEl.close();</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

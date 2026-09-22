@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Quiz Application</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 32</p>
+    <h1>Simple Quiz Application</h1>
+    <p class="desc">One multiple-choice question with instant feedback on the selected option.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p><strong>What does CSS stand for?</strong></p>
+    <div>
+      <label style="display:block;"><input type="radio" name="q32" value="wrong"> Creative Style Sheets</label>
+      <label style="display:block;"><input type="radio" name="q32" value="right"> Cascading Style Sheets</label>
+      <label style="display:block;"><input type="radio" name="q32" value="wrong2"> Computer Style Sheets</label>
+    </div>
+    <button class="btn" onclick="checkQuiz32()">Submit answer</button>
+    <p id="quizOut32"></p>
+    <script>
+      function checkQuiz32(){
+        const selected = document.querySelector('input[name="q32"]:checked');
+        const out = document.getElementById('quizOut32');
+        if (!selected){ out.textContent = 'Please select an answer.'; return; }
+        out.textContent = selected.value === 'right' ? 'Correct!' : 'Incorrect, try again.';
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const selected = document.querySelector('input[name="q1"]:checked');
+result.textContent = selected.value === correctAnswer ? "Correct!" : "Incorrect.";</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

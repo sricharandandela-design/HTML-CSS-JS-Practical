@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Spending Limits</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 209</p>
+    <h1>AI Spending Limits</h1>
+    <p class="desc">A monthly spend cap the account owner can set, with a warning threshold.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:300px;">
+      <div class="field"><label>Monthly spending limit ($)</label><input type="number" value="200"></div>
+      <div class="field"><label>Warn me at (%)</label><input type="number" value="80"></div>
+      <p style="font-size:0.8rem; color:#55605B;">You'll get an alert once usage passes 80% of $200.</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;input type="number" value="200"&gt;  &lt;!-- hard cap --&gt;
+&lt;input type="number" value="80"&gt;   &lt;!-- % threshold for a warning --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

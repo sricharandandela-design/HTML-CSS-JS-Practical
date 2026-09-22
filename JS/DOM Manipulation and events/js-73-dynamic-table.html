@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create a Dynamic Table Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 73</p>
+    <h1>Create a Dynamic Table Using JavaScript</h1>
+    <p class="desc">Builds an entire HTML table from a JavaScript array of data.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table id="dynTable73" style="width:100%; border-collapse:collapse; font-size:0.85rem;"></table>
+    <script>
+      const data73 = [ {name:"Ananya", score:88}, {name:"Karan", score:74}, {name:"Divya", score:95} ];
+      const table73 = document.getElementById('dynTable73');
+      data73.forEach(row => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td style="padding:0.4rem; border-bottom:1px solid var(--rule);">${row.name}</td>
+                        <td style="padding:0.4rem; border-bottom:1px solid var(--rule);">${row.score}</td>`;
+        table73.appendChild(tr);
+      });
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>data.forEach(row =&gt; {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `&lt;td&gt;${row.name}&lt;/td&gt;&lt;td&gt;${row.score}&lt;/td&gt;`;
+  table.appendChild(tr);
+});</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

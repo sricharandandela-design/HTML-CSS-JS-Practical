@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline and Activity History Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 80</p>
+    <h1>Timeline and Activity History Component</h1>
+    <p class="desc">A vertical timeline of dated events, similar to an order-tracking history.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .tl{ border-left:2px solid var(--rule); padding-left:1.2rem; }
+      .tl-item{ position:relative; padding-bottom:1.2rem; }
+      .tl-item::before{ content:""; position:absolute; left:-1.53rem; top:2px; width:10px; height:10px;
+                         border-radius:50%; background:var(--pine); }
+      .tl-item .date{ font-size:0.75rem; color:#8A9089; }
+    </style>
+    <div class="tl">
+      <div class="tl-item"><span class="date">Sep 18</span><br><strong>Order shipped</strong></div>
+      <div class="tl-item"><span class="date">Sep 17</span><br><strong>Order confirmed</strong></div>
+      <div class="tl-item"><span class="date">Sep 16</span><br><strong>Order placed</strong></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.timeline{ border-left:2px solid #C9C2AE; padding-left:1.2rem; }
+.timeline-item{ position:relative; }
+.timeline-item::before{ content:""; position:absolute; left:-1.53rem; top:2px;
+                         width:10px; height:10px; border-radius:50%; background:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

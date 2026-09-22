@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popover Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 67</p>
+    <h1>Popover Component</h1>
+    <p class="desc">Like a tooltip, but richer: click to open a small panel with more than one line of content.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pop-wrap{ position:relative; display:inline-block; }
+      .pop-panel{ display:none; position:absolute; top:120%; left:0; background:#fff; border:1px solid var(--rule);
+                  border-radius:8px; padding:0.8rem; width:220px; box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+      .pop-panel.open{ display:block; }
+    </style>
+    <div class="pop-wrap">
+      <button class="btn" onclick="document.getElementById('popPanel').classList.toggle('open')">Storage info</button>
+      <div class="pop-panel" id="popPanel">
+        <strong>4.2 GB used</strong>
+        <p style="font-size:0.85rem; color:#55605B; margin:0.3rem 0 0;">Out of 10 GB on the Pro plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.popover{ display:none; position:absolute; top:120%; left:0; width:220px;
+          box-shadow:0 8px 20px rgba(0,0,0,0.15); }
+.popover.open{ display:block; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

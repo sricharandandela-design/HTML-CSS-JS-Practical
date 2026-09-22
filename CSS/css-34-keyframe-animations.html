@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Keyframe Animations</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 34</p>
+    <h1>CSS Keyframe Animations</h1>
+    <p class="desc">A looping @keyframes animation that moves and recolours a box automatically, with no JavaScript.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      @keyframes float-glow{
+        0%   { transform: translateY(0);    background: var(--pine); }
+        50%  { transform: translateY(-14px); background: var(--amber); }
+        100% { transform: translateY(0);    background: var(--pine); }
+      }
+      .kf-box{ width:90px; height:90px; border-radius:12px; color:#fff; display:flex;
+                align-items:center; justify-content:center; animation: float-glow 2s ease-in-out infinite; }
+    </style>
+    <div class="kf-box">looping</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>@keyframes float-glow{
+  0%   { transform: translateY(0);     background: #3F6C5D; }
+  50%  { transform: translateY(-14px); background: #E8A33D; }
+  100% { transform: translateY(0);     background: #3F6C5D; }
+}
+
+.box{ animation: float-glow 2s ease-in-out infinite; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

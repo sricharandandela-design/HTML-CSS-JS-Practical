@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Second-largest Element in an Array</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 54</p>
+    <h1>Second-largest Element in an Array</h1>
+    <p class="desc">Tracks the largest and second-largest values in a single pass through the array.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Comma-separated numbers</label><input type="text" id="sl54" value="12, 45, 3, 88, 27, 6"></div>
+    <button class="btn" onclick="runSecondLargest54()">Find</button>
+    <div class="output-box" id="out54"></div>
+    <script>
+      function secondLargest54(nums){
+        let first = -Infinity, second = -Infinity;
+        for (const n of nums){
+          if (n > first){ second = first; first = n; }
+          else if (n > second && n !== first){ second = n; }
+        }
+        return second;
+      }
+      function runSecondLargest54(){
+        const nums = document.getElementById('sl54').value.split(",").map(Number);
+        document.getElementById('out54').textContent = `Second largest: ${secondLargest54(nums)}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function secondLargest(nums){
+  let first = -Infinity, second = -Infinity;
+  for (const n of nums){
+    if (n &gt; first){ second = first; first = n; }
+    else if (n &gt; second &amp;&amp; n !== first){ second = n; }
+  }
+  return second;
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

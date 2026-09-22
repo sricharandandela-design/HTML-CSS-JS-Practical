@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Prediction Comparison Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 174</p>
+    <h1>ML Prediction Comparison Dashboard</h1>
+    <p class="desc">Two model versions' predictions shown side by side for the same inputs.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table style="width:100%; font-size:0.85rem; border-collapse:collapse; max-width:340px;">
+      <tr style="color:#55605B;"><td>Input</td><td>Model v1</td><td>Model v2</td></tr>
+      <tr><td>Customer #881</td><td>0.71</td><td style="color:var(--pine); font-weight:600;">0.82</td></tr>
+      <tr><td>Customer #882</td><td>0.90</td><td style="color:var(--pine); font-weight:600;">0.94</td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.comparison-table td:last-child{ font-weight:600; color:#3F6C5D; } /* highlights the newer model */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

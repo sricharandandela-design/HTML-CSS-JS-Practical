@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Web Storge - JavaScript Programs</title>
+
+    
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.program {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.program-name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.open-btn {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+.open-btn:hover {
+    background: #1d4ed8;
+}
+
+.home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.folder-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.folder-box h3 {
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.file-type {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: #e5e7eb;
+    font-size: 12px;
+    color: #444;
+}
+
+@media (max-width: 650px) {
+
+    .program {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .open-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Web Storge</h1>
+
+    <p>
+        JavaScript Practical Programs
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <div class="card">
+
+        <h2>
+            26 Programs
+        </h2>
+
+        <p>
+            Select a program or topic below.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Program List
+        </h2>
+
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                1. 01 Store Username
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="01-store-username.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                2. 02 Retrieve Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="02-retrieve-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                3. 03 Update Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="03-update-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                4. 04 Delete Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="04-delete-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                5. 05 Clear Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="05-clear-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                6. 06 Multiple Values
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="06-multiple-values.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                7. 07 Array Json
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="07-array-json.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                8. 08 Object Json
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="08-object-json.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                9. 09 Student Record
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="09-student-record.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                10. 10 Todo Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="10-todo-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                11. 11 Notes Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="11-notes-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                12. 12 Shopping Cart
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="12-shopping-cart.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                13. 13 Login Preference
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="13-login-preference.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                14. 14 Theme Switcher
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="14-theme-switcher.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                15. 15 Font Size
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="15-font-size.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                16. 16 Recently Viewed
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="16-recently-viewed.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                17. 17 Visitor Counter
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="17-visitor-counter.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                18. 18 Local Vs Session
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="18-local-vs-session.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                19. 19 Session Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="19-session-form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                20. 20 Multipage Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="20-multipage-form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                21. 20 Page2
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="20-page2.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                22. 21 Auto Save Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="21-auto-save-form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                23. 22 Restore Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="22-restore-form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                24. 23 Persistent Cart
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="23-persistent-cart.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                25. 24 Student Marks
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="24-student-marks.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                26. 25 Crud Localstorage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="25-crud-localstorage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                27. Index
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="index.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+
+    </div>
+
+
+    <div class="home">
+
+        <a href="../index.html">
+            ← Back to Parent
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

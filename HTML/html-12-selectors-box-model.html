@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selectors, Colours, Fonts, Margins, Padding and Borders</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 12</p>
+    <h1>Selectors, Colours, Fonts, Margins, Padding and Borders</h1>
+    <p class="desc">Element, class, ID and descendant selectors, plus the CSS box model in action.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .sel-demo p{ font-family: var(--font-mono); }             /* element selector */
+      .sel-demo .highlight{ color: var(--amber); font-weight: 600; } /* class selector */
+      .sel-demo #unique-box{                                      /* ID selector */
+        border: 3px solid var(--pine);
+        margin: 1rem 0;
+        padding: 1rem 1.4rem;
+        background: #fff;
+      }
+      .sel-demo ul li{ color: var(--pine); }                     /* descendant selector */
+    </style>
+    <div class="sel-demo">
+      <p>Styled by the <strong>element selector</strong> <code>p</code> (monospace font).</p>
+      <p class="highlight">Styled by the <strong>class selector</strong> <code>.highlight</code>.</p>
+      <div id="unique-box">
+        Styled by the <strong>ID selector</strong> <code>#unique-box</code> &mdash;
+        this box shows margin (space outside), a border, and padding (space inside)
+        all at once.
+      </div>
+      <ul><li>Styled by the descendant selector <code>ul li</code></li></ul>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>p{ font-family: monospace; }              /* element selector   */
+.highlight{ color: #E8A33D; font-weight:600; } /* class selector    */
+#unique-box{                                   /* ID selector       */
+  border: 3px solid #3F6C5D;
+  margin: 1rem 0;      /* space outside the border */
+  padding: 1rem 1.4rem; /* space inside the border  */
+}
+ul li{ color: #3F6C5D; }                       /* descendant selector */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button Click Event</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 23</p>
+    <h1>Button Click Event</h1>
+    <p class="desc">A click handler counts how many times the button has been pressed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" id="clickBtn23">Click me</button>
+    <p id="clickOut23">Clicked 0 times.</p>
+    <script>
+      let count23 = 0;
+      document.getElementById('clickBtn23').addEventListener('click', () => {
+        count23++;
+        document.getElementById('clickOut23').textContent = `Clicked ${count23} times.`;
+      });
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>let count = 0;
+button.addEventListener('click', () =&gt; {
+  count++;
+  output.textContent = `Clicked ${count} times.`;
+});</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

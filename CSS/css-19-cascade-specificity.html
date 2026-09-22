@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Inheritance, Specificity, and the Cascade</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 19</p>
+    <h1>CSS Inheritance, Specificity, and the Cascade</h1>
+    <p class="desc">Three rules target the same element; the most specific one wins, and colour is inherited by children automatically.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .spec-demo{ color: var(--pine); }              /* specificity 0-1-0, inherited by children */
+      .spec-demo p{ color: var(--danger); }           /* 0-1-1, beats the parent rule            */
+      .spec-demo p.win{ color: var(--amber) !important; } /* 0-2-1 + !important, wins overall  */
+    </style>
+    <div class="spec-demo">
+      <span>span inherits pine colour from its parent .spec-demo</span>
+      <p>a plain p is red (0-1-1 beats 0-1-0)</p>
+      <p class="win">p.win is amber (!important overrides everything above)</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.spec-demo{ color: teal; }          /* specificity (0,1,0) - inherited by children */
+.spec-demo p{ color: red; }         /* specificity (0,1,1) - more specific, wins    */
+.spec-demo p.win{ color: orange !important; } /* wins over everything above       */
+
+/* cascade order when specificity ties: later rule in the file wins */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

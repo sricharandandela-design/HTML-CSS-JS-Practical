@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Check Whether a String Is a Palindrome</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 60</p>
+    <h1>Check Whether a String Is a Palindrome</h1>
+    <p class="desc">Compares the string to its reverse, ignoring case and spaces.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Text</label><input type="text" id="sp60" value="A man a plan a canal Panama"></div>
+    <button class="btn" onclick="runStrPalin60()">Check</button>
+    <div class="output-box" id="out60"></div>
+    <script>
+      function runStrPalin60(){
+        const raw = document.getElementById('sp60').value;
+        const cleaned = raw.toLowerCase().replace(/[^a-z0-9]/g, "");
+        const reversed = cleaned.split("").reverse().join("");
+        document.getElementById('out60').textContent = `"${raw}" is ${cleaned === reversed ? "a palindrome" : "not a palindrome"}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const cleaned = str.toLowerCase().replace(/[^a-z0-9]/g, "");
+const isPalindrome = cleaned === cleaned.split("").reverse().join("");</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

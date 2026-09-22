@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Confidence Score Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 168</p>
+    <h1>ML Confidence Score Component</h1>
+    <p class="desc">A circular gauge (conic-gradient) showing model confidence as a percentage.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .gauge{ width:90px; height:90px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+              background:conic-gradient(var(--pine) 0% 87%, #E4E2D8 87% 100%); }
+      .gauge .hole{ width:60px; height:60px; background:#fff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; }
+    </style>
+    <div class="gauge"><div class="hole">87%</div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.gauge{ background: conic-gradient(#3F6C5D 0% 87%, #E4E2D8 87% 100%); }
+.gauge .hole{ background:#fff; border-radius:50%; } /* punches the ring, leaving the % in the middle */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

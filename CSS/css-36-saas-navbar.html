@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Navigation Bar</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 36</p>
+    <h1>SaaS Navigation Bar</h1>
+    <p class="desc">A top navbar with a logo, links, and a call-to-action button, laid out with flexbox.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .navbar-demo{ display:flex; align-items:center; justify-content:space-between;
+                    background:var(--ink); color:#fff; padding:0.9rem 1.4rem; border-radius:8px; }
+      .navbar-demo .logo{ font-family:var(--font-display); font-weight:600; font-size:1.1rem; }
+      .navbar-demo .links{ display:flex; gap:1.4rem; }
+      .navbar-demo .links a{ color:#C9C2AE; }
+      .navbar-demo .links a:hover{ color:#fff; }
+      .navbar-demo .cta{ background:var(--amber); color:var(--ink); padding:0.4rem 0.9rem; border-radius:6px; font-weight:600; }
+    </style>
+    <nav class="navbar-demo">
+      <span class="logo">Flowbase</span>
+      <div class="links"><a href="#">Product</a><a href="#">Pricing</a><a href="#">Docs</a></div>
+      <a class="cta" href="#">Get Started</a>
+    </nav>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.navbar{ display:flex; align-items:center; justify-content:space-between; background:#1A2332; padding:0.9rem 1.4rem; }
+.navbar .links{ display:flex; gap:1.4rem; }
+.navbar .cta{ background:#E8A33D; color:#1A2332; padding:0.4rem 0.9rem; border-radius:6px; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

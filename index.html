@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML CSS JavaScript Practical Programs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #d1d5db;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 35px 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #666;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>HTML, CSS & JavaScript</h1>
+        <p>Practical Programs</p>
+    </header>
+
+    <main class="container">
+
+        <div class="cards">
+
+            <div class="card">
+                <h2>HTML Programs</h2>
+                <p>
+                    Explore HTML fundamentals, forms, tables,
+                    multimedia, semantic elements and more.
+                </p>
+
+                <a href="HTML/index.html" class="btn">
+                    View HTML Programs
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>CSS Programs</h2>
+                <p>
+                    Explore CSS selectors, layouts, animations,
+                    responsive designs and modern UI components.
+                </p>
+
+                <a href="CSS/index.html" class="btn">
+                    View CSS Programs
+                </a>
+            </div>
+
+            <div class="card">
+                <h2>JavaScript Programs</h2>
+                <p>
+                    Explore JavaScript basics, DOM manipulation,
+                    events, validation, storage and mini projects.
+                </p>
+
+                <a href="JS/index.html" class="btn">
+                    View JavaScript Programs
+                </a>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p>HTML, CSS & JavaScript Practical Programs</p>
+    </footer>
+
+</body>
+</html>

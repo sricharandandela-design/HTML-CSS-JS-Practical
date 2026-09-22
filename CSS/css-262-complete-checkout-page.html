@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Checkout Page</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 262</p>
+    <h1>SaaS Checkout Page</h1>
+    <p class="desc">A checkout page combining an order summary with a payment details form.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; max-width:400px;">
+      <div style="flex:1; min-width:150px;">
+        <div class="field"><label>Card number</label><input type="text" placeholder="4242 4242 4242 4242"></div>
+        <div class="field"><label>Expiry</label><input type="text" placeholder="MM/YY"></div>
+        <button class="btn amber" style="width:100%;">Pay $29.00</button>
+      </div>
+      <div style="flex:1; min-width:150px; background:var(--paper-raised); border-radius:8px; padding:0.8rem; font-size:0.85rem;">
+        <strong>Order summary</strong>
+        <div style="display:flex; justify-content:space-between; margin-top:0.5rem;"><span>Pro plan</span><span>$29.00</span></div>
+        <hr style="border:none; border-top:1px solid var(--rule); margin:0.4rem 0;">
+        <div style="display:flex; justify-content:space-between; font-weight:700;"><span>Total</span><span>$29.00</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.checkout-page{ display:flex; } /* payment form + order summary side by side */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

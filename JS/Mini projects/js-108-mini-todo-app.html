@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-do List Application (Mini Project)</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 108</p>
+    <h1>To-do List Application (Mini Project)</h1>
+    <p class="desc">A fuller to-do app than program 31 — tasks persist in localStorage across page reloads.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:0.5rem; margin-bottom:0.6rem;">
+      <input type="text" id="todoInput108" placeholder="New task..." style="flex:1; padding:0.5rem;">
+      <button class="btn" onclick="addTodo108()">Add</button>
+    </div>
+    <ul id="todoList108" style="list-style:none; padding:0;"></ul>
+    <script>
+      function getTodos108(){ return JSON.parse(localStorage.getItem('todos108') || '[]'); }
+      function saveTodos108(todos){ localStorage.setItem('todos108', JSON.stringify(todos)); }
+      function renderTodos108(){
+        const list = document.getElementById('todoList108');
+        list.innerHTML = '';
+        getTodos108().forEach((task, i) => {
+          const li = document.createElement('li');
+          li.style.cssText = 'display:flex; justify-content:space-between; padding:0.4rem 0; border-bottom:1px solid var(--rule);';
+          li.innerHTML = `<span>${task}</span><button onclick="removeTodo108(${i})" style="border:none; background:none;">&times;</button>`;
+          list.appendChild(li);
+        });
+      }
+      function addTodo108(){
+        const input = document.getElementById('todoInput108');
+        if (!input.value.trim()) return;
+        const todos = getTodos108(); todos.push(input.value); saveTodos108(todos);
+        input.value = ''; renderTodos108();
+      }
+      function removeTodo108(i){
+        const todos = getTodos108(); todos.splice(i, 1); saveTodos108(todos); renderTodos108();
+      }
+      renderTodos108();
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function saveTodos(todos){ localStorage.setItem('todos', JSON.stringify(todos)); }
+function getTodos(){ return JSON.parse(localStorage.getItem('todos') || '[]'); }
+// tasks are reloaded from localStorage every time the page opens</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

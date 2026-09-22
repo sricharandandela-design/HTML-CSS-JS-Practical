@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Pricing Page</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 219</p>
+    <h1>Responsive Pricing Page</h1>
+    <p class="desc">Pricing cards that sit in a row on desktop and stack on mobile.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .rpricing{ display:flex; gap:1rem; flex-wrap:wrap; }
+      .rpricing div{ flex:1 1 140px; background:#fff; border:1px solid var(--rule); border-radius:8px; padding:1rem; text-align:center; }
+    </style>
+    <div class="rpricing"><div>Starter<br>$9</div><div>Pro<br>$29</div><div>Enterprise<br>Contact</div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.rpricing{ display:flex; flex-wrap:wrap; }
+.rpricing div{ flex:1 1 140px; } /* wraps to a new row once too narrow */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

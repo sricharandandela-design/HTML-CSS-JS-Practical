@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Personal Portfolio Webpage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 15</p>
+    <h1>Simple Personal Portfolio Webpage</h1>
+    <p class="desc">A one-page portfolio combining the layout and styling techniques from the programs above.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pf{ background:#fff; border:1px solid var(--rule); }
+      .pf-hero{ background: var(--ink); color:#fff; padding:2rem; }
+      .pf-hero h2{ color:#fff; margin:0; }
+      .pf-hero p{ color:#C9C2AE; margin-top:0.3rem; }
+      .pf-section{ padding:1.5rem 2rem; border-top:1px solid var(--rule); }
+      .pf-skills{ display:flex; flex-wrap:wrap; gap:0.5rem; }
+      .pf-skill{ background:var(--paper); border:1px solid var(--rule); padding:0.3rem 0.8rem; font-size:0.85rem; }
+      @media (max-width:600px){ .pf-hero{ padding:1.2rem; } .pf-section{ padding:1.2rem; } }
+    </style>
+    <div class="pf">
+      <div class="pf-hero">
+        <h2>Priya Sharma</h2>
+        <p>B.Sc Computer Science student &middot; Web development enthusiast</p>
+      </div>
+      <div class="pf-section">
+        <h3>About</h3>
+        <p>I build small web projects to practice HTML, CSS and JavaScript, and I enjoy
+           turning course assignments into working, browsable sites like this one.</p>
+      </div>
+      <div class="pf-section">
+        <h3>Skills</h3>
+        <div class="pf-skills">
+          <span class="pf-skill">HTML5</span>
+          <span class="pf-skill">CSS3</span>
+          <span class="pf-skill">JavaScript</span>
+          <span class="pf-skill">Responsive Design</span>
+        </div>
+      </div>
+      <div class="pf-section">
+        <h3>Contact</h3>
+        <p><a href="mailto:priya@example.com">priya@example.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;div class="pf-hero"&gt;
+  &lt;h2&gt;Priya Sharma&lt;/h2&gt;
+  &lt;p&gt;B.Sc Computer Science student&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="pf-section"&gt;
+  &lt;h3&gt;Skills&lt;/h3&gt;
+  &lt;div class="pf-skills"&gt;
+    &lt;span class="pf-skill"&gt;HTML5&lt;/span&gt;
+    &lt;span class="pf-skill"&gt;CSS3&lt;/span&gt;
+    &lt;span class="pf-skill"&gt;JavaScript&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+/* pf-hero uses a dark background + light text for a header band;
+   pf-skills uses flex-wrap so tags reflow on narrow screens */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

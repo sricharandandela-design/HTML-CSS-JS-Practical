@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Data Analysis Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 134</p>
+    <h1>AI Data Analysis Interface</h1>
+    <p class="desc">A data table paired with an 'Analyze' action that produces a findings panel.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:360px;">
+      <table style="width:100%; font-size:0.85rem; border-collapse:collapse; margin-bottom:0.6rem;">
+        <tr style="color:#55605B;"><td>Region</td><td>Sales</td></tr>
+        <tr><td>North</td><td>$18,200</td></tr>
+        <tr><td>South</td><td>$9,400</td></tr>
+        <tr><td>West</td><td>$21,750</td></tr>
+      </table>
+      <button class="btn amber" onclick="analyzeData()">Analyze with AI</button>
+      <div class="output-box" id="analysisOut" style="margin-top:0.6rem;"></div>
+    </div>
+    <script>
+      function analyzeData(){
+        document.getElementById('analysisOut').textContent =
+          "Finding: West region outperforms North by 19% — consider reallocating ad spend from South.";
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>analyzeBtn.onclick = () =&gt; { findingsEl.textContent = runAnalysis(tableData); };</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

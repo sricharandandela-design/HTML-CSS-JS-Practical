@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Static, Relative, Absolute, Fixed, and Sticky Positioning</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 21</p>
+    <h1>Static, Relative, Absolute, Fixed, and Sticky Positioning</h1>
+    <p class="desc">Five positioning schemes; scroll the box on the right to see 'sticky' and 'fixed' in action.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="position:relative; border:1px solid var(--rule); height:220px; overflow:auto; padding:0.5rem;">
+      <div style="position:static; background:var(--paper-raised); padding:0.4rem;">static: normal flow (default)</div>
+      <div style="position:relative; top:6px; left:10px; background:var(--paper-raised); padding:0.4rem;">
+        relative: nudged 6px down, 10px right from where it would sit
+      </div>
+      <div style="position:sticky; top:0; background:var(--amber); padding:0.4rem; z-index:2;">
+        sticky: sticks to the top of this box once you scroll past it
+      </div>
+      <div style="height:300px; background:repeating-linear-gradient(45deg,#fff,#fff 10px,var(--paper) 10px,var(--paper) 20px);">
+        scroll me — 300px of filler content
+      </div>
+      <div style="position:absolute; bottom:6px; right:6px; background:var(--pine); color:#fff; padding:0.3rem 0.6rem;">
+        absolute: pinned to this container's corner
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.static  { position: static; }                    /* default flow                */
+.relative{ position: relative; top: 6px; left: 10px; } /* offset from its own spot */
+.absolute{ position: absolute; bottom: 6px; right: 6px; } /* relative to nearest positioned ancestor */
+.fixed   { position: fixed; top: 0; right: 0; }    /* relative to the viewport, ignores scroll */
+.sticky  { position: sticky; top: 0; }             /* static until scrolled past, then fixed  */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

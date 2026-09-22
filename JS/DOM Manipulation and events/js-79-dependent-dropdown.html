@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dependent Dropdown: Country &amp;rarr; State &amp;rarr; City</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 79</p>
+    <h1>Dependent Dropdown: Country &amp;rarr; State &amp;rarr; City</h1>
+    <p class="desc">Choosing a country repopulates the state dropdown with only that country's states.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <select id="countrySel79" onchange="updateStates79()" style="padding:0.5rem; margin-right:0.5rem;">
+      <option value="">Select country</option>
+      <option value="india">India</option>
+      <option value="usa">USA</option>
+    </select>
+    <select id="stateSel79" style="padding:0.5rem;"><option>Select state</option></select>
+    <script>
+      const statesByCountry79 = {
+        india: ["Tamil Nadu", "Karnataka", "Maharashtra"],
+        usa: ["California", "Texas", "New York"]
+      };
+      function updateStates79(){
+        const country = document.getElementById('countrySel79').value;
+        const stateSel = document.getElementById('stateSel79');
+        stateSel.innerHTML = '<option>Select state</option>';
+        (statesByCountry79[country] || []).forEach(state => {
+          const opt = document.createElement('option');
+          opt.textContent = state;
+          stateSel.appendChild(opt);
+        });
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const statesByCountry = { india: [...], usa: [...] };
+countrySelect.onchange = () =&gt; {
+  stateSelect.innerHTML = '';
+  statesByCountry[countrySelect.value].forEach(state =&gt; {
+    stateSelect.appendChild(new Option(state));
+  });
+};</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

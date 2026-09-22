@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 05</p>
+    <h1>Student Registration Form</h1>
+    <p class="desc">A registration form built from text, email, radio, checkbox, select and textarea controls, with basic HTML validation.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <form onsubmit="event.preventDefault(); document.getElementById('regOutput').textContent = 'Registration submitted for ' + document.getElementById('regName').value + '.';">
+      <div class="field">
+        <label for="regName">Full name</label>
+        <input type="text" id="regName" name="fullName" required minlength="3" placeholder="Your name">
+      </div>
+      <div class="field">
+        <label for="regEmail">College email</label>
+        <input type="email" id="regEmail" name="email" required placeholder="you@college.edu">
+      </div>
+      <div class="field">
+        <label>Gender</label>
+        <label><input type="radio" name="gender" value="female" checked> Female</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+      </div>
+      <div class="field">
+        <label for="regCourse">Course</label>
+        <select id="regCourse" name="course">
+          <option>B.Sc Computer Science</option>
+          <option>B.C.A</option>
+          <option>B.E Computer Science</option>
+        </select>
+      </div>
+      <div class="field">
+        <label><input type="checkbox" name="hostel"> Requires hostel accommodation</label>
+      </div>
+      <div class="field">
+        <label for="regNote">Notes</label>
+        <textarea id="regNote" name="note" rows="3" placeholder="Anything else we should know?"></textarea>
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <div class="output-box" id="regOutput">Fill in the form and press Register.</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;form onsubmit="event.preventDefault(); handleRegister();"&gt;
+  &lt;input type="text" name="fullName" required minlength="3"&gt;
+  &lt;input type="email" name="email" required&gt;
+  &lt;input type="radio" name="gender" value="female" checked&gt; Female
+  &lt;input type="radio" name="gender" value="male"&gt; Male
+  &lt;select name="course"&gt;
+    &lt;option&gt;B.Sc Computer Science&lt;/option&gt;
+    &lt;option&gt;B.C.A&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;input type="checkbox" name="hostel"&gt; Requires hostel accommodation
+  &lt;textarea name="note" rows="3"&gt;&lt;/textarea&gt;
+  &lt;button type="submit"&gt;Register&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

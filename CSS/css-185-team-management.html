@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 185</p>
+    <h1>Team Management</h1>
+    <p class="desc">A member list with roles and a pending-invite row.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .team-row{ display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0; border-bottom:1px solid var(--rule); max-width:340px; font-size:0.85rem; }
+      .pending{ color:#8A9089; font-style:italic; }
+    </style>
+    <div class="team-row"><span>Ananya Rao</span><span>Admin</span></div>
+    <div class="team-row"><span>Divya Nair</span><span>Member</span></div>
+    <div class="team-row"><span class="pending">karan@example.com</span><span class="pending">Invited</span></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.pending{ color:#8A9089; font-style:italic; } /* invite not yet accepted */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

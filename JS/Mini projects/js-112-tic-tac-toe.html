@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-tac-toe Game</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 112</p>
+    <h1>Tic-tac-toe Game</h1>
+    <p class="desc">A fully playable 2-player tic-tac-toe board with win detection.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .ttt-grid{ display:grid; grid-template-columns:repeat(3,60px); gap:4px; }
+      .ttt-cell{ width:60px; height:60px; background:#fff; border:1px solid var(--rule); font-size:1.5rem;
+                 display:flex; align-items:center; justify-content:center; cursor:pointer; }
+    </style>
+    <div class="ttt-grid" id="tttBoard112"></div>
+    <p id="tttStatus112" style="margin-top:0.6rem;">Player X's turn</p>
+    <button class="btn" onclick="resetTTT112()">Reset</button>
+    <script>
+      let board112 = Array(9).fill('');
+      let turn112 = 'X';
+      const wins112 = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+      function renderTTT112(){
+        const grid = document.getElementById('tttBoard112');
+        grid.innerHTML = '';
+        board112.forEach((val, i) => {
+          const cell = document.createElement('div');
+          cell.className = 'ttt-cell';
+          cell.textContent = val;
+          cell.onclick = () => playTTT112(i);
+          grid.appendChild(cell);
+        });
+      }
+      function playTTT112(i){
+        if (board112[i]) return;
+        board112[i] = turn112;
+        const winner = wins112.find(([a,b,c]) => board112[a] && board112[a]===board112[b] && board112[b]===board112[c]);
+        if (winner){ document.getElementById('tttStatus112').textContent = `Player ${turn112} wins!`; renderTTT112(); return; }
+        turn112 = turn112 === 'X' ? 'O' : 'X';
+        document.getElementById('tttStatus112').textContent = `Player ${turn112}'s turn`;
+        renderTTT112();
+      }
+      function resetTTT112(){ board112 = Array(9).fill(''); turn112 = 'X'; document.getElementById('tttStatus112').textContent = "Player X's turn"; renderTTT112(); }
+      renderTTT112();
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const wins = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+const winner = wins.find(([a,b,c]) =&gt; board[a] &amp;&amp; board[a]===board[b] &amp;&amp; board[b]===board[c]);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

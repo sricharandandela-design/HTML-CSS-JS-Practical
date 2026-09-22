@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Forms And Validations - JavaScript Programs</title>
+
+    
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.program {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.program-name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.open-btn {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+.open-btn:hover {
+    background: #1d4ed8;
+}
+
+.home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.folder-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.folder-box h3 {
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.file-type {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: #e5e7eb;
+    font-size: 12px;
+    color: #444;
+}
+
+@media (max-width: 650px) {
+
+    .program {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .open-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Forms And Validations</h1>
+
+    <p>
+        JavaScript Practical Programs
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <div class="card">
+
+        <h2>
+            40 Programs
+        </h2>
+
+        <p>
+            Select a program or topic below.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Program List
+        </h2>
+
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                1. 01 Student Registration Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="01_student_registration_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                2. 02 Login Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="02_login_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                3. 03 Name Alphabets
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="03_name_alphabets.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                4. 04 Age Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="04_age_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                5. 05 Mobile Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="05_mobile_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                6. 06 Email Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="06_email_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                7. 07 Minimum Password
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="07_minimum_password.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                8. 08 Strong Password
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="08_strong_password.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                9. 09 Confirm Password
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="09_confirm_password.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                10. 10 Date Of Birth Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="10_date_of_birth_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                11. 11 Gender Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="11_gender_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                12. 12 Radio Button Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="12_radio_button_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                13. 13 Checkbox Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="13_checkbox_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                14. 14 Select Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="14_select_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                15. 15 Textarea Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="15_textarea_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                16. 16 Required Fields
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="16_required_fields.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                17. 17 Individual Error Messages
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="17_individual_error_messages.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                18. 18 Success Message
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="18_success_message.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                19. 19 Prevent Invalid Submission
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="19_prevent_invalid_submission.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                20. 20 Validation Using Regex
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="20_validation_using_regex.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                21. 21 Email Regex
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="21_email_regex.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                22. 22 Phone Regex
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="22_phone_regex.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                23. 23 Password Regex
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="23_password_regex.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                24. 24 Realtime Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="24_realtime_validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                25. 25 Input Change Focus Blur Events
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="25_input_change_focus_blur_events.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                26. 26 Password Strength Meter
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="26_password_strength_meter.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                27. 27 Show Hide Password
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="27_show_hide_password.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                28. 28 Registration Password Confirmation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="28_registration_password_confirmation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                29. 29 College Admission Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="29_college_admission_form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                30. 30 Job Application Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="30_job_application_form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                31. 31 Feedback Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="31_feedback_form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                32. 32 Contact Form
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="32_contact_form.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                33. 33 Multistep Registration
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="33_multistep_registration.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                34. 34 Form Preview Before Submit
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="34_form_preview_before_submit.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                35. 35 Age From Dob
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="35_age_from_dob.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                36. 36 Marks Total Average Grade
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="36_marks_total_average_grade.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                37. 37 Employee Salary Calculation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="37_employee_salary_calculation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                38. 38 Shopping Order Total
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="38_shopping_order_total.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                39. 39 Dynamic Fields By Selection
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="39_dynamic_fields_by_selection.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                40. 40 Validate Without Reload
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="40_validate_without_reload.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                41. Index
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="index.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+
+    </div>
+
+
+    <div class="home">
+
+        <a href="../index.html">
+            ← Back to Parent
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Prediction Explanation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 181</p>
+    <h1>ML Prediction Explanation</h1>
+    <p class="desc">Shows which factors pushed a single prediction up or down, like a mini SHAP-style breakdown.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .exp-row{ display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; margin-bottom:0.3rem; }
+      .exp-bar{ height:10px; border-radius:3px; }
+    </style>
+    <p style="font-size:0.85rem; margin-bottom:0.6rem;">Why this customer was flagged as high churn risk:</p>
+    <div class="exp-row"><span style="width:120px;">Low usage (30d)</span><div class="exp-bar" style="width:60px; background:var(--danger);"></div><span>+0.31</span></div>
+    <div class="exp-row"><span style="width:120px;">Support tickets</span><div class="exp-bar" style="width:35px; background:var(--danger);"></div><span>+0.14</span></div>
+    <div class="exp-row"><span style="width:120px;">Long tenure</span><div class="exp-bar" style="width:25px; background:var(--pine);"></div><span>&minus;0.09</span></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.exp-row .exp-bar{ background:#B14B3F; } /* pushes prediction up */
+.exp-row .exp-bar.negative{ background:#3F6C5D; } /* pushes prediction down */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

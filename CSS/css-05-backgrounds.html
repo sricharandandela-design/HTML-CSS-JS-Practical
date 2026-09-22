@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Background Images, Colors, Positioning, Sizing, Repeat, and Attachment</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 05</p>
+    <h1>Background Images, Colors, Positioning, Sizing, Repeat, and Attachment</h1>
+    <p class="desc">Every background-* property applied to the same box, one property at a time.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .bgbox{ height:140px; border:1px solid var(--rule); margin-bottom:0.6rem; color:#fff;
+              display:flex; align-items:flex-end; padding:0.5rem; text-shadow:0 1px 2px #000; }
+      .bg1{ background-color: var(--pine); }
+      .bg2{ background-image:url('https://placehold.co/300x150/1A2332/E8A33D?text=tile');
+            background-repeat: repeat; background-size: 80px; }
+      .bg3{ background-image:url('https://placehold.co/300x150/1A2332/E8A33D?text=cover');
+            background-size: cover; background-position: center; }
+      .bg4{ background-image:url('https://placehold.co/300x150/1A2332/E8A33D?text=fixed');
+            background-attachment: fixed; background-size: cover; }
+    </style>
+    <div class="bgbox bg1">background-color</div>
+    <div class="bgbox bg2">background-repeat + size (tiled)</div>
+    <div class="bgbox bg3">background-size: cover + position: center</div>
+    <div class="bgbox bg4">background-attachment: fixed</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.bg-color{ background-color: #3F6C5D; }
+
+.bg-tiled{
+  background-image: url('pattern.png');
+  background-repeat: repeat;
+  background-size: 80px;
+}
+
+.bg-cover{
+  background-image: url('photo.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-fixed{
+  background-image: url('photo.jpg');
+  background-attachment: fixed; /* stays put while the page scrolls */
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

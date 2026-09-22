@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Chat Sidebar</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 118</p>
+    <h1>AI Chat Sidebar</h1>
+    <p class="desc">A narrow docked chat panel, the pattern used when AI chat sits beside your main content instead of full-screen.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:0; border:1px solid var(--rule); border-radius:8px; overflow:hidden; height:200px;">
+      <div style="flex:1; padding:1rem; background:var(--paper);">Main content area</div>
+      <div style="width:180px; background:var(--ink); color:#fff; padding:0.8rem; font-size:0.85rem;">
+        <strong>AI Chat</strong>
+        <p style="color:#C9C2AE; margin-top:0.5rem;">Ask about this page&hellip;</p>
+        <input type="text" style="width:100%; margin-top:0.5rem; padding:0.3rem; border-radius:4px; border:none;">
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.layout{ display:flex; }
+.chat-sidebar{ width:180px; background:#1A2332; color:#fff; } /* docked beside main content */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

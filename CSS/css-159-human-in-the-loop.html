@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human-in-the-loop AI Workflow</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 159</p>
+    <h1>Human-in-the-loop AI Workflow</h1>
+    <p class="desc">A workflow diagram showing where the agent pauses for a human checkpoint before continuing.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .hitl-step{ display:inline-block; background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.5rem 0.9rem; font-size:0.85rem; }
+      .hitl-step.human{ background:var(--amber); border-color:var(--amber); color:var(--ink); font-weight:600; }
+    </style>
+    <div class="hitl-step">AI drafts reply</div> &rarr;
+    <div class="hitl-step human">Human reviews</div> &rarr;
+    <div class="hitl-step">AI sends reply</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.hitl-step.human{ background:#E8A33D; } /* the manual checkpoint stands out visually */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

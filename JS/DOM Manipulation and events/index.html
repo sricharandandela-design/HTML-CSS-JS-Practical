@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dom Manipulation And Events - JavaScript Programs</title>
+
+    
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.program {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.program-name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.open-btn {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+.open-btn:hover {
+    background: #1d4ed8;
+}
+
+.home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.folder-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.folder-box h3 {
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.file-type {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: #e5e7eb;
+    font-size: 12px;
+    color: #444;
+}
+
+@media (max-width: 650px) {
+
+    .program {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .open-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Dom Manipulation And Events</h1>
+
+    <p>
+        JavaScript Practical Programs
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <div class="card">
+
+        <h2>
+            22 Programs
+        </h2>
+
+        <p>
+            Select a program or topic below.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Program List
+        </h2>
+
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                1. Index
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="index.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                2. Js 67 Remove Elements Dynamically
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-67-remove-elements-dynamically.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                3. Js 68 Change Css Styles
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-68-change-css-styles.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                4. Js 69 Change Multiple Elements
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-69-change-multiple-elements.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                5. Js 70 Getelementbyid Getelementsbyclassname
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-70-getelementbyid-getelementsbyclassname.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                6. Js 71 Queryselector Queryselectorall
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-71-queryselector-queryselectorall.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                7. Js 72 Create Remove Css Classes
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-72-create-remove-css-classes.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                8. Js 73 Dynamic Table
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-73-dynamic-table.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                9. Js 74 Add Delete Table Rows
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-74-add-delete-table-rows.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                10. Js 75 Search Filter Table
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-75-search-filter-table.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                11. Js 76 Live Character Counter
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-76-live-character-counter.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                12. Js 77 Password Show Hide
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-77-password-show-hide.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                13. Js 78 Dynamic Dropdown List
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-78-dynamic-dropdown-list.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                14. Js 79 Dependent Dropdown
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-79-dependent-dropdown.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                15. Js 80 Image Slideshow Carousel
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-80-image-slideshow-carousel.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                16. Js 81 Mouse Events
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-81-mouse-events.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                17. Js 82 Keyboard Events
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-82-keyboard-events.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                18. Js 83 Form Events
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-83-form-events.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                19. Js 84 Double Click Events
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-84-double-click-events.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                20. Js 85 Event Bubbling Capturing (1)
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-85-event-bubbling-capturing (1).html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                21. Js 86 Event Delegation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-86-event-delegation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                22. Js 87 Keyboard Controlled Game
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-87-keyboard-controlled-game.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                23. Js 88 Drag And Drop
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-88-drag-and-drop.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+
+    </div>
+
+
+    <div class="home">
+
+        <a href="../index.html">
+            ← Back to Parent
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

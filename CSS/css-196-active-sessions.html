@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Active Sessions and Device Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 196</p>
+    <h1>Active Sessions and Device Management</h1>
+    <p class="desc">A list of devices currently signed in, with the option to sign each one out.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .session-row{ display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--rule); max-width:340px; font-size:0.85rem; }
+    </style>
+    <div class="session-row"><div><strong>Chrome on Windows</strong><br><span style="color:#55605B; font-size:0.8rem;">Chennai &middot; This device</span></div></div>
+    <div class="session-row"><div><strong>Safari on iPhone</strong><br><span style="color:#55605B; font-size:0.8rem;">Bengaluru &middot; 2 days ago</span></div>
+      <button class="btn" style="padding:0.2rem 0.5rem; font-size:0.75rem; background:var(--danger);">Sign out</button></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.session-row .this-device{ color:#3F6C5D; } /* current session flagged, no sign-out button */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

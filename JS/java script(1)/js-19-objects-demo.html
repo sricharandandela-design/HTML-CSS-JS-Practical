@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate Objects in JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 19</p>
+    <h1>Demonstrate Objects in JavaScript</h1>
+    <p class="desc">Creating an object literal, reading and updating properties, and calling a method.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runObjects()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      const student = {
+        name: "Ananya",
+        rollNo: 21,
+        marks: [78, 92, 85],
+        average(){ return this.marks.reduce((a,b) => a+b, 0) / this.marks.length; }
+      };
+
+      function runObjects(){
+        student.marks.push(90);           // update: add a new mark
+        student.grade = "A";              // add a new property
+        document.getElementById('out').textContent =
+          `name: ${student.name}\nrollNo: ${student.rollNo}\n` +
+          `marks: ${student.marks.join(", ")}\naverage(): ${student.average().toFixed(2)}\n` +
+          `grade (added): ${student.grade}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const student = {
+  name: "Ananya",
+  rollNo: 21,
+  marks: [78, 92, 85],
+  average(){
+    return this.marks.reduce((a, b) =&gt; a + b, 0) / this.marks.length;
+  }
+};
+
+student.marks.push(90);   // update an existing property
+student.grade = "A";      // add a new property
+
+console.log(student.name, student.average(), student.grade);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

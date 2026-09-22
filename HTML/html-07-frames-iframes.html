@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frames and Iframes</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 07</p>
+    <h1>Frames and Iframes</h1>
+    <p class="desc">The classic &lt;frameset&gt; is obsolete in HTML5; &lt;iframe&gt; is the modern replacement for embedding one page inside another.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p>The iframe below embeds this project's own home page inside the current page:</p>
+    <iframe src="../index.html" title="Embedded home page" width="100%" height="260"
+            style="border:1px solid var(--rule);"></iframe>
+    <p><strong>Note:</strong> the old <code>&lt;frameset&gt;</code>/<code>&lt;frame&gt;</code> tags
+       are not supported in HTML5. Whenever a page needs to embed another document, use
+       <code>&lt;iframe&gt;</code> instead.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;!-- Modern HTML5 approach --&gt;
+&lt;iframe src="page-to-embed.html" title="Embedded page" width="100%" height="260"&gt;&lt;/iframe&gt;
+
+&lt;!-- Obsolete HTML4 approach, shown for reference only, not supported in HTML5 --&gt;
+&lt;!--
+&lt;frameset cols="50%,50%"&gt;
+  &lt;frame src="left.html"&gt;
+  &lt;frame src="right.html"&gt;
+&lt;/frameset&gt;
+--&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

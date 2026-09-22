@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search/Filter Table Records</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 75</p>
+    <h1>Search/Filter Table Records</h1>
+    <p class="desc">Typing in the search box hides table rows that don't match, in real time.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <input type="text" id="tableSearch75" placeholder="Search by name..." oninput="filterTable75()" style="width:100%; padding:0.5rem; margin-bottom:0.6rem;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.85rem;" id="filterTable75">
+      <tr><td style="padding:0.4rem;">Ananya Rao</td></tr>
+      <tr><td style="padding:0.4rem;">Karan Shah</td></tr>
+      <tr><td style="padding:0.4rem;">Divya Nair</td></tr>
+    </table>
+    <script>
+      function filterTable75(){
+        const term = document.getElementById('tableSearch75').value.toLowerCase();
+        document.querySelectorAll('#filterTable75 tr').forEach(row => {
+          row.style.display = row.textContent.toLowerCase().includes(term) ? '' : 'none';
+        });
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>searchInput.oninput = () =&gt; {
+  const term = searchInput.value.toLowerCase();
+  rows.forEach(row =&gt; {
+    row.style.display = row.textContent.toLowerCase().includes(term) ? '' : 'none';
+  });
+};</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

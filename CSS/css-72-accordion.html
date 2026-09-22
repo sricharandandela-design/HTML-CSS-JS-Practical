@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accordion Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 72</p>
+    <h1>Accordion Component</h1>
+    <p class="desc">Expandable question/answer panels, built with the native &lt;details&gt;/&lt;summary&gt; elements — no JavaScript needed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .acc details{ border:1px solid var(--rule); border-radius:8px; padding:0.7rem 1rem; margin-bottom:0.5rem; }
+      .acc summary{ cursor:pointer; font-weight:600; }
+      .acc p{ margin:0.6rem 0 0; font-size:0.9rem; color:#55605B; }
+    </style>
+    <div class="acc">
+      <details open><summary>What is Flowbase?</summary><p>A workspace that combines planning, code review and deployment.</p></details>
+      <details><summary>Can I cancel anytime?</summary><p>Yes, cancel from Billing settings with no penalty.</p></details>
+      <details><summary>Do you offer a free trial?</summary><p>Yes, every plan includes a 14-day free trial.</p></details>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;details open&gt;
+  &lt;summary&gt;What is Flowbase?&lt;/summary&gt;
+  &lt;p&gt;A workspace that combines planning, code review and deployment.&lt;/p&gt;
+&lt;/details&gt;
+&lt;!-- native HTML accordion behaviour, styled with CSS only --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

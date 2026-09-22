@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sticky SaaS Header</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 224</p>
+    <h1>Sticky SaaS Header</h1>
+    <p class="desc">A header that stays pinned to the top of a scrollable area once you scroll past it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="height:180px; overflow-y:auto; border:1px solid var(--rule); border-radius:8px;">
+      <div style="position:sticky; top:0; background:var(--ink); color:#fff; padding:0.6rem 1rem; z-index:1;">Sticky header</div>
+      <div style="padding:1rem; height:400px; background:repeating-linear-gradient(180deg,#fff,#fff 20px,var(--paper) 20px,var(--paper) 40px);">Scroll down inside this box&hellip;</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.sticky-header{ position:sticky; top:0; z-index:1; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

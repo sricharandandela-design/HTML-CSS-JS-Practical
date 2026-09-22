@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive SaaS Navigation Menu</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 38</p>
+    <h1>Responsive SaaS Navigation Menu</h1>
+    <p class="desc">The navbar links collapse into a hamburger toggle below 700px — resize the window or view on mobile.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .rnav{ background:var(--ink); color:#fff; border-radius:8px; padding:0.8rem 1.2rem; }
+      .rnav-top{ display:flex; justify-content:space-between; align-items:center; }
+      .rnav-toggle{ display:none; background:none; border:none; color:#fff; font-size:1.4rem; cursor:pointer; }
+      .rnav-links{ display:flex; gap:1.2rem; }
+      .rnav-links a{ color:#C9C2AE; }
+      @media (max-width:700px){
+        .rnav-links{ display:none; flex-direction:column; margin-top:0.8rem; }
+        .rnav-links.open{ display:flex; }
+        .rnav-toggle{ display:block; }
+      }
+    </style>
+    <nav class="rnav">
+      <div class="rnav-top">
+        <strong>Flowbase</strong>
+        <button class="rnav-toggle" onclick="document.getElementById('rnavLinks').classList.toggle('open')">&#9776;</button>
+      </div>
+      <div class="rnav-links" id="rnavLinks"><a href="#">Product</a><a href="#">Pricing</a><a href="#">Docs</a></div>
+    </nav>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.rnav-links{ display:flex; gap:1.2rem; }
+
+@media (max-width:700px){
+  .rnav-links{ display:none; flex-direction:column; }   /* hidden by default on mobile */
+  .rnav-links.open{ display:flex; }                      /* shown once toggled          */
+  .rnav-toggle{ display:block; }                         /* hamburger button appears    */
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Content Generator</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 132</p>
+    <h1>AI Content Generator</h1>
+    <p class="desc">A small form (topic + tone) that produces generated text into an output panel below it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:340px;">
+      <div class="field"><label>Topic</label><input type="text" id="cgTopic" value="new pricing announcement"></div>
+      <div class="field"><label>Tone</label>
+        <select id="cgTone"><option>Friendly</option><option>Formal</option><option>Excited</option></select>
+      </div>
+      <button class="btn amber" onclick="generateContent()">Generate</button>
+      <div class="output-box" id="cgOutput" style="margin-top:0.8rem;">Output will appear here.</div>
+    </div>
+    <script>
+      function generateContent(){
+        const topic = document.getElementById('cgTopic').value;
+        const tone = document.getElementById('cgTone').value;
+        document.getElementById('cgOutput').textContent =
+          `(${tone} tone) We're excited to share an update about ${topic} — designed with you in mind!`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function generateContent(){
+  outputEl.textContent = buildText(topicInput.value, toneSelect.value);
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

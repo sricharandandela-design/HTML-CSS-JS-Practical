@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Semantic Elements: header, nav, section, article, footer</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 08</p>
+    <h1>Semantic Elements: header, nav, section, article, footer</h1>
+    <p class="desc">A miniature page layout built entirely from semantic HTML5 elements instead of generic &lt;div&gt;s.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="border:1px solid var(--rule); padding:1rem;">
+      <header style="background:var(--paper); padding:0.6rem; margin-bottom:0.6rem;">
+        <strong>Campus Bulletin</strong> &mdash; the site header
+      </header>
+      <nav style="margin-bottom:0.6rem;">
+        <a href="#">Home</a> &nbsp;|&nbsp; <a href="#">Events</a> &nbsp;|&nbsp; <a href="#">Contact</a>
+      </nav>
+      <section style="margin-bottom:0.6rem;">
+        <h2>Latest article</h2>
+        <article style="border-left:4px solid var(--pine); padding-left:0.8rem;">
+          <h3>Department Hosts Coding Marathon</h3>
+          <p>Students competed in a 12-hour coding marathon organised by the CS department,
+             solving problems ranging from data structures to web development.</p>
+        </article>
+      </section>
+      <footer style="background:var(--paper); padding:0.6rem;">
+        &copy; 2026 Campus Bulletin &mdash; the site footer
+      </footer>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;header&gt;Campus Bulletin&lt;/header&gt;
+&lt;nav&gt;
+  &lt;a href="#"&gt;Home&lt;/a&gt;
+  &lt;a href="#"&gt;Events&lt;/a&gt;
+  &lt;a href="#"&gt;Contact&lt;/a&gt;
+&lt;/nav&gt;
+&lt;section&gt;
+  &lt;h2&gt;Latest article&lt;/h2&gt;
+  &lt;article&gt;
+    &lt;h3&gt;Department Hosts Coding Marathon&lt;/h3&gt;
+    &lt;p&gt;Students competed in a 12-hour coding marathon...&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/section&gt;
+&lt;footer&gt;&amp;copy; 2026 Campus Bulletin&lt;/footer&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Icon Buttons and Action Buttons</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 60</p>
+    <h1>Icon Buttons and Action Buttons</h1>
+    <p class="desc">Compact square buttons that show only an icon, plus a labeled action button that pairs an icon with text.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .icon-btn{ width:40px; height:40px; border-radius:8px; border:1px solid var(--rule); background:#fff;
+                 display:inline-flex; align-items:center; justify-content:center; font-size:1.1rem; cursor:pointer; }
+      .icon-btn:hover{ background:var(--paper); }
+      .action-btn{ display:inline-flex; align-items:center; gap:0.4rem; }
+    </style>
+    <button class="icon-btn" title="Edit">&#9998;</button>
+    <button class="icon-btn" title="Delete">&#128465;</button>
+    <button class="icon-btn" title="Share">&#8599;</button>
+    <button class="btn action-btn">&#8595; Download report</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.icon-btn{ width:40px; height:40px; border-radius:8px; display:inline-flex;
+           align-items:center; justify-content:center; }
+.action-btn{ display:inline-flex; align-items:center; gap:0.4rem; } /* icon + label together */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change CSS Styles Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 68</p>
+    <h1>Change CSS Styles Using JavaScript</h1>
+    <p class="desc">Buttons directly set an element's inline style properties.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p id="styleTarget68" style="padding:0.6rem; border:1px solid var(--rule);">Style me!</p>
+    <button class="btn" onclick="document.getElementById('styleTarget68').style.color='var(--pine)'">Green text</button>
+    <button class="btn" onclick="document.getElementById('styleTarget68').style.fontSize='1.4rem'">Bigger text</button>
+    <button class="btn" onclick="document.getElementById('styleTarget68').style.background='var(--amber)'">Amber background</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>element.style.color = 'green';
+element.style.fontSize = '1.4rem';
+element.style.background = 'orange';</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Counter Application with Increment and Decrement Buttons</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 33</p>
+    <h1>Counter Application with Increment and Decrement Buttons</h1>
+    <p class="desc">A number display with +, -, and reset controls.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; align-items:center; gap:0.8rem;">
+      <button class="btn" onclick="document.getElementById('countVal33').textContent = Number(document.getElementById('countVal33').textContent) - 1;">-</button>
+      <span id="countVal33" style="font-size:1.5rem; font-weight:700;">0</span>
+      <button class="btn" onclick="document.getElementById('countVal33').textContent = Number(document.getElementById('countVal33').textContent) + 1;">+</button>
+      <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('countVal33').textContent = 0;">Reset</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>incrementBtn.onclick = () =&gt; { count++; display.textContent = count; };
+decrementBtn.onclick = () =&gt; { count--; display.textContent = count; };</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

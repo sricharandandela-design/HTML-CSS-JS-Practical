@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Images and Hyperlinks</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 04</p>
+    <h1>Images and Hyperlinks</h1>
+    <p class="desc">Placing an image with proper alt text, and different kinds of hyperlinks.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <figure>
+      <img src="https://placehold.co/480x260/1A2332/EDEFE9?text=Sample+Image"
+           alt="Placeholder graphic used to demonstrate the img element" width="480" height="260">
+      <figcaption>A placeholder image, loaded from a URL and described with alt text.</figcaption>
+    </figure>
+
+    <h2>Hyperlink examples</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">
+          External link</a> &mdash; opens the MDN HTML docs in a new tab.</li>
+      <li><a href="../index.html">Internal link</a> &mdash; goes back to this project's home page.</li>
+      <li><a href="#bottom">Same-page link</a> &mdash; jumps to the anchor below.</li>
+      <li><a href="mailto:student@example.com">Email link</a> &mdash; opens the default mail app.</li>
+    </ul>
+    <p id="bottom">You have arrived at the anchor target, <code>#bottom</code>.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;img src="photo.jpg" alt="Description of the photo" width="480" height="260"&gt;
+
+&lt;a href="https://developer.mozilla.org" target="_blank" rel="noopener"&gt;External link&lt;/a&gt;
+&lt;a href="../index.html"&gt;Internal link&lt;/a&gt;
+&lt;a href="#bottom"&gt;Same-page link&lt;/a&gt;
+&lt;a href="mailto:student@example.com"&gt;Email link&lt;/a&gt;
+
+&lt;p id="bottom"&gt;Anchor target.&lt;/p&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

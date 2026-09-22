@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Marks/Grade Calculator</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 114</p>
+    <h1>Student Marks/Grade Calculator</h1>
+    <p class="desc">Enter marks for three subjects and get the total, average, and letter grade.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Subject 1</label><input type="number" id="m114a" value="85"></div>
+    <div class="field"><label>Subject 2</label><input type="number" id="m114b" value="78"></div>
+    <div class="field"><label>Subject 3</label><input type="number" id="m114c" value="92"></div>
+    <button class="btn" onclick="calcGrade114()">Calculate</button>
+    <div class="output-box" id="out114"></div>
+    <script>
+      function calcGrade114(){
+        const marks = [document.getElementById('m114a').value, document.getElementById('m114b').value, document.getElementById('m114c').value].map(Number);
+        const total = marks.reduce((a,b) => a+b, 0);
+        const avg = total / marks.length;
+        let grade = avg >= 90 ? 'A' : avg >= 75 ? 'B' : avg >= 60 ? 'C' : 'D';
+        document.getElementById('out114').textContent = `Total: ${total}  |  Average: ${avg.toFixed(1)}  |  Grade: ${grade}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const avg = total / marks.length;
+const grade = avg &gt;= 90 ? 'A' : avg &gt;= 75 ? 'B' : avg &gt;= 60 ? 'C' : 'D';</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

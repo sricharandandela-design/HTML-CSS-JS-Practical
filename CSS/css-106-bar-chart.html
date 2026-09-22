@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bar Chart Analytics Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 106</p>
+    <h1>Bar Chart Analytics Component</h1>
+    <p class="desc">A reusable bar chart built from a flex row of divs, sized purely with CSS heights.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .bc{ display:flex; align-items:flex-end; gap:10px; height:100px; }
+      .bc div{ flex:1; background:var(--pine); border-radius:3px 3px 0 0; position:relative; }
+      .bc div span{ position:absolute; top:-18px; left:0; right:0; text-align:center; font-size:0.7rem; color:#55605B; }
+    </style>
+    <div class="bc">
+      <div style="height:40%;"><span>40</span></div>
+      <div style="height:65%;"><span>65</span></div>
+      <div style="height:50%;"><span>50</span></div>
+      <div style="height:85%;"><span>85</span></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.bar-chart{ display:flex; align-items:flex-end; gap:10px; height:100px; }
+.bar-chart div{ flex:1; background:#3F6C5D; height: var(--value); } /* set inline per bar */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

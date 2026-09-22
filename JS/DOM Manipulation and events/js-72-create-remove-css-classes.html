@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create and Remove CSS Classes Dynamically</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 72</p>
+    <h1>Create and Remove CSS Classes Dynamically</h1>
+    <p class="desc">Adds and removes a highlight class with classList.add() and classList.remove().</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>.highlight72{ background:var(--amber); padding:0.2rem 0.4rem; }</style>
+    <p id="classTarget72">Toggle my highlight class.</p>
+    <button class="btn" onclick="document.getElementById('classTarget72').classList.add('highlight72')">Add class</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('classTarget72').classList.remove('highlight72')">Remove class</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>element.classList.add('highlight');
+element.classList.remove('highlight');</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

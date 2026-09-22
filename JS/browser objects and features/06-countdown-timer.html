@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html><body><h2>Countdown Timer</h2><input id="seconds" type="number" min="1" value="10">
+<button onclick="start()">Start</button><h1 id="out">10</h1><script>
+let t;
+function start(){ clearInterval(t); let n=Number(document.getElementById("seconds").value);
+document.getElementById("out").textContent=n;
+t=setInterval(()=>{ document.getElementById("out").textContent=n;
+if(n--<=0){clearInterval(t);document.getElementById("out").textContent="Time's up!";}},1000);}
+</script>
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body></html>

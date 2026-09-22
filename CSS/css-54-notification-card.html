@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notification Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 54</p>
+    <h1>Notification Card Component</h1>
+    <p class="desc">A single notification row with an icon, message, timestamp, and unread indicator.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .notif{ display:flex; gap:0.7rem; align-items:flex-start; background:#fff; border:1px solid var(--rule);
+              border-radius:8px; padding:0.8rem; max-width:340px; position:relative; }
+      .notif .dot{ width:8px; height:8px; border-radius:50%; background:var(--amber); position:absolute; top:0.9rem; right:0.9rem; }
+      .notif .icon{ width:36px; height:36px; border-radius:50%; background:var(--pine); color:#fff;
+                    display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    </style>
+    <div class="notif">
+      <div class="icon">&#9993;</div>
+      <div>
+        <strong>New comment</strong>
+        <p style="font-size:0.85rem; color:#55605B; margin:0.1rem 0;">Priya replied to your ticket #482.</p>
+        <span style="font-size:0.75rem; color:#8A9089;">2 minutes ago</span>
+      </div>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.notification{ display:flex; gap:0.7rem; position:relative; }
+.notification .unread-dot{ width:8px; height:8px; border-radius:50%; background:#E8A33D; position:absolute; top:0.9rem; right:0.9rem; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

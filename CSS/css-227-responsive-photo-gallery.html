@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Photo and Media Gallery</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 227</p>
+    <h1>Responsive Photo and Media Gallery</h1>
+    <p class="desc">A gallery grid where the number of columns adjusts automatically to the available width.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .gallery{ display:grid; grid-template-columns:repeat(auto-fill, minmax(80px, 1fr)); gap:6px; }
+      .gallery img{ width:100%; height:80px; object-fit:cover; border-radius:4px; }
+    </style>
+    <div class="gallery">
+      <img src="https://placehold.co/160x160/3F6C5D/ffffff?text=1">
+      <img src="https://placehold.co/160x160/E8A33D/1A2332?text=2">
+      <img src="https://placehold.co/160x160/1A2332/ffffff?text=3">
+      <img src="https://placehold.co/160x160/B14B3F/ffffff?text=4">
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.gallery{ grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); }
+.gallery img{ object-fit:cover; } /* crops to fill each cell without distortion */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

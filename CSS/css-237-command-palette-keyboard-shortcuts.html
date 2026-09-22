@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Command Palette with Keyboard Shortcuts</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 237</p>
+    <h1>SaaS Command Palette with Keyboard Shortcuts</h1>
+    <p class="desc">A command palette where each action lists its keyboard shortcut alongside it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="background:var(--ink); color:#fff; border-radius:10px; padding:0.8rem; max-width:340px;">
+      <input type="text" placeholder="Type a command..." style="width:100%; padding:0.5rem; border:none; border-radius:6px; margin-bottom:0.5rem;">
+      <div style="display:flex; justify-content:space-between; padding:0.4rem 0.5rem; font-size:0.85rem;"><span>New project</span><kbd style="background:rgba(255,255,255,0.15); padding:0.1rem 0.4rem; border-radius:4px;">Ctrl+N</kbd></div>
+      <div style="display:flex; justify-content:space-between; padding:0.4rem 0.5rem; font-size:0.85rem;"><span>Search</span><kbd style="background:rgba(255,255,255,0.15); padding:0.1rem 0.4rem; border-radius:4px;">Ctrl+K</kbd></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>kbd{ background:rgba(255,255,255,0.15); border-radius:4px; padding:0.1rem 0.4rem; }
+document.addEventListener("keydown", e =&gt; { if (e.ctrlKey &amp;&amp; e.key === "k") openPalette(); });</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count the Number of Words in a String</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 62</p>
+    <h1>Count the Number of Words in a String</h1>
+    <p class="desc">Splits on whitespace and filters out empty entries from extra spaces.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Text</label><input type="text" id="cw62" value="  The quick brown fox jumps  "></div>
+    <button class="btn" onclick="runWordCount62()">Count</button>
+    <div class="output-box" id="out62"></div>
+    <script>
+      function runWordCount62(){
+        const s = document.getElementById('cw62').value;
+        const words = s.trim().split(/\s+/).filter(Boolean);
+        document.getElementById('out62').textContent = `Word count: ${words.length}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const words = str.trim().split(/\s+/).filter(Boolean); // \s+ handles multiple spaces
+console.log(words.length);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

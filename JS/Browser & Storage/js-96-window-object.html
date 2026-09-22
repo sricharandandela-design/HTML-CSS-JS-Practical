@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate the Window Object</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 96</p>
+    <h1>Demonstrate the Window Object</h1>
+    <p class="desc">Reads a few properties straight off the global window object: size, and simple dialogs.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runWindowDemo96()">Show window info</button>
+    <div class="output-box" id="out96"></div>
+    <script>
+      function runWindowDemo96(){
+        document.getElementById('out96').textContent =
+          `Inner size: ${window.innerWidth} x ${window.innerHeight}\nOuter size: ${window.outerWidth} x ${window.outerHeight}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>window.innerWidth;   // viewport width
+window.innerHeight;  // viewport height
+window.alert("Hi"); window.confirm("Sure?"); window.prompt("Name?");</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

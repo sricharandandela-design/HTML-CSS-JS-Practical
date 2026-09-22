@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drag-and-drop Application Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 88</p>
+    <h1>Drag-and-drop Application Using JavaScript</h1>
+    <p class="desc">Drag the box into the drop zone using the native HTML5 Drag and Drop API.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="dragItem88" draggable="true" style="width:80px; height:80px; background:var(--amber); border-radius:6px; display:inline-flex;
+         align-items:center; justify-content:center; cursor:grab; margin-right:1rem;">Drag me</div>
+    <div id="dropZone88" style="display:inline-flex; width:120px; height:80px; border:2px dashed var(--rule); border-radius:6px;
+         align-items:center; justify-content:center; vertical-align:top; font-size:0.85rem; color:#8A9089;">Drop here</div>
+    <script>
+      const item88 = document.getElementById('dragItem88');
+      const zone88 = document.getElementById('dropZone88');
+      item88.addEventListener('dragstart', e => e.dataTransfer.setData('text', 'dragged'));
+      zone88.addEventListener('dragover', e => e.preventDefault());
+      zone88.addEventListener('drop', e => {
+        e.preventDefault();
+        zone88.textContent = 'Dropped!';
+        zone88.style.borderColor = 'var(--pine)';
+      });
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>item.addEventListener('dragstart', e =&gt; e.dataTransfer.setData('text', 'dragged'));
+zone.addEventListener('dragover', e =&gt; e.preventDefault()); // required to allow dropping
+zone.addEventListener('drop', e =&gt; { e.preventDefault(); handleDrop(); });</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

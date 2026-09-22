@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Width/Height Percentages, Viewport Units, and Rem Units</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 27</p>
+    <h1>Width/Height Percentages, Viewport Units, and Rem Units</h1>
+    <p class="desc">Three sizing strategies compared: relative to the parent, relative to the viewport, and relative to the root font size.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="border:1px solid var(--rule); padding:0.5rem;">
+      <div style="width:50%; background:var(--pine); color:#fff; padding:0.4rem; margin-bottom:0.4rem;">width: 50% of parent</div>
+      <div style="width:40vw; background:var(--amber); padding:0.4rem; margin-bottom:0.4rem;">width: 40vw (40% of viewport width)</div>
+      <div style="width:15rem; background:var(--paper-raised); border:1px solid var(--rule); padding:0.4rem;">width: 15rem (15 &times; root font size)</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.half-parent{ width: 50%; }   /* relative to the containing element   */
+.two-fifths-vw{ width: 40vw; } /* relative to the browser viewport width */
+.fixed-rem{ width: 15rem; }    /* relative to the root &lt;html&gt; font-size  */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

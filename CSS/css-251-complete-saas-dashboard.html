@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete SaaS Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 251</p>
+    <h1>Complete SaaS Dashboard</h1>
+    <p class="desc">A full dashboard layout: sidebar, top bar, KPI row, and a chart panel together.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; border:1px solid var(--rule); border-radius:10px; overflow:hidden; height:220px;">
+      <div style="width:110px; background:var(--ink); color:#C9C2AE; padding:0.8rem; font-size:0.8rem;">Dashboard<br>Projects<br>Settings</div>
+      <div style="flex:1; padding:0.8rem; overflow:auto;">
+        <div style="display:flex; gap:0.6rem; margin-bottom:0.6rem;">
+          <div style="flex:1; background:#fff; border:1px solid var(--rule); border-radius:6px; padding:0.5rem; font-size:0.8rem;">MRR: $48k</div>
+          <div style="flex:1; background:#fff; border:1px solid var(--rule); border-radius:6px; padding:0.5rem; font-size:0.8rem;">Users: 2.4k</div>
+        </div>
+        <div style="display:flex; align-items:flex-end; gap:5px; height:60px;">
+          <div style="flex:1; background:var(--pine); height:40%;"></div><div style="flex:1; background:var(--pine); height:70%;"></div>
+          <div style="flex:1; background:var(--pine); height:55%;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.dashboard-layout{ display:flex; } /* sidebar + main content area */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

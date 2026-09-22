@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate JavaScript Functions</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 15</p>
+    <h1>Demonstrate JavaScript Functions</h1>
+    <p class="desc">Function declarations, function expressions, default parameters and rest parameters, side by side.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runFunctions()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function greet(name){ return `Hello, ${name}!`; }               // declaration
+      const square = function(x){ return x * x; };                    // expression
+      function power(base, exp = 2){ return base ** exp; }             // default parameter
+      function total(...nums){ return nums.reduce((a, b) => a + b, 0); } // rest parameter
+
+      function runFunctions(){
+        document.getElementById('out').textContent =
+          `${greet("Student")}\nsquare(6) = ${square(6)}\npower(5) = ${power(5)}\ntotal(1,2,3,4) = ${total(1,2,3,4)}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function greet(name){ return `Hello, ${name}!`; }              // declaration
+const square = function(x){ return x * x; };                    // expression
+function power(base, exp = 2){ return base ** exp; }            // default parameter
+function total(...nums){ return nums.reduce((a, b) =&gt; a + b, 0); } // rest parameter
+
+console.log(greet("Student"));   // Hello, Student!
+console.log(square(6));          // 36
+console.log(power(5));           // 25  (exp defaults to 2)
+console.log(total(1, 2, 3, 4));  // 10</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

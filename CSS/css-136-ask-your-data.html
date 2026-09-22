@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ask Your Data Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 136</p>
+    <h1>Ask Your Data Interface</h1>
+    <p class="desc">A chat-style Q&A where the answer to a data question renders inline as a small chart.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:340px;">
+      <div class="msg-like" style="background:var(--pine); color:#fff; padding:0.6rem 0.9rem; border-radius:12px; display:inline-block; margin-bottom:0.6rem;">
+        Show me signups by month
+      </div><br>
+      <div style="background:var(--paper-raised); border:1px solid var(--rule); border-radius:12px; padding:0.8rem;">
+        <div style="display:flex; align-items:flex-end; gap:5px; height:50px;">
+          <div style="flex:1; background:var(--amber); height:40%;"></div>
+          <div style="flex:1; background:var(--amber); height:60%;"></div>
+          <div style="flex:1; background:var(--amber); height:85%;"></div>
+        </div>
+        <p style="font-size:0.8rem; margin:0.5rem 0 0;">Signups grew 45% over the last 3 months.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.chat-answer .mini-chart{ display:flex; align-items:flex-end; height:50px; }
+/* the "answer" to a data question is rendered as a chart, not just text */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

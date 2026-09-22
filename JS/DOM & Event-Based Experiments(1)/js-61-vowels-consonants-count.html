@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count Vowels and Consonants in a String</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 61</p>
+    <h1>Count Vowels and Consonants in a String</h1>
+    <p class="desc">Loops through each letter, classifying it as a vowel or consonant.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Text</label><input type="text" id="vc61" value="Hello World"></div>
+    <button class="btn" onclick="runVowelCount61()">Count</button>
+    <div class="output-box" id="out61"></div>
+    <script>
+      function runVowelCount61(){
+        const s = document.getElementById('vc61').value.toLowerCase();
+        let vowels = 0, consonants = 0;
+        for (const ch of s){
+          if (!/[a-z]/.test(ch)) continue;
+          if ("aeiou".includes(ch)) vowels++; else consonants++;
+        }
+        document.getElementById('out61').textContent = `Vowels: ${vowels}  |  Consonants: ${consonants}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>for (const ch of str.toLowerCase()){
+  if (!/[a-z]/.test(ch)) continue;
+  if ("aeiou".includes(ch)) vowels++; else consonants++;
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

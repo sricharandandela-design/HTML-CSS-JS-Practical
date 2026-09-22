@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Configuration Settings</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 156</p>
+    <h1>AI Agent Configuration Settings</h1>
+    <p class="desc">Toggle switches and sliders for tuning how an agent behaves.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cfg-row{ display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0; border-bottom:1px solid var(--rule); max-width:320px; }
+      .toggle156{ width:36px; height:20px; background:var(--pine); border-radius:999px; position:relative; }
+      .toggle156::after{ content:""; position:absolute; top:2px; left:18px; width:16px; height:16px; background:#fff; border-radius:50%; }
+    </style>
+    <div class="cfg-row"><span>Auto-reply enabled</span><div class="toggle156"></div></div>
+    <div class="cfg-row"><span>Confidence threshold</span><input type="range" min="0" max="100" value="70"></div>
+    <div class="cfg-row"><span>Max actions per run</span><input type="number" value="10" style="width:60px;"></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.cfg-row{ display:flex; justify-content:space-between; }
+&lt;input type="range" min="0" max="100" value="70"&gt;  &lt;!-- confidence threshold --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

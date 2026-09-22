@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Breadcrumb Navigation Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 42</p>
+    <h1>Breadcrumb Navigation Component</h1>
+    <p class="desc">Shows the page's location in a hierarchy, with a separator between each level.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .crumbs{ display:flex; gap:0.4rem; font-size:0.9rem; }
+      .crumbs a{ color: var(--pine); }
+      .crumbs span{ color:#8A9089; }
+      .crumbs .current{ color: var(--ink); font-weight:600; }
+    </style>
+    <nav class="crumbs">
+      <a href="#">Home</a><span>/</span><a href="#">Projects</a><span>/</span><span class="current">Q3 Report</span>
+    </nav>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;nav class="crumbs"&gt;
+  &lt;a href="/"&gt;Home&lt;/a&gt; &lt;span&gt;/&lt;/span&gt;
+  &lt;a href="/projects"&gt;Projects&lt;/a&gt; &lt;span&gt;/&lt;/span&gt;
+  &lt;span class="current"&gt;Q3 Report&lt;/span&gt;
+&lt;/nav&gt;
+
+.crumbs .current{ font-weight:600; color:#1A2332; } /* last item is not a link */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

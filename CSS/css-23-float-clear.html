@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Float and Clear Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 23</p>
+    <h1>Float and Clear Properties</h1>
+    <p class="desc">An image floated left with text wrapping around it, and a cleared element that drops below it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="border:1px solid var(--rule); padding:0.6rem;">
+      <img src="https://placehold.co/100x100/3F6C5D/ffffff?text=float" style="float:left; margin:0 1rem 0.5rem 0;">
+      <p>This paragraph text wraps naturally around the floated image on the left,
+         the way a newspaper column wraps around a picture, because the image has
+         been taken out of normal flow with <code>float:left</code>.</p>
+      <div style="clear:both; border-top:2px dashed var(--amber); padding-top:0.4rem;">
+        clear: both &mdash; this element drops below the float instead of wrapping beside it.
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.floated-image{ float: left; margin: 0 1rem 0.5rem 0; }
+.text{ /* wraps around the float automatically */ }
+.cleared{ clear: both; } /* moves below any floated elements above it */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Shopping Cart</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 115</p>
+    <h1>Simple Shopping Cart</h1>
+    <p class="desc">A fuller cart than program 102: add items, remove individual items, and see the live total.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="addItem115('Notebook', 4)">Add Notebook ($4)</button>
+    <button class="btn" onclick="addItem115('Pen', 1)">Add Pen ($1)</button>
+    <ul id="cartList115" style="list-style:none; padding:0; margin-top:0.6rem;"></ul>
+    <p><strong>Total: $<span id="cartTotal115">0</span></strong></p>
+    <script>
+      let cart115 = [];
+      function addItem115(name, price){ cart115.push({ name, price }); renderCart115(); }
+      function removeItem115(i){ cart115.splice(i, 1); renderCart115(); }
+      function renderCart115(){
+        const list = document.getElementById('cartList115');
+        list.innerHTML = '';
+        let total = 0;
+        cart115.forEach((item, i) => {
+          total += item.price;
+          const li = document.createElement('li');
+          li.textContent = `${item.name} - $${item.price} `;
+          const btn = document.createElement('button');
+          btn.textContent = 'Remove'; btn.onclick = () => removeItem115(i);
+          li.appendChild(btn);
+          list.appendChild(li);
+        });
+        document.getElementById('cartTotal115').textContent = total.toFixed(2);
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>cart.push({ name, price });
+const total = cart.reduce((sum, item) =&gt; sum + item.price, 0);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

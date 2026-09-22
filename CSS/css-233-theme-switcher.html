@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light and Dark Theme Switcher</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 233</p>
+    <h1>Light and Dark Theme Switcher</h1>
+    <p class="desc">A toggle switch styled like a sun/moon control, flipping the whole panel's theme.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .ts-panel{ --bg:#fff; --fg:#1A2332; background:var(--bg); color:var(--fg); border-radius:8px; padding:1rem; transition:all 0.2s; }
+      .ts-panel.dark{ --bg:#1A2332; --fg:#EDEFE9; }
+      .ts-switch{ width:44px; height:24px; background:var(--rule); border-radius:999px; position:relative; cursor:pointer; display:inline-block; }
+      .ts-switch::after{ content:"\2600"; position:absolute; top:1px; left:2px; width:20px; height:20px; background:#fff; border-radius:50%;
+                          text-align:center; line-height:20px; font-size:12px; transition:left 0.2s; }
+      .ts-panel.dark .ts-switch::after{ left:22px; content:"\1F319"; }
+    </style>
+    <div class="ts-panel" id="tsPanel">
+      <span class="ts-switch" onclick="document.getElementById('tsPanel').classList.toggle('dark')"></span>
+      <span style="margin-left:0.6rem;">Toggle theme</span>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.ts-switch::after{ content:"\2600"; left:2px; }        /* sun, light mode */
+.dark .ts-switch::after{ content:"\1F319"; left:22px; } /* moon, dark mode  */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

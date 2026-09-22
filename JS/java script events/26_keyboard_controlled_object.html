@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html><head><style>
+#area{position:relative;width:500px;height:300px;border:1px solid black}
+#box{position:absolute;width:40px;height:40px;background:tomato;left:0;top:0}
+</style></head><body>
+<div id="area"><div id="box"></div></div>
+<script>
+let x=0,y=0;
+document.addEventListener("keydown",function(e){
+    if(e.key==="ArrowRight") x+=10;
+    if(e.key==="ArrowLeft") x-=10;
+    if(e.key==="ArrowDown") y+=10;
+    if(e.key==="ArrowUp") y-=10;
+    x=Math.max(0,Math.min(460,x)); y=Math.max(0,Math.min(260,y));
+    document.getElementById("box").style.left=x+"px";
+    document.getElementById("box").style.top=y+"px";
+});
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body></html>

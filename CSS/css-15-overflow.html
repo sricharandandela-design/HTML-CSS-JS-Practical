@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overflow, Overflow-x, and Overflow-y Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 15</p>
+    <h1>Overflow, Overflow-x, and Overflow-y Properties</h1>
+    <p class="desc">A box with more content than fits, shown with three different overflow behaviours.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .ov{ width:220px; height:80px; border:1px solid var(--rule); padding:0.5rem; margin-bottom:0.6rem; }
+      .ov-hidden{ overflow:hidden; }
+      .ov-scroll{ overflow:scroll; }
+      .ov-auto{ overflow-x:auto; overflow-y:hidden; white-space:nowrap; }
+    </style>
+    <div class="ov ov-hidden">overflow: hidden &mdash; extra content is clipped and simply not shown, with no scrollbar at all, no matter how much text you add here.</div>
+    <div class="ov ov-scroll">overflow: scroll &mdash; always shows scrollbars, even if the content fits, so you can scroll to read this longer line of text.</div>
+    <div class="ov ov-auto">overflow-x: auto &mdash; a horizontal scrollbar appears only because this single line is too wide to fit in the box.</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.clip   { overflow: hidden; }               /* extra content is cut off      */
+.scroll { overflow: scroll; }               /* scrollbars always shown       */
+.auto-x { overflow-x: auto; overflow-y: hidden; } /* scrollbar only if needed */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

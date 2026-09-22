@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagination Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 45</p>
+    <h1>Pagination Component</h1>
+    <p class="desc">Numbered page controls with previous/next arrows and a highlighted current page.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pagination{ display:flex; gap:0.4rem; }
+      .pagination button{ width:2.2rem; height:2.2rem; border:1px solid var(--rule); background:#fff; border-radius:6px; cursor:pointer; }
+      .pagination button.active{ background:var(--pine); color:#fff; border-color:var(--pine); }
+      .pagination button:hover:not(.active){ background:var(--paper); }
+    </style>
+    <div class="pagination">
+      <button>&laquo;</button>
+      <button class="active">1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>&hellip;</button>
+      <button>9</button>
+      <button>&raquo;</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.pagination button{ width:2.2rem; height:2.2rem; border:1px solid #C9C2AE; border-radius:6px; }
+.pagination button.active{ background:#3F6C5D; color:#fff; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

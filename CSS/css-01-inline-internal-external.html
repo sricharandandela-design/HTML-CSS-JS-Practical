@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inline, Internal, and External CSS</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 01</p>
+    <h1>Inline, Internal, and External CSS</h1>
+    <p class="desc">The same paragraph styled three ways, showing where each method is written and when to prefer it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p style="color:#B14B3F; font-style:italic;">Styled with an <strong>inline</strong> style attribute.</p>
+    <p class="internal-demo">Styled by an <strong>internal</strong> &lt;style&gt; block in this page's head.</p>
+    <p>Styled only by the <strong>external</strong> stylesheet shared by the whole site.</p>
+    <style>
+      .internal-demo{ color: var(--pine); background:#fff; border-left:4px solid var(--amber); padding:0.6rem 1rem; }
+    </style>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;p style="color:#B14B3F;"&gt;Inline: fastest, but not reusable.&lt;/p&gt;
+
+&lt;style&gt;
+  .internal-demo{ color: teal; border-left: 4px solid orange; }
+&lt;/style&gt;
+&lt;p class="internal-demo"&gt;Internal: scoped to this one page.&lt;/p&gt;
+
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;p&gt;External: one file, reused across every page - best for real projects.&lt;/p&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

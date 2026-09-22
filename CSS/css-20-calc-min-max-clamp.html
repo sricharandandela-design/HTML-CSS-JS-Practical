@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The calc(), min(), max(), and clamp() Functions</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 20</p>
+    <h1>The calc(), min(), max(), and clamp() Functions</h1>
+    <p class="desc">Four math-aware CSS functions used to size things relative to their container.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="width: calc(100% - 40px); background:var(--paper-raised); border:1px solid var(--rule); padding:0.5rem; margin-bottom:0.5rem;">
+      width: calc(100% - 40px)
+    </div>
+    <div style="width: min(80%, 300px); background:var(--paper-raised); border:1px solid var(--rule); padding:0.5rem; margin-bottom:0.5rem;">
+      width: min(80%, 300px) &mdash; never wider than 300px
+    </div>
+    <div style="width: max(40%, 220px); background:var(--paper-raised); border:1px solid var(--rule); padding:0.5rem; margin-bottom:0.5rem;">
+      width: max(40%, 220px) &mdash; never narrower than 220px
+    </div>
+    <p style="font-size: clamp(1rem, 2.5vw, 1.8rem);">
+      font-size: clamp(1rem, 2.5vw, 1.8rem) &mdash; resize the window to see this text scale
+      smoothly between its floor and ceiling.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.calc { width: calc(100% - 40px); }        /* subtract a fixed gutter from 100% */
+.min  { width: min(80%, 300px); }          /* the SMALLER of the two              */
+.max  { width: max(40%, 220px); }          /* the LARGER of the two                */
+.fluid{ font-size: clamp(1rem, 2.5vw, 1.8rem); } /* fluid, but bounded both ends  */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

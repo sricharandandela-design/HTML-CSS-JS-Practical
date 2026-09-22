@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mega Navigation Menu</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 41</p>
+    <h1>Mega Navigation Menu</h1>
+    <p class="desc">A wide multi-column dropdown, used by large sites to group many links under one nav item.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .mega-wrap{ position:relative; display:inline-block; }
+      .mega-panel{ display:none; position:absolute; top:110%; left:0; background:#fff; border:1px solid var(--rule);
+                   width:460px; padding:1rem; gap:1.5rem; box-shadow:0 10px 24px rgba(0,0,0,0.15); border-radius:8px; }
+      .mega-panel.open{ display:flex; }
+      .mega-col h4{ font-size:0.85rem; color:var(--pine); margin-bottom:0.4rem; }
+      .mega-col a{ display:block; font-size:0.9rem; color:var(--ink); padding:0.15rem 0; }
+    </style>
+    <div class="mega-wrap">
+      <button class="btn" onclick="document.getElementById('megaPanel').classList.toggle('open')">Solutions &#9662;</button>
+      <div class="mega-panel" id="megaPanel">
+        <div class="mega-col"><h4>By team</h4><a href="#">Engineering</a><a href="#">Marketing</a><a href="#">Sales</a></div>
+        <div class="mega-col"><h4>By use case</h4><a href="#">Analytics</a><a href="#">Automation</a><a href="#">Reporting</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.mega-panel{ display:none; position:absolute; width:460px; }
+.mega-panel.open{ display:flex; gap:1.5rem; }   /* multiple columns side by side */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

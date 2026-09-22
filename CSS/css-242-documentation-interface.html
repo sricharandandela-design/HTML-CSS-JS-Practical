@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Documentation Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 242</p>
+    <h1>SaaS Documentation Interface</h1>
+    <p class="desc">A docs layout: sidebar table of contents beside the article content.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:1rem; border:1px solid var(--rule); border-radius:8px; overflow:hidden;">
+      <div style="width:120px; background:var(--paper); padding:0.8rem; font-size:0.8rem;">
+        <a href="#" style="display:block; color:var(--pine); font-weight:600;">Getting started</a>
+        <a href="#" style="display:block; color:var(--ink);">Authentication</a>
+        <a href="#" style="display:block; color:var(--ink);">Webhooks</a>
+      </div>
+      <div style="flex:1; padding:0.8rem;"><h4 style="margin-top:0;">Getting started</h4><p style="font-size:0.85rem;">Install the SDK and create your first API key to begin.</p></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.docs-layout{ display:flex; }
+.docs-sidebar{ width:120px; } /* table of contents beside the article */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

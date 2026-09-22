@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Character Counter for a Textarea</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 76</p>
+    <h1>Live Character Counter for a Textarea</h1>
+    <p class="desc">Updates a count as the user types, and warns when a limit is exceeded.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <textarea id="charTa76" maxlength="120" rows="3" style="width:100%; padding:0.5rem;" oninput="updateCharCount76()"></textarea>
+    <p id="charCountOut76" style="font-size:0.85rem; color:#55605B;">0 / 120 characters</p>
+    <script>
+      function updateCharCount76(){
+        const len = document.getElementById('charTa76').value.length;
+        document.getElementById('charCountOut76').textContent = `${len} / 120 characters`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>textarea.oninput = () =&gt; {
+  countEl.textContent = `${textarea.value.length} / ${textarea.maxLength} characters`;
+};</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

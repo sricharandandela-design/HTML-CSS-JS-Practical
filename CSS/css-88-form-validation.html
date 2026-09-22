@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation and Error Messages</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 88</p>
+    <h1>Form Validation and Error Messages</h1>
+    <p class="desc">Inline error messages that appear under each field only when that field is invalid.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .form-card{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1.4rem; max-width:320px; }
+      .form-card h3{ margin-top:0; }
+      .form-card .field{ max-width:100%; }
+    </style>
+    <div class="form-card">
+      <h3>Validated form</h3>
+      <form onsubmit="return validateForm();">
+        <div class="field">
+          <label>Email</label>
+          <input type="email" id="veEmail">
+          <span class="error-text" id="veEmailErr"></span>
+        </div>
+        <div class="field">
+          <label>Password (min 8 chars)</label>
+          <input type="password" id="vePass">
+          <span class="error-text" id="vePassErr"></span>
+        </div>
+        <button class="btn" style="width:100%;">Submit</button>
+        <p id="veSuccess" style="color:var(--pine); font-size:0.85rem;"></p>
+      </form>
+    </div>
+    <script>
+      function validateForm(){
+        let ok = true;
+        const email = document.getElementById('veEmail').value;
+        const pass = document.getElementById('vePass').value;
+        const emailErr = document.getElementById('veEmailErr');
+        const passErr = document.getElementById('vePassErr');
+        emailErr.textContent = ""; passErr.textContent = "";
+        if (!email.includes('@')){ emailErr.textContent = "Enter a valid email."; ok = false; }
+        if (pass.length < 8){ passErr.textContent = "Password must be at least 8 characters."; ok = false; }
+        document.getElementById('veSuccess').textContent = ok ? "Form is valid!" : "";
+        return false;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function validateForm(){
+  let ok = true;
+  if (!email.value.includes('@')){ showError(emailErr, "Enter a valid email."); ok = false; }
+  if (password.value.length &lt; 8){ showError(passErr, "Min 8 characters."); ok = false; }
+  return ok;
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

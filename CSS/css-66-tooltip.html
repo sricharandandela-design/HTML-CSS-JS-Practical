@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tooltip Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 66</p>
+    <h1>Tooltip Component</h1>
+    <p class="desc">A pure-CSS tooltip that appears above an element on hover, using the ::after pseudo-element.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .tt{ position:relative; display:inline-block; border-bottom:1px dotted var(--pine); cursor:help; }
+      .tt::after{
+        content: attr(data-tip); position:absolute; bottom:130%; left:50%; transform:translateX(-50%);
+        background:var(--ink); color:#fff; padding:0.35rem 0.6rem; border-radius:6px; font-size:0.8rem;
+        white-space:nowrap; opacity:0; pointer-events:none; transition:opacity 0.15s ease;
+      }
+      .tt:hover::after{ opacity:1; }
+    </style>
+    <p>Hover over <span class="tt" data-tip="Created 3 days ago">this text</span> to see its tooltip.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.tt{ position:relative; }
+.tt::after{
+  content: attr(data-tip);
+  position:absolute; bottom:130%; left:50%; transform:translateX(-50%);
+  opacity:0; transition:opacity 0.15s ease;
+}
+.tt:hover::after{ opacity:1; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

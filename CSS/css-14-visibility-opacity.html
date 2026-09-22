@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visibility and Opacity Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 14</p>
+    <h1>Visibility and Opacity Properties</h1>
+    <p class="desc">display:none removes space entirely; visibility:hidden keeps the space; opacity fades without hiding.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:1rem;">
+      <div style="background:var(--pine); color:#fff; padding:0.6rem;">normal</div>
+      <div style="background:var(--pine); color:#fff; padding:0.6rem; visibility:hidden;">hidden (space kept)</div>
+      <div style="background:var(--pine); color:#fff; padding:0.6rem;">normal</div>
+      <div style="background:var(--pine); color:#fff; padding:0.6rem; opacity:0.35;">opacity: 0.35</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.hidden-but-present{ visibility: hidden; } /* invisible, but still takes up space */
+.gone{ display: none; }                     /* invisible AND removed from layout   */
+.faded{ opacity: 0.35; }                    /* see-through, still interactive      */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

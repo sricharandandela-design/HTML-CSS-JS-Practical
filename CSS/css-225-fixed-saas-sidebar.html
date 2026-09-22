@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed SaaS Sidebar</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 225</p>
+    <h1>Fixed SaaS Sidebar</h1>
+    <p class="desc">A sidebar that stays in place while only the main content area scrolls.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; height:160px; border:1px solid var(--rule); border-radius:8px; overflow:hidden;">
+      <div style="width:110px; background:var(--ink); color:#fff; padding:0.8rem; font-size:0.85rem;">Fixed sidebar</div>
+      <div style="flex:1; overflow-y:auto; padding:0.8rem; background:repeating-linear-gradient(180deg,#fff,#fff 20px,var(--paper) 20px,var(--paper) 40px);">
+        Only this content area scrolls&hellip;<br><br><br><br><br>more content&hellip;</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.layout{ display:flex; }
+.sidebar{ width:110px; }        /* stays fixed */
+.main-content{ overflow-y:auto; flex:1; } /* this part scrolls independently */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

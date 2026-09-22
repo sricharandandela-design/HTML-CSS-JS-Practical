@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Data Drift Monitoring</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 179</p>
+    <h1>ML Data Drift Monitoring</h1>
+    <p class="desc">Two overlapping distributions comparing training data vs live data — a gap signals drift.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <svg viewBox="0 0 260 100" width="100%" style="max-width:300px;">
+      <path d="M10,90 Q60,10 110,90 T210,90" fill="none" stroke="#3F6C5D" stroke-width="2.5"/>
+      <path d="M30,90 Q80,30 130,90 T230,90" fill="none" stroke="#E8A33D" stroke-width="2.5" stroke-dasharray="5,4"/>
+    </svg>
+    <p style="font-size:0.8rem; color:#55605B;">Pine = training distribution &middot; Dashed amber = live data (drifted right)</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;path stroke="#3F6C5D" d="..." /&gt;                         &lt;!-- training distribution --&gt;
+&lt;path stroke="#E8A33D" stroke-dasharray="5,4" d="..." /&gt; &lt;!-- live/production distribution --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

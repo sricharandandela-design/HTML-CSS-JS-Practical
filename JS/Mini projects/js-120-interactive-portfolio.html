@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Interactive Portfolio Website</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 120</p>
+    <h1>Complete Interactive Portfolio Website</h1>
+    <p class="desc">A mini one-page portfolio with a theme toggle and a JS-powered contact form, combining HTML, CSS and JS together.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="pf120" style="border:1px solid var(--rule); border-radius:10px; padding:1.2rem; transition:all 0.2s;">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <strong>Ananya Rao &mdash; Web Developer</strong>
+        <button class="btn" style="font-size:0.8rem; padding:0.3rem 0.7rem;" onclick="document.getElementById('pf120').classList.toggle('pfdark120')">Toggle theme</button>
+      </div>
+      <p style="margin-top:0.6rem;">I build fast, accessible websites with HTML, CSS and JavaScript.</p>
+      <form onsubmit="event.preventDefault(); document.getElementById('pfMsg120').textContent = 'Thanks for reaching out! I will reply soon.';">
+        <input type="email" placeholder="Your email" style="padding:0.5rem; margin-right:0.5rem;">
+        <button class="btn amber" type="submit">Contact me</button>
+      </form>
+      <p id="pfMsg120" style="color:var(--pine); font-size:0.85rem; margin-top:0.4rem;"></p>
+      <style>#pf120.pfdark120{ background:var(--ink); color:#fff; }</style>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>/* Combines a theme toggle (DOM + classList), a contact form (event handling),
+   and dynamic feedback text — a small complete site in one page. */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

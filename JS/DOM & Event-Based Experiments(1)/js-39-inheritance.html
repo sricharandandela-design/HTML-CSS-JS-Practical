@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inheritance in JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 39</p>
+    <h1>Inheritance in JavaScript</h1>
+    <p class="desc">A subclass extends a base class with extends and super(), reusing and overriding behaviour.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runInherit39()">Run</button>
+    <div class="output-box" id="out39"></div>
+    <script>
+      class Animal39{
+        constructor(name){ this.name = name; }
+        speak(){ return `${this.name} makes a sound.`; }
+      }
+      class Dog39 extends Animal39{
+        speak(){ return `${this.name} barks.`; } // overrides the parent method
+      }
+      function runInherit39(){
+        const a = new Animal39("Generic animal");
+        const d = new Dog39("Rex");
+        document.getElementById('out39').textContent = `${a.speak()}\n${d.speak()}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>class Animal{
+  constructor(name){ this.name = name; }
+  speak(){ return `${this.name} makes a sound.`; }
+}
+class Dog extends Animal{
+  speak(){ return `${this.name} barks.`; } // overrides Animal's speak()
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

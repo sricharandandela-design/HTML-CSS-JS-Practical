@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linear and Radial CSS Gradients</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 07</p>
+    <h1>Linear and Radial CSS Gradients</h1>
+    <p class="desc">Two gradient functions: linear-gradient (direction-based) and radial-gradient (centre-out).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .grad{ height:100px; border-radius:8px; margin-bottom:0.6rem; color:#fff;
+             display:flex; align-items:center; justify-content:center; }
+      .g1{ background: linear-gradient(90deg, #1A2332, #3F6C5D); }
+      .g2{ background: linear-gradient(135deg, #E8A33D, #B14B3F); }
+      .g3{ background: radial-gradient(circle, #3F6C5D, #1A2332); }
+    </style>
+    <div class="grad g1">linear-gradient(90deg, ink, pine)</div>
+    <div class="grad g2">linear-gradient(135deg, amber, danger)</div>
+    <div class="grad g3">radial-gradient(circle, pine, ink)</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.linear-h{ background: linear-gradient(90deg, #1A2332, #3F6C5D); }
+.linear-d{ background: linear-gradient(135deg, #E8A33D, #B14B3F); }
+.radial  { background: radial-gradient(circle, #3F6C5D, #1A2332); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

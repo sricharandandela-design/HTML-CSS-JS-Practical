@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Execution Timeline</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 153</p>
+    <h1>AI Agent Execution Timeline</h1>
+    <p class="desc">A horizontal timeline showing the stages of a single agent run and how long each took.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .exec-tl{ display:flex; height:28px; border-radius:6px; overflow:hidden; max-width:360px; font-size:0.75rem; color:#fff; }
+      .exec-tl div{ display:flex; align-items:center; justify-content:center; }
+    </style>
+    <div class="exec-tl">
+      <div style="width:20%; background:var(--pine);">Fetch</div>
+      <div style="width:50%; background:#4C7A6A;">Analyze</div>
+      <div style="width:30%; background:var(--amber); color:var(--ink);">Reply</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.exec-tl{ display:flex; } /* each segment's width = its share of total run time */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

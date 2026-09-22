@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Document Summarizer</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 133</p>
+    <h1>AI Document Summarizer</h1>
+    <p class="desc">An upload area followed by a generated summary panel, once a file is 'processed'.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:340px;">
+      <div style="border:2px dashed var(--rule); border-radius:8px; padding:1.2rem; text-align:center; margin-bottom:0.8rem;">
+        <p style="margin:0; font-size:0.9rem;">Drop a PDF here, or</p>
+        <button class="btn" onclick="summarizeDoc()" style="margin-top:0.5rem;">Choose file to summarize</button>
+      </div>
+      <div class="output-box" id="docSummary">Summary will appear here.</div>
+    </div>
+    <script>
+      function summarizeDoc(){
+        document.getElementById('docSummary').textContent =
+          "Summary: The document outlines a 3-phase rollout plan, budget of $120k, and a target launch in Q1.";
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.upload-area{ border:2px dashed #C9C2AE; text-align:center; }
+uploadBtn.onclick = () =&gt; { summaryEl.textContent = generateSummary(file); };</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

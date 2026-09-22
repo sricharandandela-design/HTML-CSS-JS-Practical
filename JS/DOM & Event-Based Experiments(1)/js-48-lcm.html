@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Least Common Multiple (LCM) of Two Numbers</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 48</p>
+    <h1>Least Common Multiple (LCM) of Two Numbers</h1>
+    <p class="desc">Computed from the GCD, using the identity LCM(a,b) = (a*b) / GCD(a,b).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>A</label><input type="number" id="lcm48a" value="4"></div>
+    <div class="field"><label>B</label><input type="number" id="lcm48b" value="6"></div>
+    <button class="btn" onclick="runLcm48()">Find LCM</button>
+    <div class="output-box" id="out48"></div>
+    <script>
+      function gcd48(a, b){ return b === 0 ? a : gcd48(b, a % b); }
+      function runLcm48(){
+        const a = Number(document.getElementById('lcm48a').value);
+        const b = Number(document.getElementById('lcm48b').value);
+        const lcm = (a * b) / gcd48(a, b);
+        document.getElementById('out48').textContent = `LCM(${a}, ${b}) = ${lcm}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function lcm(a, b){
+  return (a * b) / gcd(a, b);
+}
+console.log(lcm(4, 6)); // 12</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

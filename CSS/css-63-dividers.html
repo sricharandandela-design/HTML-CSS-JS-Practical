@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dividers and Section Separators</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 63</p>
+    <h1>Dividers and Section Separators</h1>
+    <p class="desc">A plain horizontal rule, a labeled divider, and a vertical divider between inline items.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p>Above the plain divider</p>
+    <hr style="border:none; border-top:1px solid var(--rule); margin:1rem 0;">
+    <p>Below the plain divider</p>
+
+    <div style="display:flex; align-items:center; gap:0.8rem; margin:1.2rem 0;">
+      <hr style="flex:1; border:none; border-top:1px solid var(--rule);">
+      <span style="color:#8A9089; font-size:0.85rem;">OR</span>
+      <hr style="flex:1; border:none; border-top:1px solid var(--rule);">
+    </div>
+
+    <span>Settings</span>
+    <span style="display:inline-block; width:1px; height:1em; background:var(--rule); margin:0 0.6rem; vertical-align:middle;"></span>
+    <span>Billing</span>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.divider{ border:none; border-top:1px solid #C9C2AE; }
+
+.labeled-divider{ display:flex; align-items:center; gap:0.8rem; }
+.labeled-divider hr{ flex:1; }
+
+.vertical-divider{ display:inline-block; width:1px; height:1em; background:#C9C2AE; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

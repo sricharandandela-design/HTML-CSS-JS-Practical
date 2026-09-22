@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Largest and Smallest Element in an Array</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 12</p>
+    <h1>Find the Largest and Smallest Element in an Array</h1>
+    <p class="desc">Scans the array once, tracking the running maximum and minimum.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label for="arr">Comma-separated numbers</label>
+      <input type="text" id="arr" value="12, 45, 3, 88, 27, 6"></div>
+    <button class="btn" onclick="runMinMax()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function findMinMax(numbers){
+        let max = numbers[0], min = numbers[0];
+        for (const n of numbers){
+          if (n > max) max = n;
+          if (n < min) min = n;
+        }
+        return { max, min };
+      }
+      function runMinMax(){
+        const numbers = document.getElementById('arr').value.split(",").map(Number);
+        const { max, min } = findMinMax(numbers);
+        document.getElementById('out').textContent = `Largest: ${max}  |  Smallest: ${min}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function findMinMax(numbers){
+  let max = numbers[0], min = numbers[0];
+  for (const n of numbers){
+    if (n &gt; max) max = n;
+    if (n &lt; min) min = n;
+  }
+  return { max, min };
+}
+
+console.log(findMinMax([12, 45, 3, 88, 27, 6])); // { max: 88, min: 3 }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

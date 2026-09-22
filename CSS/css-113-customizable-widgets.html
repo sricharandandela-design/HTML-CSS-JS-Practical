@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Customizable Dashboard Widgets</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 113</p>
+    <h1>Customizable Dashboard Widgets</h1>
+    <p class="desc">A grid of widgets, each with a remove (&times;) button that hides it — the interaction pattern behind draggable dashboards.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .widget-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.8rem; }
+      .widget{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.8rem; position:relative; }
+      .widget .close{ position:absolute; top:6px; right:8px; cursor:pointer; color:#8A9089; border:none; background:none; font-size:1rem; }
+    </style>
+    <div class="widget-grid" id="widgetGrid">
+      <div class="widget"><button class="close" onclick="this.parentElement.remove()">&times;</button>Revenue widget</div>
+      <div class="widget"><button class="close" onclick="this.parentElement.remove()">&times;</button>Users widget</div>
+      <div class="widget"><button class="close" onclick="this.parentElement.remove()">&times;</button>Churn widget</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.widget{ position:relative; }
+.widget .close{ position:absolute; top:6px; right:8px; }
+closeBtn.onclick = () =&gt; widget.remove();</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

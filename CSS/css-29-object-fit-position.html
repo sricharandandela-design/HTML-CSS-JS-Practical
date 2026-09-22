@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Object-fit and Object-position Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 29</p>
+    <h1>Object-fit and Object-position Properties</h1>
+    <p class="desc">The same wide image placed in a square frame three different ways.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .of-box{ width:140px; height:140px; border:1px solid var(--rule); overflow:hidden; display:inline-block; margin-right:0.6rem; }
+      .of-box img{ width:100%; height:100%; }
+    </style>
+    <div class="of-box"><img src="https://placehold.co/400x160/1A2332/EDEFE9?text=source" style="object-fit:fill;"></div>
+    <div class="of-box"><img src="https://placehold.co/400x160/1A2332/EDEFE9?text=source" style="object-fit:cover; object-position:center;"></div>
+    <div class="of-box"><img src="https://placehold.co/400x160/1A2332/EDEFE9?text=source" style="object-fit:contain;"></div>
+    <p>Left to right: <code>fill</code> (stretched, distorted), <code>cover</code>
+       (cropped to fill, no distortion), <code>contain</code> (whole image kept, letterboxed).</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.fill   { object-fit: fill; }    /* stretches to fit, can distort   */
+.cover  { object-fit: cover; object-position: center; } /* crops, fills frame, no distortion */
+.contain{ object-fit: contain; } /* whole image visible, may letterbox */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

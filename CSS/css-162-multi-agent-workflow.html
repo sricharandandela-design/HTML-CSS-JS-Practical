@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-agent Workflow Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 162</p>
+    <h1>Multi-agent Workflow Management</h1>
+    <p class="desc">Several agents handing work off to each other in sequence.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .ma-agent{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.6rem 0.9rem; font-size:0.85rem; display:inline-block; text-align:center; }
+    </style>
+    <div class="ma-agent">Intake Agent</div> &rarr;
+    <div class="ma-agent">Research Agent</div> &rarr;
+    <div class="ma-agent">Reply Agent</div>
+    <p style="font-size:0.8rem; color:#55605B; margin-top:0.6rem;">Each agent hands its output to the next in the chain.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.ma-agent{ display:inline-block; } /* chained agents, output of one feeds the next */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

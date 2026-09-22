@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Expense Tracker</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 113</p>
+    <h1>Simple Expense Tracker</h1>
+    <p class="desc">Add expenses and see the running total update automatically.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:0.5rem; margin-bottom:0.6rem;">
+      <input type="text" id="expName113" placeholder="Item" style="flex:1; padding:0.5rem;">
+      <input type="number" id="expAmt113" placeholder="Amount" style="width:100px; padding:0.5rem;">
+      <button class="btn" onclick="addExpense113()">Add</button>
+    </div>
+    <ul id="expList113" style="list-style:none; padding:0; font-size:0.9rem;"></ul>
+    <p><strong>Total: $<span id="expTotal113">0</span></strong></p>
+    <script>
+      let total113 = 0;
+      function addExpense113(){
+        const name = document.getElementById('expName113').value;
+        const amt = Number(document.getElementById('expAmt113').value);
+        if (!name || !amt) return;
+        total113 += amt;
+        const li = document.createElement('li');
+        li.textContent = `${name}: $${amt.toFixed(2)}`;
+        document.getElementById('expList113').appendChild(li);
+        document.getElementById('expTotal113').textContent = total113.toFixed(2);
+        document.getElementById('expName113').value = ''; document.getElementById('expAmt113').value = '';
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>total += amount;
+totalEl.textContent = total.toFixed(2);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

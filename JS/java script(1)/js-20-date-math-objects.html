@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate Date and Math Objects</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 20</p>
+    <h1>Demonstrate Date and Math Objects</h1>
+    <p class="desc">Reads the current date/time from the built-in Date object, and runs a few Math helper methods.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runDateMath()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function runDateMath(){
+        const now = new Date();
+        const lines = [
+          `Date.toDateString(): ${now.toDateString()}`,
+          `getFullYear(): ${now.getFullYear()}`,
+          `getHours()/getMinutes(): ${now.getHours()}:${String(now.getMinutes()).padStart(2,'0')}`,
+          `Math.max(4, 19, 7): ${Math.max(4, 19, 7)}`,
+          `Math.sqrt(144): ${Math.sqrt(144)}`,
+          `Math.round(4.6): ${Math.round(4.6)}`,
+          `Math.random() sample: ${Math.random().toFixed(4)}`,
+        ];
+        document.getElementById('out').textContent = lines.join("\n");
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const now = new Date();
+now.toDateString();     // e.g. "Wed Sep 16 2026"
+now.getFullYear();      // e.g. 2026
+now.getHours();         // current hour, 0-23
+
+Math.max(4, 19, 7);     // 19
+Math.sqrt(144);         // 12
+Math.round(4.6);        // 5
+Math.random();          // a fresh decimal between 0 and 1 each call</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

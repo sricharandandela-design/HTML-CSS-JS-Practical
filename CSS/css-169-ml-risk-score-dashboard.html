@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Risk Score Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 169</p>
+    <h1>ML Risk Score Dashboard</h1>
+    <p class="desc">A list of accounts ranked by predicted risk, colour-coded by severity.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .risk-badge{ padding:0.15rem 0.5rem; border-radius:999px; font-size:0.75rem; font-weight:600; }
+      .risk-high{ background:#F6DEDA; color:#8A3327; } .risk-med{ background:#FBEBD1; color:#8A5A12; } .risk-low{ background:#DCEEE3; color:#2C5142; }
+    </style>
+    <table style="width:100%; font-size:0.85rem; border-collapse:collapse; max-width:300px;">
+      <tr><td>Account #221</td><td><span class="risk-badge risk-high">High risk</span></td></tr>
+      <tr><td>Account #222</td><td><span class="risk-badge risk-med">Medium risk</span></td></tr>
+      <tr><td>Account #223</td><td><span class="risk-badge risk-low">Low risk</span></td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.risk-high{ background:#F6DEDA; color:#8A3327; }
+.risk-med { background:#FBEBD1; color:#8A5A12; }
+.risk-low { background:#DCEEE3; color:#2C5142; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

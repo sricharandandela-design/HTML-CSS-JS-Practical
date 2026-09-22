@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmation Dialog Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 69</p>
+    <h1>Confirmation Dialog Component</h1>
+    <p class="desc">A destructive-action confirmation, styled to make the risk clear before the user commits.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      dialog.confirm{ border:none; border-radius:10px; padding:1.4rem; max-width:300px; }
+      dialog.confirm::backdrop{ background:rgba(26,35,50,0.55); }
+    </style>
+    <button class="btn" style="background:var(--danger);" onclick="document.getElementById('confirmEl').showModal()">Delete project</button>
+    <dialog class="confirm" id="confirmEl">
+      <h3 style="margin-top:0; color:var(--danger);">Delete this project?</h3>
+      <p style="font-size:0.9rem; color:#55605B;">This cannot be undone. All files and history will be permanently removed.</p>
+      <div style="display:flex; gap:0.6rem; justify-content:flex-end; margin-top:1rem;">
+        <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('confirmEl').close()">Cancel</button>
+        <button class="btn" style="background:var(--danger);" onclick="document.getElementById('confirmEl').close()">Yes, delete</button>
+      </div>
+    </dialog>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;dialog id="confirmEl"&gt;
+  &lt;h3 style="color:#B14B3F;"&gt;Delete this project?&lt;/h3&gt;
+  &lt;p&gt;This cannot be undone.&lt;/p&gt;
+  &lt;button onclick="confirmEl.close()"&gt;Cancel&lt;/button&gt;
+  &lt;button style="background:#B14B3F;" onclick="confirmEl.close()"&gt;Yes, delete&lt;/button&gt;
+&lt;/dialog&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

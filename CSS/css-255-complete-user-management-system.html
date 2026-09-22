@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS User Management System</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 255</p>
+    <h1>SaaS User Management System</h1>
+    <p class="desc">A full page: search bar, filter, and a user table with status and role columns together.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:400px;">
+      <div style="display:flex; gap:0.6rem; margin-bottom:0.6rem;">
+        <input type="text" placeholder="Search users..." style="flex:1; padding:0.4rem; border:1px solid var(--rule); border-radius:6px;">
+        <select style="font-size:0.85rem;"><option>All roles</option></select>
+      </div>
+      <table style="width:100%; font-size:0.85rem; border-collapse:collapse;">
+        <tr style="color:#55605B;"><td>User</td><td>Role</td><td>Status</td></tr>
+        <tr><td>Ananya Rao</td><td>Admin</td><td style="color:var(--pine);">Active</td></tr>
+        <tr><td>Karan Shah</td><td>Member</td><td style="color:var(--danger);">Suspended</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.user-mgmt-page{ /* search + filter + table, composed as one page */ }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alert and Notification Components</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 64</p>
+    <h1>Alert and Notification Components</h1>
+    <p class="desc">Four alert banners in the standard info/success/warning/error variants.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .alert{ padding:0.8rem 1rem; border-radius:8px; border-left:4px solid; margin-bottom:0.6rem; font-size:0.9rem; }
+      .alert.info{ background:#E6F0FB; border-color:#2F6FA8; color:#204A70; }
+      .alert.success{ background:#DCEEE3; border-color:#2C7A4B; color:#2C5142; }
+      .alert.warning{ background:#FBEBD1; border-color:#B9791B; color:#8A5A12; }
+      .alert.error{ background:#F6DEDA; border-color:#B14B3F; color:#8A3327; }
+    </style>
+    <div class="alert info">Your trial ends in 5 days.</div>
+    <div class="alert success">Payment received successfully.</div>
+    <div class="alert warning">Your storage is 85% full.</div>
+    <div class="alert error">Failed to sync — check your connection.</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.alert{ padding:0.8rem 1rem; border-left:4px solid; border-radius:8px; }
+.alert.info   { background:#E6F0FB; border-color:#2F6FA8; }
+.alert.success{ background:#DCEEE3; border-color:#2C7A4B; }
+.alert.warning{ background:#FBEBD1; border-color:#B9791B; }
+.alert.error  { background:#F6DEDA; border-color:#B14B3F; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

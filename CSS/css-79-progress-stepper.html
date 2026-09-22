@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progress Stepper Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 79</p>
+    <h1>Progress Stepper Component</h1>
+    <p class="desc">A multi-step process indicator, showing completed, current, and upcoming steps.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .stepper{ display:flex; align-items:center; }
+      .step{ display:flex; align-items:center; gap:0.5rem; }
+      .step-circle{ width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center;
+                    font-size:0.8rem; font-weight:700; border:2px solid var(--rule); color:#8A9089; }
+      .step.done .step-circle{ background:var(--pine); border-color:var(--pine); color:#fff; }
+      .step.current .step-circle{ border-color:var(--amber); color:var(--ink); }
+      .step-line{ flex:1; height:2px; background:var(--rule); margin:0 0.6rem; min-width:30px; }
+      .step-line.done{ background:var(--pine); }
+    </style>
+    <div class="stepper">
+      <div class="step done"><div class="step-circle">&#10003;</div><span>Account</span></div>
+      <div class="step-line done"></div>
+      <div class="step current"><div class="step-circle">2</div><span>Payment</span></div>
+      <div class="step-line"></div>
+      <div class="step"><div class="step-circle">3</div><span>Confirm</span></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.step.done .step-circle{ background:#3F6C5D; color:#fff; }
+.step.current .step-circle{ border-color:#E8A33D; }
+.step-line.done{ background:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Internal and External CSS Styling</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 11</p>
+    <h1>Internal and External CSS Styling</h1>
+    <p class="desc">The same paragraph styled three ways: inline, internal (a &lt;style&gt; block) and external (this project's own stylesheet.css).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p style="color:#B14B3F; font-style:italic;">This paragraph is styled with an
+       <strong>inline</strong> style attribute directly on the tag.</p>
+
+    <p class="internal-demo">This paragraph is styled by an <strong>internal</strong>
+       &lt;style&gt; block declared in this page's own &lt;head&gt;.</p>
+
+    <p>This paragraph uses only the project's <strong>external</strong> stylesheet,
+       <code>assets/css/style.css</code>, linked once and shared by every page.</p>
+
+    <style>
+      .internal-demo{
+        color: var(--pine);
+        background: #fff;
+        border-left: 4px solid var(--amber);
+        padding: 0.6rem 1rem;
+      }
+    </style>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;!-- 1. Inline: style="" on the element itself --&gt;
+&lt;p style="color:#B14B3F; font-style:italic;"&gt;Inline styling&lt;/p&gt;
+
+&lt;!-- 2. Internal: a &lt;style&gt; block in the page's own &lt;head&gt; --&gt;
+&lt;style&gt;
+  .internal-demo{ color: teal; border-left: 4px solid orange; padding: 0.6rem 1rem; }
+&lt;/style&gt;
+&lt;p class="internal-demo"&gt;Internal styling&lt;/p&gt;
+
+&lt;!-- 3. External: rules kept in a separate .css file and linked --&gt;
+&lt;link rel="stylesheet" href="assets/css/style.css"&gt;
+&lt;p&gt;External styling&lt;/p&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

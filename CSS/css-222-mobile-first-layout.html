@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile-first SaaS Layout</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 222</p>
+    <h1>Mobile-first SaaS Layout</h1>
+    <p class="desc">Base styles target mobile; a min-width media query only adds the wider desktop layout on top.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .mf-layout{ display:flex; flex-direction:column; gap:0.6rem; }
+      @media (min-width:700px){ .mf-layout{ flex-direction:row; } }
+      .mf-layout div{ background:var(--paper-raised); border:1px solid var(--rule); padding:0.8rem; flex:1; }
+    </style>
+    <div class="mf-layout"><div>Sidebar</div><div>Main content</div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.mf-layout{ flex-direction:column; }              /* mobile default   */
+@media (min-width:700px){ .mf-layout{ flex-direction:row; } } /* desktop enhancement */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

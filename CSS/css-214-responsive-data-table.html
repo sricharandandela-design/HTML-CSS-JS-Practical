@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Data Table</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 214</p>
+    <h1>Responsive Data Table</h1>
+    <p class="desc">A wide table that scrolls horizontally inside its own container instead of breaking the page layout.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="overflow-x:auto; border:1px solid var(--rule); border-radius:8px;">
+      <table style="width:600px; border-collapse:collapse; font-size:0.85rem;">
+        <tr style="color:#55605B;"><td style="padding:0.5rem;">Name</td><td style="padding:0.5rem;">Email</td><td style="padding:0.5rem;">Plan</td><td style="padding:0.5rem;">Joined</td><td style="padding:0.5rem;">Status</td></tr>
+        <tr><td style="padding:0.5rem;">Ananya Rao</td><td style="padding:0.5rem;">ananya@example.com</td><td style="padding:0.5rem;">Pro</td><td style="padding:0.5rem;">2024</td><td style="padding:0.5rem;">Active</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.table-wrap{ overflow-x:auto; } /* the table scrolls, the page body never does */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

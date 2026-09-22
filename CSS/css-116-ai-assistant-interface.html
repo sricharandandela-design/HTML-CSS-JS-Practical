@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Assistant Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 116</p>
+    <h1>AI Assistant Interface</h1>
+    <p class="desc">A compact floating assistant panel: greeting, one input box, and a send button.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .ai-panel{ background:var(--ink); color:#fff; border-radius:12px; padding:1rem; max-width:300px; }
+      .ai-panel .row{ display:flex; gap:0.5rem; margin-top:0.8rem; }
+      .ai-panel input{ flex:1; border:none; border-radius:6px; padding:0.5rem; }
+    </style>
+    <div class="ai-panel">
+      <strong>Hi, I'm Nova <span style="background:var(--amber); color:var(--ink); font-size:0.65rem; font-weight:700;
+      padding:0.1rem 0.4rem; border-radius:4px; vertical-align:middle;">AI</span></strong>
+      <p style="color:#C9C2AE; font-size:0.85rem; margin:0.4rem 0 0;">Ask me anything about your workspace.</p>
+      <div class="row"><input type="text" placeholder="Type a message..."><button class="btn amber">&#10148;</button></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.ai-panel{ background:#1A2332; color:#fff; border-radius:12px; }
+.ai-panel .row{ display:flex; gap:0.5rem; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

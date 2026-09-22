@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 48</p>
+    <h1>Product Card Component</h1>
+    <p class="desc">An e-commerce style card: image, name, price and an add-to-cart button.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1.2rem; max-width:320px;
+           box-shadow:0 2px 8px rgba(26,35,50,0.05); }
+    </style>
+    <div class="cd">
+      <img src="https://placehold.co/280x160/EDEFE9/1A2332?text=Product" style="width:100%; border-radius:6px; margin-bottom:0.6rem;">
+      <h3 style="margin-bottom:0.1rem; font-size:1.05rem;">Wireless Keyboard</h3>
+      <p style="color:var(--pine); font-weight:700; margin-bottom:0.6rem;">$49.00</p>
+      <button class="btn" style="width:100%;">Add to cart</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.product-card img{ width:100%; border-radius:6px; }
+.product-card .price{ color:#3F6C5D; font-weight:700; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

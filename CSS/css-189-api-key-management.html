@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Key Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 189</p>
+    <h1>API Key Management</h1>
+    <p class="desc">A list of API keys, partially masked, with create and revoke actions.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .key-row{ display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0; border-bottom:1px solid var(--rule); max-width:360px; font-size:0.85rem; }
+      .key-val{ font-family:var(--font-mono); }
+    </style>
+    <div class="key-row"><span class="key-val">sk_live_&bull;&bull;&bull;&bull;9f2a</span><button class="btn" style="padding:0.2rem 0.5rem; font-size:0.75rem; background:var(--danger);">Revoke</button></div>
+    <button class="btn amber" style="margin-top:0.6rem; font-size:0.85rem;">+ Create new key</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.key-val{ font-family: monospace; } /* keys shown masked except the last few characters */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

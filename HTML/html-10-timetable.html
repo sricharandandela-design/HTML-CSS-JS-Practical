@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Timetable</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 10</p>
+    <h1>College Timetable</h1>
+    <p class="desc">A weekly timetable laid out as an HTML table, one row per period.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table class="demo-table">
+      <caption>B.Sc Computer Science &mdash; Semester 3 Timetable</caption>
+      <thead>
+        <tr>
+          <th>Period</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>9:00&ndash;9:50</td><td>Data Structures</td><td>Web Technology</td><td>Data Structures</td><td>DBMS</td><td>Web Technology</td></tr>
+        <tr><td>9:50&ndash;10:40</td><td>DBMS</td><td>Mathematics</td><td>Web Technology Lab</td><td>Web Technology Lab</td><td>Mathematics</td></tr>
+        <tr><td>11:00&ndash;11:50</td><td>Mathematics</td><td>Data Structures</td><td colspan="1">Web Technology Lab</td><td>Web Technology Lab</td><td>DBMS</td></tr>
+        <tr><td>11:50&ndash;12:40</td><td colspan="5" style="text-align:center;">Library / Project Hour</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;table border="1"&gt;
+  &lt;caption&gt;Semester 3 Timetable&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Period&lt;/th&gt;&lt;th&gt;Monday&lt;/th&gt;&lt;th&gt;Tuesday&lt;/th&gt;&lt;th&gt;Wednesday&lt;/th&gt;&lt;th&gt;Thursday&lt;/th&gt;&lt;th&gt;Friday&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;9:00-9:50&lt;/td&gt;&lt;td&gt;Data Structures&lt;/td&gt;&lt;td&gt;Web Technology&lt;/td&gt;
+    &lt;td&gt;Data Structures&lt;/td&gt;&lt;td&gt;DBMS&lt;/td&gt;&lt;td&gt;Web Technology&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;11:50-12:40&lt;/td&gt;&lt;td colspan="5"&gt;Library / Project Hour&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

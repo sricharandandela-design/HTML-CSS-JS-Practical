@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validate an Email Address Using a Regular Expression</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 65</p>
+    <h1>Validate an Email Address Using a Regular Expression</h1>
+    <p class="desc">Tests an email string against a standard pattern for a valid address shape.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Email</label><input type="text" id="ev65" value="student@example.com"></div>
+    <button class="btn" onclick="runEmailRegex65()">Validate</button>
+    <div class="output-box" id="out65"></div>
+    <script>
+      function runEmailRegex65(){
+        const email = document.getElementById('ev65').value;
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        document.getElementById('out65').textContent = `"${email}" is ${pattern.test(email) ? "a valid email format" : "not a valid email format"}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+console.log(pattern.test("student@example.com")); // true</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

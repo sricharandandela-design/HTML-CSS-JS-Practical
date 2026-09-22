@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate Form Events: submit, change, focus, and blur</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 83</p>
+    <h1>Demonstrate Form Events: submit, change, focus, and blur</h1>
+    <p class="desc">Four different form events, each logging when it fires.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <form onsubmit="event.preventDefault(); logEvent83('submit');">
+      <select onchange="logEvent83('change')"><option>A</option><option>B</option></select>
+      <input type="text" onfocus="logEvent83('focus')" onblur="logEvent83('blur')" placeholder="Click then click away">
+      <button type="submit" class="btn">Submit</button>
+    </form>
+    <div class="output-box" id="formEvOut83">Interact with the form above.</div>
+    <script>
+      function logEvent83(name){ document.getElementById('formEvOut83').textContent = `Event fired: ${name}`; }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>select.onchange = () =&gt; log('change');
+input.onfocus = () =&gt; log('focus');
+input.onblur = () =&gt; log('blur');
+form.onsubmit = (e) =&gt; { e.preventDefault(); log('submit'); };</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

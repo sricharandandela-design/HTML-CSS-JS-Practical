@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Application (Mini Project)</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 110</p>
+    <h1>Quiz Application (Mini Project)</h1>
+    <p class="desc">Builds on program 32 with three questions and a running score shown at the end.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="quizArea110"></div>
+    <div class="output-box" id="quizResult110"></div>
+    <script>
+      const questions110 = [
+        { q: "2 + 2 = ?", options: ["3","4","5"], answer: "4" },
+        { q: "Capital of France?", options: ["Berlin","Paris","Rome"], answer: "Paris" },
+        { q: "JS stands for?", options: ["JavaScript","JavaSyntax","JustScript"], answer: "JavaScript" }
+      ];
+      let score110 = 0, current110 = 0;
+      function renderQuestion110(){
+        const area = document.getElementById('quizArea110');
+        if (current110 >= questions110.length){
+          document.getElementById('quizResult110').textContent = `Quiz finished! Score: ${score110}/${questions110.length}`;
+          area.innerHTML = ''; return;
+        }
+        const q = questions110[current110];
+        area.innerHTML = `<p><strong>${q.q}</strong></p>` +
+          q.options.map(opt => `<button class="btn" style="margin:0.2rem;" onclick="answerQuiz110('${opt}')">${opt}</button>`).join('');
+      }
+      function answerQuiz110(opt){
+        if (opt === questions110[current110].answer) score110++;
+        current110++;
+        renderQuestion110();
+      }
+      renderQuestion110();
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function answerQuiz(choice){
+  if (choice === questions[current].answer) score++;
+  current++;
+  renderQuestion(); // shows next question, or the final score
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

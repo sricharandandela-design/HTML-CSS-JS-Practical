@@ -1,0 +1,37 @@
+<h2>Student Marks</h2><input id="name" placeholder="Name"><input id="marks" placeholder="Marks"><button onclick="save()">Save</button><p id="out"></p><script>
+let db=JSON.parse(localStorage.getItem("marksDB")||"[]");function save(){db.push({name:name.value,marks:marks.value});localStorage.setItem("marksDB",JSON.stringify(db));show()}function show(){out.innerHTML=db.map(s=>s.name+" - "+s.marks).join("<br>")}show();
+</script>
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>

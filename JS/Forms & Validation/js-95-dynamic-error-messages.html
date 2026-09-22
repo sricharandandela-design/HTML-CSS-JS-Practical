@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Validation Error Messages Dynamically Without Reloading the Page</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 95</p>
+    <h1>Display Validation Error Messages Dynamically Without Reloading the Page</h1>
+    <p class="desc">Errors appear and disappear inline as you type, with no page reload at any point.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Email</label><input type="text" id="dyn95email" oninput="liveValidate95()"></div>
+    <p class="error-text" id="dyn95err"></p>
+    <script>
+      function liveValidate95(){
+        const email = document.getElementById('dyn95email').value;
+        const err = document.getElementById('dyn95err');
+        err.textContent = (email && !email.includes('@')) ? 'Email must contain an @ symbol.' : '';
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>emailInput.oninput = () =&gt; {
+  errorEl.textContent = (email &amp;&amp; !email.includes('@')) ? 'Email must contain @.' : '';
+};
+/* No form submission or page reload involved — validation happens live, per keystroke. */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

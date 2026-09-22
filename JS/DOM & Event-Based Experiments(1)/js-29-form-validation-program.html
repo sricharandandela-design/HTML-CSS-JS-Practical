@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation Program</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 29</p>
+    <h1>Form Validation Program</h1>
+    <p class="desc">A generic form that blocks submission and shows an error until every field is filled in.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <form onsubmit="return validateForm29();">
+      <div class="field"><label>Name</label><input type="text" id="fv29name"></div>
+      <div class="field"><label>Email</label><input type="text" id="fv29email"></div>
+      <p class="error-text" id="fv29err"></p>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <script>
+      function validateForm29(){
+        const name = document.getElementById('fv29name').value.trim();
+        const email = document.getElementById('fv29email').value.trim();
+        if (!name || !email){
+          document.getElementById('fv29err').textContent = 'All fields are required.';
+          return false;
+        }
+        document.getElementById('fv29err').textContent = '';
+        alert('Form submitted successfully!');
+        return false;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function validateForm(){
+  if (!name.value.trim() || !email.value.trim()){
+    showError('All fields are required.');
+    return false;
+  }
+  return true;
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

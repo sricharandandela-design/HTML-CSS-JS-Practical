@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Transitions for Colors, Sizes, Shadows, and Positions</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 31</p>
+    <h1>CSS Transitions for Colors, Sizes, Shadows, and Positions</h1>
+    <p class="desc">Hover over each box to see its property change smoothly instead of snapping instantly.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .tr{ display:inline-flex; align-items:center; justify-content:center; width:110px; height:70px; margin:0.4rem;
+           background:var(--pine); color:#fff; transition: all 0.35s ease; }
+      .tr-color:hover{ background: var(--amber); color: var(--ink); }
+      .tr-size:hover{ transform: scale(1.15); }
+      .tr-shadow:hover{ box-shadow: 0 10px 20px rgba(0,0,0,0.35); }
+      .tr-pos{ position:relative; }
+      .tr-pos:hover{ left:20px; }
+    </style>
+    <div class="tr tr-color">hover: colour</div>
+    <div class="tr tr-size">hover: size</div>
+    <div class="tr tr-shadow">hover: shadow</div>
+    <div class="tr tr-pos">hover: position</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.box{ transition: all 0.35s ease; } /* animate ANY property that changes */
+
+.box:hover{ background: #E8A33D; }        /* colour transition */
+.box:hover{ transform: scale(1.15); }      /* size transition   */
+.box:hover{ box-shadow: 0 10px 20px rgba(0,0,0,.35); } /* shadow transition */
+.box:hover{ left: 20px; }                 /* position transition (needs position:relative) */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tables with Rows, Columns, Borders and Merged Cells</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 03</p>
+    <h1>Tables with Rows, Columns, Borders and Merged Cells</h1>
+    <p class="desc">A results table that merges cells with rowspan and colspan.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table class="demo-table">
+      <caption>Semester Result Sheet</caption>
+      <thead>
+        <tr>
+          <th rowspan="2">Student</th>
+          <th colspan="2">Semester 1</th>
+          <th rowspan="2">Overall</th>
+        </tr>
+        <tr>
+          <th>Theory</th>
+          <th>Lab</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Arjun Kumar</td>
+          <td>78</td>
+          <td>92</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td>Divya Rao</td>
+          <td>85</td>
+          <td>88</td>
+          <td>Pass</td>
+        </tr>
+        <tr>
+          <td colspan="3">Class average</td>
+          <td>85.75</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;table border="1"&gt;
+  &lt;caption&gt;Semester Result Sheet&lt;/caption&gt;
+  &lt;tr&gt;
+    &lt;th rowspan="2"&gt;Student&lt;/th&gt;
+    &lt;th colspan="2"&gt;Semester 1&lt;/th&gt;
+    &lt;th rowspan="2"&gt;Overall&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Theory&lt;/th&gt;
+    &lt;th&gt;Lab&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Arjun Kumar&lt;/td&gt;
+    &lt;td&gt;78&lt;/td&gt;
+    &lt;td&gt;92&lt;/td&gt;
+    &lt;td&gt;Pass&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td colspan="3"&gt;Class average&lt;/td&gt;
+    &lt;td&gt;85.75&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

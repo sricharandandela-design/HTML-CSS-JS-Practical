@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Forecast Chart</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 166</p>
+    <h1>ML Forecast Chart</h1>
+    <p class="desc">A forecast band: the shaded area shows the range the model expects the true value to fall within.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <svg viewBox="0 0 300 110" width="100%" style="max-width:340px;">
+      <polygon fill="rgba(232,163,61,0.25)" points="150,70 180,55 210,45 240,35 240,65 210,75 180,85 150,95" />
+      <polyline fill="none" stroke="#3F6C5D" stroke-width="2.5" points="30,90 90,75 150,70" />
+      <polyline fill="none" stroke="#E8A33D" stroke-width="2" stroke-dasharray="5,4" points="150,70 180,55 210,45 240,35" />
+    </svg>
+    <p style="font-size:0.8rem; color:#55605B;">Shaded band = the model's forecast confidence interval.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;polygon fill="rgba(232,163,61,0.25)" points="..." /&gt; &lt;!-- confidence band --&gt;
+&lt;polyline stroke="#E8A33D" stroke-dasharray="5,4" points="..." /&gt; &lt;!-- forecast line --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

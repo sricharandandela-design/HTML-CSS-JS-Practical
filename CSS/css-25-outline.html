@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Outline and Outline-offset Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 25</p>
+    <h1>CSS Outline and Outline-offset Properties</h1>
+    <p class="desc">Outline draws outside the border box without affecting layout — click the button to see its focus outline.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <div style="padding:0.6rem; border:1px solid var(--rule); outline:3px solid var(--amber);">outline: 3px solid</div>
+      <div style="padding:0.6rem; border:1px solid var(--rule); outline:3px solid var(--pine); outline-offset:6px;">outline-offset: 6px</div>
+      <button class="btn">Tab to me or click (focus outline)</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.box{ outline: 3px solid #E8A33D; }                 /* doesn't affect layout, unlike border */
+.offset-box{ outline: 3px solid #3F6C5D; outline-offset: 6px; } /* gap between border and outline */
+button:focus-visible{ outline: 3px solid #E8A33D; outline-offset: 2px; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

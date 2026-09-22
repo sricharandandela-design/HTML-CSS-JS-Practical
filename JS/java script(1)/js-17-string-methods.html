@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate Strings and String Methods</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 17</p>
+    <h1>Demonstrate Strings and String Methods</h1>
+    <p class="desc">Common string methods applied to whatever text you type in.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label for="s">Text</label><input type="text" id="s" value="  Hello JavaScript World  "></div>
+    <button class="btn" onclick="runStrings()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function runStrings(){
+        const s = document.getElementById('s').value;
+        const lines = [
+          `length: ${s.length}`,
+          `trim(): "${s.trim()}"`,
+          `toUpperCase(): "${s.toUpperCase()}"`,
+          `toLowerCase(): "${s.toLowerCase()}"`,
+          `includes("Script"): ${s.includes("Script")}`,
+          `replace("World","Students"): "${s.replace("World", "Students")}"`,
+          `split(" "): [${s.trim().split(" ").join(", ")}]`,
+        ];
+        document.getElementById('out').textContent = lines.join("\n");
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const s = "  Hello JavaScript World  ";
+
+s.length;                          // 27
+s.trim();                          // "Hello JavaScript World"
+s.toUpperCase();                   // "  HELLO JAVASCRIPT WORLD  "
+s.includes("Script");              // true
+s.replace("World", "Students");    // "  Hello JavaScript Students  "
+s.trim().split(" ");               // ["Hello", "JavaScript", "World"]</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

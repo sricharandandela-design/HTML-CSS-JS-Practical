@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive CSS Grid Layout</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 212</p>
+    <h1>Responsive CSS Grid Layout</h1>
+    <p class="desc">A grid that automatically fits as many columns as space allows, with no media query needed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .grid-layout{ display:grid; grid-template-columns:repeat(auto-fit, minmax(120px, 1fr)); gap:0.8rem; }
+      .grid-layout div{ background:var(--paper-raised); border:1px solid var(--rule); padding:1rem; text-align:center; }
+    </style>
+    <div class="grid-layout"><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.grid-layout{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap:0.8rem;
+} /* columns added/removed automatically as width changes */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

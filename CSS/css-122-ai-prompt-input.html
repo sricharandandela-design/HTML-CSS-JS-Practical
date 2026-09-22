@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompt Input Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 122</p>
+    <h1>AI Prompt Input Interface</h1>
+    <p class="desc">A multi-line prompt box with a character count and a send button that activates once text is entered.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:340px;">
+      <textarea id="promptBox" rows="3" placeholder="Describe what you want to generate..."
+                style="width:100%; padding:0.6rem; border:1px solid var(--rule); border-radius:8px;"
+                oninput="document.getElementById('promptCount').textContent = this.value.length + ' characters'"></textarea>
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.4rem;">
+        <span id="promptCount" style="font-size:0.75rem; color:#8A9089;">0 characters</span>
+        <button class="btn amber">Generate</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>textarea.oninput = () =&gt; {
+  countEl.textContent = textarea.value.length + " characters";
+};</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

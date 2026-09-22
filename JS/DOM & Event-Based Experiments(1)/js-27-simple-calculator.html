@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 27</p>
+    <h1>Simple Calculator</h1>
+    <p class="desc">A working calculator UI: click digits and operators, see the running expression and result.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .calc27{ max-width:220px; }
+      .calc27 input{ width:100%; padding:0.5rem; font-size:1.2rem; text-align:right; margin-bottom:0.4rem; font-family:var(--font-mono); }
+      .calc27 .row{ display:grid; grid-template-columns:repeat(4,1fr); gap:4px; }
+      .calc27 button{ padding:0.6rem; font-size:1rem; border:1px solid var(--rule); background:#fff; cursor:pointer; }
+    </style>
+    <div class="calc27">
+      <input type="text" id="calcDisplay27" readonly>
+      <div class="row">
+        <button onclick="calcInput27('7')">7</button><button onclick="calcInput27('8')">8</button><button onclick="calcInput27('9')">9</button><button onclick="calcInput27('/')">/</button>
+        <button onclick="calcInput27('4')">4</button><button onclick="calcInput27('5')">5</button><button onclick="calcInput27('6')">6</button><button onclick="calcInput27('*')">&times;</button>
+        <button onclick="calcInput27('1')">1</button><button onclick="calcInput27('2')">2</button><button onclick="calcInput27('3')">3</button><button onclick="calcInput27('-')">-</button>
+        <button onclick="calcClear27()">C</button><button onclick="calcInput27('0')">0</button><button onclick="calcEquals27()">=</button><button onclick="calcInput27('+')">+</button>
+      </div>
+    </div>
+    <script>
+      function calcInput27(v){ document.getElementById('calcDisplay27').value += v; }
+      function calcClear27(){ document.getElementById('calcDisplay27').value = ''; }
+      function calcEquals27(){
+        try{ document.getElementById('calcDisplay27').value = eval(document.getElementById('calcDisplay27').value); }
+        catch(e){ document.getElementById('calcDisplay27').value = 'Error'; }
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function calcInput(v){ display.value += v; }
+function calcEquals(){
+  try{ display.value = eval(display.value); }
+  catch(e){ display.value = 'Error'; }
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

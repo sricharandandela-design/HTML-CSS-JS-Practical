@@ -1,0 +1,37 @@
+<h2>Student Record</h2><input id="name" placeholder="Name"><input id="mark" placeholder="Marks"><button onclick="save()">Save</button><p id="out"></p><script>
+function save(){localStorage.setItem("student",JSON.stringify({name:name.value,marks:mark.value}));show()}function show(){let s=JSON.parse(localStorage.getItem("student")||"{}");out.textContent=s.name?s.name+" - "+s.marks:"No record";}show();
+</script>
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>

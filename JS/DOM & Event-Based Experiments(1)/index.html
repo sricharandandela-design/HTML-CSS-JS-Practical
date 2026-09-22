@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dom &amp; Event Based Experiments(1) - JavaScript Programs</title>
+
+    
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.program {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.program-name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.open-btn {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+.open-btn:hover {
+    background: #1d4ed8;
+}
+
+.home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.folder-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.folder-box h3 {
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.file-type {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: #e5e7eb;
+    font-size: 12px;
+    color: #444;
+}
+
+@media (max-width: 650px) {
+
+    .program {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .open-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Dom &amp; Event Based Experiments(1)</h1>
+
+    <p>
+        JavaScript Practical Programs
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <div class="card">
+
+        <h2>
+            45 Programs
+        </h2>
+
+        <p>
+            Select a program or topic below.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Program List
+        </h2>
+
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                1. Index
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="index.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                2. Js 21 Change Text
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-21-change-text.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                3. Js 22 Change Background Color
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-22-change-background-color.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                4. Js 23 Button Click Event
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-23-button-click-event.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                5. Js 24 Show Hide Element
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-24-show-hide-element.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                6. Js 25 Change Image
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-25-change-image.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                7. Js 26 Digital Clock
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-26-digital-clock.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                8. Js 27 Simple Calculator
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-27-simple-calculator.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                9. Js 28 Number Guessing Game
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-28-number-guessing-game.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                10. Js 29 Form Validation Program
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-29-form-validation-program.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                11. Js 30 Validate Name Email Phone Password
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-30-validate-name-email-phone-password.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                12. Js 31 Todo List
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-31-todo-list.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                13. Js 32 Quiz Application
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-32-quiz-application.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                14. Js 33 Counter App
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-33-counter-app.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                15. Js 34 Stopwatch
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-34-stopwatch.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                16. Js 35 Countdown Timer
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-35-countdown-timer.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                17. Js 36 Es6 Let Const Destructuring
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-36-es6-let-const-destructuring.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                18. Js 37 Spread Rest Operators
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-37-spread-rest-operators.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                19. Js 38 Classes Objects
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-38-classes-objects.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                20. Js 39 Inheritance
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-39-inheritance.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                21. Js 40 Callbacks Promises Async Await
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-40-callbacks-promises-async-await.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                22. Js 41 Fetch Api
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-41-fetch-api.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                23. Js 42 Display Api Data
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-42-display-api-data.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                24. Js 43 Localstorage Basics
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-43-localstorage-basics.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                25. Js 44 Responsive Login Validation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-44-responsive-login-validation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                26. Js 45 Complete Interactive Webpage
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-45-complete-interactive-webpage.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                27. Js 46 Swap Two Numbers
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-46-swap-two-numbers.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                28. Js 47 Gcd
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-47-gcd.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                29. Js 48 Lcm
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-48-lcm.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                30. Js 49 Armstrong Number
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-49-armstrong-number.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                31. Js 50 Perfect Number
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-50-perfect-number.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                32. Js 51 Multiplication Table
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-51-multiplication-table.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                33. Js 52 Power Of Number
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-52-power-of-number.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                34. Js 53 Count Digits
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-53-count-digits.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                35. Js 54 Second Largest Array
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-54-second-largest-array.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                36. Js 55 Remove Duplicates
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-55-remove-duplicates.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                37. Js 56 Merge Arrays
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-56-merge-arrays.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                38. Js 57 Array Element Frequency
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-57-array-element-frequency.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                39. Js 58 Common Elements Arrays
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-58-common-elements-arrays.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                40. Js 59 Reverse String
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-59-reverse-string.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                41. Js 60 String Palindrome
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-60-string-palindrome.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                42. Js 61 Vowels Consonants Count
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-61-vowels-consonants-count.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                43. Js 62 Count Words
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-62-count-words.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                44. Js 63 Character Frequency
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-63-character-frequency.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                45. Js 64 Regex Demo
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-64-regex-demo.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                46. Js 65 Validate Email Regex
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="js-65-validate-email-regex.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+
+    </div>
+
+
+    <div class="home">
+
+        <a href="../index.html">
+            ← Back to Parent
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

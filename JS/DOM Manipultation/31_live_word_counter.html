@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+<textarea id="text" rows="6" cols="50" placeholder="Type here..."></textarea>
+<p>Words: <span id="count">0</span></p>
+<script>
+document.getElementById("text").addEventListener("input", function() {
+    const value = this.value.trim();
+    const words = value ? value.split(/\s+/).length : 0;
+    document.getElementById("count").textContent = words;
+});
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body>
+</html>

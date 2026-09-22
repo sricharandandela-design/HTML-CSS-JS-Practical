@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pie and Donut Chart Analytics Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 108</p>
+    <h1>Pie and Donut Chart Analytics Component</h1>
+    <p class="desc">The same three-way split rendered as a solid pie and as a donut, both pure CSS with conic-gradient.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pie{ width:110px; height:110px; border-radius:50%;
+            background:conic-gradient(var(--pine) 0% 50%, var(--amber) 50% 78%, var(--danger) 78% 100%); }
+      .donut3{ width:110px; height:110px; border-radius:50%;
+               background:conic-gradient(var(--pine) 0% 50%, var(--amber) 50% 78%, var(--danger) 78% 100%);
+               display:flex; align-items:center; justify-content:center; }
+      .donut3 .hole{ width:55px; height:55px; background:#fff; border-radius:50%; }
+    </style>
+    <div style="display:flex; gap:2rem;">
+      <div class="pie"></div>
+      <div class="donut3"><div class="hole"></div></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.pie{ border-radius:50%; background: conic-gradient(#3F6C5D 0% 50%, #E8A33D 50% 78%, #B14B3F 78% 100%); }
+.donut{ /* same background, plus a centred white circle to punch the hole */ }
+.donut .hole{ background:#fff; border-radius:50%; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

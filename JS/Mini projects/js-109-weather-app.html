@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Application Using an API</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 109</p>
+    <h1>Weather Application Using an API</h1>
+    <p class="desc">Fetches live weather for a typed-in city using the free Open-Meteo API (no key required).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <input type="text" id="cityInput109" placeholder="e.g. Chennai" style="padding:0.5rem;">
+    <button class="btn" onclick="getWeather109()">Get weather</button>
+    <div class="output-box" id="weatherOut109">Enter a city and click the button.</div>
+    <script>
+      async function getWeather109(){
+        const city = document.getElementById('cityInput109').value || 'Chennai';
+        const out = document.getElementById('weatherOut109');
+        out.textContent = 'Loading...';
+        try{
+          const geoRes = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(city)}&count=1`);
+          const geoData = await geoRes.json();
+          if (!geoData.results){ out.textContent = 'City not found.'; return; }
+          const { latitude, longitude, name } = geoData.results[0];
+          const wRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
+          const wData = await wRes.json();
+          out.textContent = `${name}: ${wData.current_weather.temperature}\u00b0C, wind ${wData.current_weather.windspeed} km/h`;
+        } catch(e){ out.textContent = 'Could not fetch weather right now.'; }
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const geo = await fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}`);
+const { latitude, longitude } = (await geo.json()).results[0];
+const weather = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&amp;longitude=${longitude}&amp;current_weather=true`);
+console.log((await weather.json()).current_weather);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

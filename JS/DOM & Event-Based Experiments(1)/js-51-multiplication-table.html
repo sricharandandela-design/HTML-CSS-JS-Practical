@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiplication Table of a Given Number</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 51</p>
+    <h1>Multiplication Table of a Given Number</h1>
+    <p class="desc">Generates the 1 to 10 times table for any chosen number.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Number</label><input type="number" id="mt51" value="7"></div>
+    <button class="btn" onclick="runTable51()">Generate</button>
+    <div class="output-box" id="out51" style="white-space:pre-line;"></div>
+    <script>
+      function runTable51(){
+        const n = Number(document.getElementById('mt51').value);
+        let lines = [];
+        for (let i = 1; i <= 10; i++) lines.push(`${n} x ${i} = ${n * i}`);
+        document.getElementById('out51').textContent = lines.join("\n");
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>for (let i = 1; i &lt;= 10; i++){
+  console.log(`${n} x ${i} = ${n * i}`);
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

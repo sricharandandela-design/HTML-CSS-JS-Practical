@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Text Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 21</p>
+    <h1>Change Text Using JavaScript</h1>
+    <p class="desc">Clicking a button replaces a paragraph's text content.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p id="txt21">Original text.</p>
+    <button class="btn" onclick="document.getElementById('txt21').textContent = 'Text changed by JavaScript!'">Change text</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>document.getElementById('txt21').textContent = 'Text changed by JavaScript!';</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

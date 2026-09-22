@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change the Background Color of a Webpage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 22</p>
+    <h1>Change the Background Color of a Webpage</h1>
+    <p class="desc">Each button click sets document.body's background to a different colour.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:0.5rem;">
+      <button class="btn" onclick="document.body.style.background='#EDEFE9'">Default</button>
+      <button class="btn" style="background:#3F6C5D;" onclick="document.body.style.background='#DCEEE3'">Green</button>
+      <button class="btn" style="background:#E8A33D;" onclick="document.body.style.background='#FBEBD1'">Amber</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>document.body.style.background = '#DCEEE3';</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

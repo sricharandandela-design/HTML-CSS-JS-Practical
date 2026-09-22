@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Sidebar Navigation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 37</p>
+    <h1>SaaS Sidebar Navigation</h1>
+    <p class="desc">A vertical sidebar with a highlighted active item, common in dashboard layouts.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .sidebar-demo{ width:220px; background:var(--ink); color:#C9C2AE; padding:1rem; border-radius:8px; }
+      .sidebar-demo .item{ display:block; padding:0.6rem 0.8rem; border-radius:6px; margin-bottom:0.3rem; color:#C9C2AE; }
+      .sidebar-demo .item:hover{ background:rgba(255,255,255,0.08); color:#fff; }
+      .sidebar-demo .item.active{ background:var(--pine); color:#fff; font-weight:600; }
+    </style>
+    <nav class="sidebar-demo">
+      <a class="item active" href="#">Dashboard</a>
+      <a class="item" href="#">Projects</a>
+      <a class="item" href="#">Team</a>
+      <a class="item" href="#">Billing</a>
+      <a class="item" href="#">Settings</a>
+    </nav>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.sidebar{ width:220px; background:#1A2332; padding:1rem; }
+.sidebar .item{ display:block; padding:0.6rem 0.8rem; border-radius:6px; color:#C9C2AE; }
+.sidebar .item.active{ background:#3F6C5D; color:#fff; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

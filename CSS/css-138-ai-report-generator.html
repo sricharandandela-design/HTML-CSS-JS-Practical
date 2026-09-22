@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Report Generator</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 138</p>
+    <h1>AI Report Generator</h1>
+    <p class="desc">Pick a period and format, then generate a written report preview.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:320px;">
+      <div class="field"><label>Period</label><select><option>Last 30 days</option><option>Last quarter</option></select></div>
+      <div class="field"><label>Format</label><select><option>Written summary</option><option>Slide deck</option></select></div>
+      <button class="btn amber" onclick="document.getElementById('rgOut').textContent='Report ready: Revenue grew 12% with strongest performance in the West region.'">Generate report</button>
+      <div class="output-box" id="rgOut" style="margin-top:0.6rem;"></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>generateBtn.onclick = () =&gt; { reportEl.textContent = buildReport(period.value, format.value); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

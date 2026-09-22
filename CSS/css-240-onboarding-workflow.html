@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Onboarding Workflow</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 240</p>
+    <h1>SaaS Onboarding Workflow</h1>
+    <p class="desc">A welcome checklist that tracks which setup steps a new user has completed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:300px; background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1rem;">
+      <strong>Get started (2/4 complete)</strong>
+      <div style="background:var(--paper); border-radius:999px; height:6px; margin:0.5rem 0 0.8rem;"><div style="width:50%; background:var(--pine); height:100%; border-radius:999px;"></div></div>
+      <label style="display:block; font-size:0.85rem; margin-bottom:0.3rem;"><input type="checkbox" checked disabled> Create your account</label>
+      <label style="display:block; font-size:0.85rem; margin-bottom:0.3rem;"><input type="checkbox" checked disabled> Invite a teammate</label>
+      <label style="display:block; font-size:0.85rem; margin-bottom:0.3rem;"><input type="checkbox"> Connect an integration</label>
+      <label style="display:block; font-size:0.85rem;"><input type="checkbox"> Create your first project</label>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.onboarding-progress div{ width: calc(completed/total * 100%); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

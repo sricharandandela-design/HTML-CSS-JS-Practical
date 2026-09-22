@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonial Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 56</p>
+    <h1>Testimonial Card Component</h1>
+    <p class="desc">A quote, an avatar, and the person's name/title beneath it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1.2rem; max-width:320px;
+           box-shadow:0 2px 8px rgba(26,35,50,0.05); }
+    </style>
+    <div class="cd">
+      <p style="font-style:italic; color:var(--ink); margin-bottom:0.8rem;">
+        &ldquo;This tool cut our onboarding time in half. Our whole team was up
+        and running within a day.&rdquo;</p>
+      <div style="display:flex; align-items:center; gap:0.6rem;">
+        <img src="https://placehold.co/40x40/E8A33D/1A2332?text=DR" style="border-radius:50%;">
+        <div>
+          <strong style="font-size:0.9rem;">Divya Rao</strong><br>
+          <span style="font-size:0.8rem; color:#55605B;">Head of Ops, Northwind</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.testimonial-card blockquote{ font-style:italic; }
+.testimonial-card .author{ display:flex; align-items:center; gap:0.6rem; }
+.testimonial-card .author img{ border-radius:50%; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

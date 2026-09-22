@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Classification Result</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 173</p>
+    <h1>ML Classification Result</h1>
+    <p class="desc">A predicted label with a bar showing the score for each candidate class.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:280px;">
+      <p style="font-size:0.85rem; margin-bottom:0.5rem;">Predicted class: <strong style="color:var(--pine);">Cat</strong></p>
+      <div style="font-size:0.8rem; margin-bottom:2px;">Cat</div><div style="background:var(--paper); border-radius:4px; height:8px; margin-bottom:6px;"><div style="width:88%; background:var(--pine); height:100%;"></div></div>
+      <div style="font-size:0.8rem; margin-bottom:2px;">Dog</div><div style="background:var(--paper); border-radius:4px; height:8px; margin-bottom:6px;"><div style="width:9%; background:var(--amber); height:100%;"></div></div>
+      <div style="font-size:0.8rem; margin-bottom:2px;">Fox</div><div style="background:var(--paper); border-radius:4px; height:8px;"><div style="width:3%; background:#8A9089; height:100%;"></div></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.class-bar div{ width: calc(class_score * 100%); } /* highest bar = predicted class */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes Application Using localStorage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 116</p>
+    <h1>Notes Application Using localStorage</h1>
+    <p class="desc">Save multiple short notes, each persisted in localStorage as a JSON array.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <textarea id="noteInput116" rows="2" placeholder="Write a note..." style="width:100%; padding:0.5rem;"></textarea>
+    <button class="btn" onclick="addNote116()">Save note</button>
+    <ul id="noteList116" style="list-style:none; padding:0; margin-top:0.6rem;"></ul>
+    <script>
+      function getNotes116(){ return JSON.parse(localStorage.getItem('notes116') || '[]'); }
+      function renderNotes116(){
+        const list = document.getElementById('noteList116');
+        list.innerHTML = '';
+        getNotes116().forEach((note, i) => {
+          const li = document.createElement('li');
+          li.style.cssText = 'border-bottom:1px solid var(--rule); padding:0.4rem 0;';
+          li.innerHTML = `${note} <button onclick="deleteNote116(${i})" style="float:right; border:none; background:none;">&times;</button>`;
+          list.appendChild(li);
+        });
+      }
+      function addNote116(){
+        const input = document.getElementById('noteInput116');
+        if (!input.value.trim()) return;
+        const notes = getNotes116(); notes.push(input.value);
+        localStorage.setItem('notes116', JSON.stringify(notes));
+        input.value = ''; renderNotes116();
+      }
+      function deleteNote116(i){
+        const notes = getNotes116(); notes.splice(i, 1);
+        localStorage.setItem('notes116', JSON.stringify(notes)); renderNotes116();
+      }
+      renderNotes116();
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const notes = JSON.parse(localStorage.getItem('notes') || '[]');
+notes.push(newNote);
+localStorage.setItem('notes', JSON.stringify(notes));</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><body>
+<h2>Student Registration</h2>
+<form id="f">
+<input id="name" placeholder="Name"><br><input id="email" placeholder="Email"><br>
+<input id="age" type="number" placeholder="Age"><br><input id="phone" placeholder="10-digit Phone"><br>
+<input id="password" type="password" placeholder="Password"><br>
+<button>Register</button>
+</form><p id="msg"></p>
+<script>
+f.onsubmit=e=>{e.preventDefault();let n=name.value.trim(),em=email.value.trim(),a=+age.value,p=phone.value.trim(),pw=password.value;
+let errors=[];if(!/^[A-Za-z ]+$/.test(n))errors.push("Name");if(!/^\S+@\S+\.\S+$/.test(em))errors.push("Email");if(a<1||a>120)errors.push("Age");if(!/^\d{10}$/.test(p))errors.push("Phone");if(pw.length<8)errors.push("Password");
+msg.textContent=errors.length?"Invalid: "+errors.join(", "):"Registration successful!";};
+</script>
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body></html>

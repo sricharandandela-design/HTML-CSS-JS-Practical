@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 28</p>
+    <h1>Number Guessing Game</h1>
+    <p class="desc">The computer picks a random number 1-50; guess it with feedback of higher/lower.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Guess a number (1-50)</label><input type="number" id="guessInput28" min="1" max="50"></div>
+    <button class="btn" onclick="checkGuess28()">Guess</button>
+    <div class="output-box" id="guessOut28">Make a guess!</div>
+    <script>
+      let secret28 = Math.floor(Math.random() * 50) + 1;
+      let tries28 = 0;
+      function checkGuess28(){
+        const g = Number(document.getElementById('guessInput28').value);
+        tries28++;
+        const out = document.getElementById('guessOut28');
+        if (g === secret28) out.textContent = `Correct! The number was ${secret28}. Tries: ${tries28}`;
+        else if (g < secret28) out.textContent = 'Too low, try again.';
+        else out.textContent = 'Too high, try again.';
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const secret = Math.floor(Math.random() * 50) + 1;
+if (guess === secret) win();
+else if (guess &lt; secret) hint("Too low");
+else hint("Too high");</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

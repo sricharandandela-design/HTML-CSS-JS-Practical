@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classes and Objects</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 38</p>
+    <h1>Classes and Objects</h1>
+    <p class="desc">An ES6 class with a constructor and a method, then an instance created from it.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runClass38()">Run</button>
+    <div class="output-box" id="out38"></div>
+    <script>
+      class Book38{
+        constructor(title, author){ this.title = title; this.author = author; }
+        describe(){ return `"${this.title}" by ${this.author}`; }
+      }
+      function runClass38(){
+        const b = new Book38("Atomic Habits", "James Clear");
+        document.getElementById('out38').textContent = b.describe();
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>class Book{
+  constructor(title, author){ this.title = title; this.author = author; }
+  describe(){ return `"${this.title}" by ${this.author}`; }
+}
+
+const b = new Book("Atomic Habits", "James Clear");
+console.log(b.describe());</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

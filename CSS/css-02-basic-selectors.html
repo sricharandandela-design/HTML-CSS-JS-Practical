@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universal, Element, Class, ID, Attribute, and Grouping Selectors</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 02</p>
+    <h1>Universal, Element, Class, ID, Attribute, and Grouping Selectors</h1>
+    <p class="desc">Six ways to target elements, from broadest to most specific.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .sel2 *{ box-sizing: border-box; }
+      .sel2 p{ font-family: var(--font-mono); font-size: 0.95rem; }
+      .sel2 .tag{ color: var(--amber); font-weight:600; }
+      .sel2 #one{ border:2px solid var(--pine); padding:0.5rem; }
+      .sel2 input[type="email"]{ border-color: var(--amber); }
+      .sel2 h4, .sel2 h5{ color: var(--pine); margin-bottom:0.2rem; }
+    </style>
+    <div class="sel2">
+      <h4>Selector demo</h4>
+      <p>Element selector <code>p</code> gives every paragraph a mono font.</p>
+      <p class="tag">Class selector <code>.tag</code> colours just this line.</p>
+      <div id="one">ID selector <code>#one</code> targets this exact box only.</div>
+      <input type="email" placeholder="attribute selector styles this input">
+      <h5>Grouped heading (h4, h5 share one rule)</h5>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>*{ box-sizing: border-box; }             /* universal selector   */
+p{ font-family: monospace; }              /* element selector     */
+.tag{ color: #E8A33D; }                   /* class selector       */
+#one{ border: 2px solid #3F6C5D; }        /* ID selector          */
+input[type="email"]{ border-color:#E8A33D; } /* attribute selector */
+h4, h5{ color: #3F6C5D; }                 /* grouping selector    */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

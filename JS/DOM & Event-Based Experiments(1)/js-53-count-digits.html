@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Count the Number of Digits in a Number</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 53</p>
+    <h1>Count the Number of Digits in a Number</h1>
+    <p class="desc">Counts digits by repeated division, and shows the string-length shortcut too.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Number</label><input type="number" id="cd53" value="48213"></div>
+    <button class="btn" onclick="runCountDigits53()">Count</button>
+    <div class="output-box" id="out53"></div>
+    <script>
+      function countDigitsLoop53(n){
+        let count = 0, num = Math.abs(n);
+        if (num === 0) return 1;
+        while (num > 0){ count++; num = Math.floor(num / 10); }
+        return count;
+      }
+      function runCountDigits53(){
+        const n = Number(document.getElementById('cd53').value);
+        document.getElementById('out53').textContent =
+          `Loop method: ${countDigitsLoop53(n)} digits  |  String method: ${String(Math.abs(n)).length} digits`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function countDigits(n){
+  let count = 0, num = Math.abs(n);
+  while (num &gt; 0){ count++; num = Math.floor(num / 10); }
+  return count;
+}
+String(Math.abs(n)).length; // shortcut using string length</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KPI and Metric Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 52</p>
+    <h1>KPI and Metric Card Component</h1>
+    <p class="desc">Three KPI tiles in a row, each with its own metric and a mini progress indicator.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <div class="cd" style="max-width:170px; text-align:center;">
+        <p style="font-size:0.8rem; color:#55605B;">Active Users</p>
+        <div style="font-size:1.5rem; font-weight:700;">2,481</div>
+      </div>
+      <div class="cd" style="max-width:170px; text-align:center;">
+        <p style="font-size:0.8rem; color:#55605B;">Churn Rate</p>
+        <div style="font-size:1.5rem; font-weight:700; color:var(--danger);">3.2%</div>
+      </div>
+      <div class="cd" style="max-width:170px; text-align:center;">
+        <p style="font-size:0.8rem; color:#55605B;">Goal Progress</p>
+        <div style="background:var(--paper); border-radius:999px; height:8px; margin-top:0.4rem;">
+          <div style="width:68%; background:var(--pine); height:100%; border-radius:999px;"></div>
+        </div>
+      </div>
+    </div>    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1.2rem; max-width:320px;
+           box-shadow:0 2px 8px rgba(26,35,50,0.05); }
+    </style>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.kpi-tile{ text-align:center; }
+.kpi-tile .value{ font-size:1.5rem; font-weight:700; }
+.kpi-tile .value.negative{ color:#B14B3F; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

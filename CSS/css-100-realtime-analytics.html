@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Real-time Analytics</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 100</p>
+    <h1>Real-time Analytics</h1>
+    <p class="desc">A live counter that increments automatically with JavaScript's setInterval, simulating a live visitor count.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="cd" style="text-align:center; max-width:260px;">
+      <p style="font-size:0.85rem; color:#55605B;">Visitors online right now</p>
+      <div id="liveCount" style="font-size:2.2rem; font-weight:700; color:var(--pine);">128</div>
+      <span style="font-size:0.75rem; color:var(--amber);">&#9679; live</span>
+    </div>
+    <script>
+      let count = 128;
+      setInterval(() => {
+        count += Math.floor(Math.random()*5) - 2;
+        if (count < 1) count = 1;
+        document.getElementById('liveCount').textContent = count;
+      }, 1500);
+    </script>    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1rem; }
+    </style>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>let count = 128;
+setInterval(() =&gt; {
+  count += Math.floor(Math.random() * 5) - 2; // random walk +/-2
+  liveCountEl.textContent = count;
+}, 1500);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

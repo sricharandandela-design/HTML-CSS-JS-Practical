@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate Arrays and Array Methods</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 18</p>
+    <h1>Demonstrate Arrays and Array Methods</h1>
+    <p class="desc">map, filter, reduce and find applied to a small list of numbers.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label for="arr">Comma-separated numbers</label>
+      <input type="text" id="arr" value="1, 2, 3, 4, 5, 6, 7, 8"></div>
+    <button class="btn" onclick="runArrayMethods()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function runArrayMethods(){
+        const nums = document.getElementById('arr').value.split(",").map(Number);
+        const doubled = nums.map(n => n * 2);
+        const evens = nums.filter(n => n % 2 === 0);
+        const total = nums.reduce((a, b) => a + b, 0);
+        const firstOver5 = nums.find(n => n > 5);
+        document.getElementById('out').textContent =
+          `map (x2): ${doubled.join(", ")}\nfilter (even): ${evens.join(", ")}\nreduce (sum): ${total}\nfind (>5): ${firstOver5}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+
+nums.map(n =&gt; n * 2);            // [2,4,6,8,10,12,14,16]
+nums.filter(n =&gt; n % 2 === 0);   // [2,4,6,8]
+nums.reduce((a, b) =&gt; a + b, 0); // 36
+nums.find(n =&gt; n &gt; 5);           // 6</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

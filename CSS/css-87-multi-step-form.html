@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multi-step Form</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 87</p>
+    <h1>Multi-step Form</h1>
+    <p class="desc">A form split across steps, with Next/Back navigation and only one step visible at a time.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .form-card{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1.4rem; max-width:320px; }
+      .form-card h3{ margin-top:0; }
+      .form-card .field{ max-width:100%; }
+    </style>
+    <div class="form-card">
+      <h3>Create project (<span id="msStepLabel">1</span>/3)</h3>
+      <div class="ms-step" id="msStep1"><div class="field"><label>Project name</label><input type="text"></div></div>
+      <div class="ms-step" id="msStep2" style="display:none;"><div class="field"><label>Team size</label><input type="number"></div></div>
+      <div class="ms-step" id="msStep3" style="display:none;"><div class="field"><label>Template</label>
+        <select><option>Blank</option><option>Kanban</option></select></div></div>
+      <div style="display:flex; justify-content:space-between; margin-top:0.6rem;">
+        <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="msMove(-1)">Back</button>
+        <button class="btn" onclick="msMove(1)">Next</button>
+      </div>
+    </div>
+    <script>
+      let msCurrent = 1;
+      function msMove(dir){
+        const next = msCurrent + dir;
+        if (next < 1 || next > 3) return;
+        document.getElementById('msStep' + msCurrent).style.display = 'none';
+        msCurrent = next;
+        document.getElementById('msStep' + msCurrent).style.display = 'block';
+        document.getElementById('msStepLabel').textContent = msCurrent;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function msMove(direction){
+  currentStep.style.display = 'none';
+  currentStepIndex += direction;
+  newCurrentStep.style.display = 'block';
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

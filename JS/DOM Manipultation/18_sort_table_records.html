@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table border="1" id="table">
+<thead><tr><th onclick="sortTable()">Name ▲</th><th>Marks</th></tr></thead>
+<tbody>
+<tr><td>Charan</td><td>85</td></tr>
+<tr><td>Anu</td><td>95</td></tr>
+<tr><td>Rahul</td><td>75</td></tr>
+</tbody>
+</table>
+<script>
+function sortTable() {
+    const tbody = document.querySelector("#table tbody");
+    const rows = [...tbody.rows];
+    rows.sort((a,b) => a.cells[0].textContent.localeCompare(b.cells[0].textContent));
+    rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body>
+</html>

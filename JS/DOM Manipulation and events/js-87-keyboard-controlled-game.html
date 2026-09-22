@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyboard-controlled Webpage/Game</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 87</p>
+    <h1>Keyboard-controlled Webpage/Game</h1>
+    <p class="desc">Use the arrow keys to move a square around inside its box.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="gameArea87" tabindex="0" style="position:relative; width:100%; max-width:300px; height:150px; border:1px solid var(--rule); outline:none;">
+      <div id="player87" style="position:absolute; top:10px; left:10px; width:24px; height:24px; background:var(--pine); border-radius:4px;"></div>
+    </div>
+    <p style="font-size:0.8rem; color:#55605B;">Click the box, then use arrow keys.</p>
+    <script>
+      const player87 = document.getElementById('player87');
+      let x87 = 10, y87 = 10;
+      document.getElementById('gameArea87').addEventListener('keydown', e => {
+        if (e.key === 'ArrowUp') y87 -= 10;
+        if (e.key === 'ArrowDown') y87 += 10;
+        if (e.key === 'ArrowLeft') x87 -= 10;
+        if (e.key === 'ArrowRight') x87 += 10;
+        player87.style.left = x87 + 'px';
+        player87.style.top = y87 + 'px';
+      });
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>gameArea.addEventListener('keydown', e =&gt; {
+  if (e.key === 'ArrowUp') y -= 10;
+  if (e.key === 'ArrowDown') y += 10;
+  player.style.top = y + 'px';
+});</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

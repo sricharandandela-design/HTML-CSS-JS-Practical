@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS-only Modal and Popup Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 231</p>
+    <h1>CSS-only Modal and Popup Interface</h1>
+    <p class="desc">A modal that opens and closes using only the :target selector — no JavaScript at all.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .css-modal{ display:none; position:fixed; inset:0; background:rgba(26,35,50,0.55); align-items:center; justify-content:center; }
+      .css-modal:target{ display:flex; }
+      .css-modal-box{ background:#fff; border-radius:10px; padding:1.2rem; max-width:280px; position:relative; }
+      .css-modal-box .close{ position:absolute; top:8px; right:10px; color:var(--ink); }
+    </style>
+    <a class="btn" href="#cssModalDemo">Open CSS-only modal</a>
+    <div class="css-modal" id="cssModalDemo">
+      <div class="css-modal-box">
+        <a href="#" class="close">&times;</a>
+        <p>This modal opens and closes purely with the <code>:target</code> CSS selector.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.css-modal{ display:none; }
+.css-modal:target{ display:flex; }  /* shown only when the URL hash matches its id */
+&lt;a href="#modal"&gt;Open&lt;/a&gt; ... &lt;div id="modal" class="css-modal"&gt;...&lt;/div&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

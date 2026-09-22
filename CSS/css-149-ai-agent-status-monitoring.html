@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Status Monitoring</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 149</p>
+    <h1>AI Agent Status Monitoring</h1>
+    <p class="desc">A live-feeling status panel with a pulsing dot for an actively running agent.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pulse-dot{ width:10px; height:10px; border-radius:50%; background:var(--pine); display:inline-block;
+                  animation: pulse149 1.4s ease-in-out infinite; }
+      @keyframes pulse149{ 0%,100%{ box-shadow:0 0 0 0 rgba(63,108,93,0.5);} 50%{ box-shadow:0 0 0 6px rgba(63,108,93,0);} }
+    </style>
+    <p><span class="pulse-dot"></span> Support Triage Agent is actively processing (14 tickets in queue)</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.pulse-dot{ animation: pulse 1.4s ease-in-out infinite; }
+@keyframes pulse{
+  0%,100%{ box-shadow:0 0 0 0 rgba(63,108,93,0.5); }
+  50%    { box-shadow:0 0 0 6px rgba(63,108,93,0); }
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

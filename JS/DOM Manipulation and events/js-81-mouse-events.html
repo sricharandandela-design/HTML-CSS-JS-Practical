@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate Mouse Events</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 81</p>
+    <h1>Demonstrate Mouse Events</h1>
+    <p class="desc">A box reports mouseenter, mouseleave, and mousemove coordinates.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="mouseBox81" style="height:100px; border:1px solid var(--rule); border-radius:6px; display:flex; align-items:center; justify-content:center;">
+      Move your mouse over this box
+    </div>
+    <p id="mouseOut81" style="font-size:0.85rem; color:#55605B;"></p>
+    <script>
+      const box81 = document.getElementById('mouseBox81');
+      box81.addEventListener('mouseenter', () => document.getElementById('mouseOut81').textContent = 'Mouse entered!');
+      box81.addEventListener('mouseleave', () => document.getElementById('mouseOut81').textContent = 'Mouse left.');
+      box81.addEventListener('mousemove', e => document.getElementById('mouseOut81').textContent = `Position: ${e.offsetX}, ${e.offsetY}`);
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>box.addEventListener('mouseenter', () =&gt; console.log('entered'));
+box.addEventListener('mouseleave', () =&gt; console.log('left'));
+box.addEventListener('mousemove', e =&gt; console.log(e.offsetX, e.offsetY));</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

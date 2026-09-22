@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toast Notification Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 65</p>
+    <h1>Toast Notification Component</h1>
+    <p class="desc">A temporary message that slides in, then can be dismissed — click the button to trigger one.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .toast-wrap{ position:relative; height:100px; }
+      .toast{ position:absolute; bottom:10px; right:10px; background:var(--ink); color:#fff; padding:0.7rem 1rem;
+              border-radius:8px; transform:translateY(20px); opacity:0; transition:all 0.3s ease; display:flex;
+              align-items:center; gap:0.6rem; }
+      .toast.show{ transform:translateY(0); opacity:1; }
+    </style>
+    <div class="toast-wrap">
+      <button class="btn" onclick="showToast()">Save changes</button>
+      <div class="toast" id="toastEl">&#10003; Changes saved</div>
+    </div>
+    <script>
+      function showToast(){
+        const t = document.getElementById('toastEl');
+        t.classList.add('show');
+        setTimeout(() => t.classList.remove('show'), 2500);
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.toast{ position:fixed; bottom:20px; right:20px; transform:translateY(20px); opacity:0;
+        transition: all 0.3s ease; }
+.toast.show{ transform:translateY(0); opacity:1; }
+
+setTimeout(() =&gt; toast.classList.remove('show'), 2500); // auto-dismiss</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

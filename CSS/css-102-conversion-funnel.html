@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversion Funnel Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 102</p>
+    <h1>Conversion Funnel Dashboard</h1>
+    <p class="desc">A four-stage funnel visualization with the drop-off percentage between each stage.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cf-step{ background:var(--pine); color:#fff; text-align:center; padding:0.6rem; margin:0 auto 2px; border-radius:4px; font-size:0.85rem; }
+      .cf-drop{ text-align:center; font-size:0.75rem; color:var(--danger); margin-bottom:2px; }
+    </style>
+    <div class="cf-step" style="width:100%;">Visited site: 10,000</div>
+    <div class="cf-drop">&#9660; 60% drop-off</div>
+    <div class="cf-step" style="width:70%; background:#4C7A6A;">Viewed pricing: 4,000</div>
+    <div class="cf-drop">&#9660; 45% drop-off</div>
+    <div class="cf-step" style="width:45%; background:#5D8879;">Started signup: 2,200</div>
+    <div class="cf-drop">&#9660; 20% drop-off</div>
+    <div class="cf-step" style="width:25%; background:var(--amber); color:var(--ink);">Completed: 1,760</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.cf-step{ margin:0 auto 2px; text-align:center; }
+/* width shrinks at each stage to visualise drop-off */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

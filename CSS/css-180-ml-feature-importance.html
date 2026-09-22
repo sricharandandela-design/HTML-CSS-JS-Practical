@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Feature Importance Visualization</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 180</p>
+    <h1>ML Feature Importance Visualization</h1>
+    <p class="desc">Horizontal bars ranking which input features matter most to the model's predictions.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .fi-row{ display:flex; align-items:center; gap:0.6rem; margin-bottom:0.4rem; font-size:0.85rem; }
+      .fi-row .fi-label{ width:110px; }
+      .fi-bar{ flex:1; background:var(--paper); border-radius:4px; height:10px; }
+      .fi-bar div{ height:100%; background:var(--pine); border-radius:4px; }
+    </style>
+    <div class="fi-row"><span class="fi-label">Tenure (days)</span><div class="fi-bar"><div style="width:90%;"></div></div></div>
+    <div class="fi-row"><span class="fi-label">Support tickets</span><div class="fi-bar"><div style="width:64%;"></div></div></div>
+    <div class="fi-row"><span class="fi-label">Plan type</span><div class="fi-bar"><div style="width:38%;"></div></div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.fi-bar div{ width: calc(importance * 100%); } /* longer bar = more influential feature */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

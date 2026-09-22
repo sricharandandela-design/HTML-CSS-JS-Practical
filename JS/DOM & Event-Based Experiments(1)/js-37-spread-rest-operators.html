@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spread and Rest Operators</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 37</p>
+    <h1>Spread and Rest Operators</h1>
+    <p class="desc">The same ... syntax used two ways: spreading values out, and gathering values in.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runSpreadRest37()">Run</button>
+    <div class="output-box" id="out37"></div>
+    <script>
+      function sumAll37(...nums){ return nums.reduce((a,b) => a+b, 0); } // rest: gathers args into an array
+      function runSpreadRest37(){
+        const arr1 = [1,2,3];
+        const arr2 = [...arr1, 4, 5]; // spread: expands an array into individual elements
+        const obj1 = { x:1, y:2 };
+        const obj2 = { ...obj1, z:3 };
+        document.getElementById('out37').textContent =
+          `Spread array: [${arr2}]\nSpread object: ${JSON.stringify(obj2)}\nRest sum(1,2,3,4): ${sumAll37(1,2,3,4)}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const arr2 = [...arr1, 4, 5];      // spread: unpacks arr1's elements
+const obj2 = { ...obj1, z: 3 };    // spread: copies obj1's properties
+
+function sumAll(...nums){          // rest: gathers all arguments into an array
+  return nums.reduce((a,b) =&gt; a+b, 0);
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate getElementById() and getElementsByClassName()</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 70</p>
+    <h1>Demonstrate getElementById() and getElementsByClassName()</h1>
+    <p class="desc">getElementById returns one element; getElementsByClassName returns a live collection of all matches.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p id="single70">Selected by ID</p>
+    <p class="multi70">Selected by class (1)</p>
+    <p class="multi70">Selected by class (2)</p>
+    <button class="btn" onclick="
+      document.getElementById('single70').style.fontWeight='700';
+      const els = document.getElementsByClassName('multi70');
+      for (let i=0; i<els.length; i++) els[i].style.color='var(--pine)';
+    ">Run</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const one = document.getElementById('single');           // single element
+const many = document.getElementsByClassName('multi');   // HTMLCollection (live)
+for (let i = 0; i &lt; many.length; i++){ many[i].style.color = 'green'; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

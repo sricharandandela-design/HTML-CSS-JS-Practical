@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Webpage Using Media Queries</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 13</p>
+    <h1>Responsive Webpage Using Media Queries</h1>
+    <p class="desc">Resize the browser window (or view on a phone) to see these three boxes reflow from a row into a stack.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .mq-row{ display:flex; gap:1rem; }
+      .mq-box{ flex:1; background:var(--pine); color:#fff; padding:1rem; text-align:center; }
+      @media (max-width: 640px){
+        .mq-row{ flex-direction: column; }
+        .mq-box{ background: var(--amber); color: var(--ink); }
+      }
+    </style>
+    <div class="mq-row">
+      <div class="mq-box">Box 1</div>
+      <div class="mq-box">Box 2</div>
+      <div class="mq-box">Box 3</div>
+    </div>
+    <p>Above 640px wide the boxes sit in a green row; at 640px or narrower the
+       media query switches them to an amber column.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.mq-row{ display:flex; gap:1rem; }
+.mq-box{ flex:1; background:#3F6C5D; color:#fff; padding:1rem; text-align:center; }
+
+@media (max-width: 640px){
+  .mq-row{ flex-direction: column; }
+  .mq-box{ background:#E8A33D; color:#1A2332; }
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

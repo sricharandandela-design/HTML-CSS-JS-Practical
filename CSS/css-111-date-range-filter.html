@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Date-range Filter</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 111</p>
+    <h1>Analytics Date-range Filter</h1>
+    <p class="desc">A start/end date picker with quick preset buttons.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .dr-presets{ display:flex; gap:0.4rem; margin-bottom:0.6rem; }
+      .dr-presets button{ font-size:0.8rem; padding:0.3rem 0.7rem; border:1px solid var(--rule); background:#fff; border-radius:6px; cursor:pointer; }
+      .dr-presets button.active{ background:var(--pine); color:#fff; border-color:var(--pine); }
+    </style>
+    <div class="dr-presets">
+      <button class="active" onclick="drPick(this)">7 days</button>
+      <button onclick="drPick(this)">30 days</button>
+      <button onclick="drPick(this)">90 days</button>
+    </div>
+    <div style="display:flex; gap:0.6rem; align-items:center;">
+      <input type="date"> <span>to</span> <input type="date">
+    </div>
+    <script>
+      function drPick(btn){
+        btn.parentElement.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.dr-presets button.active{ background:#3F6C5D; color:#fff; }
+&lt;input type="date"&gt; &lt;input type="date"&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

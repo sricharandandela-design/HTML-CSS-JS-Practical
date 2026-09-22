@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add and Delete Rows from a Table</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 74</p>
+    <h1>Add and Delete Rows from a Table</h1>
+    <p class="desc">A button appends a new row; each row has its own delete button.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table id="rowTable74" style="width:100%; border-collapse:collapse; font-size:0.85rem; margin-bottom:0.6rem;">
+      <tr><td style="padding:0.4rem; border-bottom:1px solid var(--rule);">Item A</td><td style="border-bottom:1px solid var(--rule);"><button onclick="this.closest('tr').remove()">Delete</button></td></tr>
+    </table>
+    <button class="btn" onclick="addRow74()">Add row</button>
+    <script>
+      let rowCount74 = 1;
+      function addRow74(){
+        rowCount74++;
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td style="padding:0.4rem; border-bottom:1px solid var(--rule);">Item ${rowCount74}</td>
+                        <td style="border-bottom:1px solid var(--rule);"><button onclick="this.closest('tr').remove()">Delete</button></td>`;
+        document.getElementById('rowTable74').appendChild(tr);
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>addBtn.onclick = () =&gt; table.appendChild(newRow);
+deleteBtn.onclick = () =&gt; rowEl.closest('tr').remove();</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

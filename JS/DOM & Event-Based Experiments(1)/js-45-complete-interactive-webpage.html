@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete Interactive Webpage Using HTML, CSS, and JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 45</p>
+    <h1>Complete Interactive Webpage Using HTML, CSS, and JavaScript</h1>
+    <p class="desc">A mini page combining several techniques at once: a theme toggle, a live counter, and a small to-do list.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="ciw45" style="border:1px solid var(--rule); border-radius:8px; padding:1rem; transition:all 0.2s;">
+      <button class="btn" onclick="document.getElementById('ciw45').classList.toggle('dark45')">Toggle theme</button>
+      <p style="margin-top:0.6rem;">Clicks: <span id="ciw45count">0</span>
+        <button class="btn" style="padding:0.3rem 0.6rem;" onclick="document.getElementById('ciw45count').textContent = Number(document.getElementById('ciw45count').textContent)+1;">+1</button></p>
+      <style>#ciw45.dark45{ background:var(--ink); color:#fff; }</style>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>/* Combines DOM manipulation (theme toggle), state (click counter),
+   and styling — a small end-to-end example of everything together. */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

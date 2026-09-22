@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retention and Cohort Analytics Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 103</p>
+    <h1>Retention and Cohort Analytics Dashboard</h1>
+    <p class="desc">A cohort retention grid — each row is a signup month, each column a week later, shaded by retention rate.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cohort{ border-collapse:collapse; font-size:0.75rem; }
+      .cohort th, .cohort td{ padding:0.35rem 0.5rem; text-align:center; }
+      .cohort td{ color:#fff; font-weight:600; }
+    </style>
+    <table class="cohort">
+      <tr><th></th><th>Wk 1</th><th>Wk 2</th><th>Wk 3</th><th>Wk 4</th></tr>
+      <tr><th>Jul</th><td style="background:#2C5142;">100%</td><td style="background:#3F6C5D;">72%</td><td style="background:#6C9080;">54%</td><td style="background:#9BB1A5;">41%</td></tr>
+      <tr><th>Aug</th><td style="background:#2C5142;">100%</td><td style="background:#4C7A6A;">68%</td><td style="background:#7A9C8E;">49%</td><td style="background:#A9BEB2;">33%</td></tr>
+      <tr><th>Sep</th><td style="background:#2C5142;">100%</td><td style="background:#5D8879;">75%</td><td style="background:#88A797;">58%</td><td style="background:#B5C7BC;">&mdash;</td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.cohort td{ color:#fff; } /* darker green = higher retention */
+/* each row = a monthly signup cohort, each column = weeks since signup */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

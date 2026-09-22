@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Analytics Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 93</p>
+    <h1>Revenue Analytics Dashboard</h1>
+    <p class="desc">Total revenue trend, plus a breakdown by subscription plan.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1rem; }
+      .kpi-row{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:1rem; }
+      .kpi-tile{ flex:1; min-width:120px; }
+      .kpi-tile .label{ font-size:0.75rem; color:#55605B; }
+      .kpi-tile .value{ font-size:1.3rem; font-weight:700; }
+      .bars{ display:flex; align-items:flex-end; gap:6px; height:80px; }
+      .bars div{ flex:1; background:var(--pine); border-radius:3px 3px 0 0; }
+    </style>
+    <div class="cd">
+      <div class="kpi-tile" style="margin-bottom:0.6rem;"><div class="label">Total Revenue (MTD)</div><div class="value">$92,400</div></div>
+      <div class="bars" style="margin-bottom:0.8rem;">
+        <div style="height:50%; background:var(--pine);"></div><div style="height:65%; background:var(--amber);"></div>
+        <div style="height:40%; background:var(--danger);"></div>
+      </div>
+      <p style="font-size:0.8rem; color:#55605B;">Pine = Pro plan &middot; Amber = Team plan &middot; Red = Enterprise</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.revenue-bars div:nth-child(1){ background:#3F6C5D; } /* Pro */
+.revenue-bars div:nth-child(2){ background:#E8A33D; } /* Team */
+.revenue-bars div:nth-child(3){ background:#B14B3F; } /* Enterprise */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

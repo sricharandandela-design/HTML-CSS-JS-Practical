@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequency of Each Element in an Array</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 57</p>
+    <h1>Frequency of Each Element in an Array</h1>
+    <p class="desc">Counts how many times each value appears, using a plain object as a tally.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Comma-separated values</label><input type="text" id="fr57" value="a, b, a, c, b, a"></div>
+    <button class="btn" onclick="runFrequency57()">Count</button>
+    <div class="output-box" id="out57"></div>
+    <script>
+      function runFrequency57(){
+        const items = document.getElementById('fr57').value.split(",").map(s=>s.trim());
+        const freq = {};
+        items.forEach(item => { freq[item] = (freq[item] || 0) + 1; });
+        document.getElementById('out57').textContent = JSON.stringify(freq);
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const freq = {};
+items.forEach(item =&gt; { freq[item] = (freq[item] || 0) + 1; });
+console.log(freq); // e.g. { a: 3, b: 2, c: 1 }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive SaaS Footer</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 226</p>
+    <h1>Responsive SaaS Footer</h1>
+    <p class="desc">A multi-column footer that collapses to a single stacked column on mobile.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .rfooter{ display:flex; gap:2rem; background:var(--ink); color:#C9C2AE; padding:1.2rem; border-radius:8px; font-size:0.85rem; }
+      @media (max-width:500px){ .rfooter{ flex-direction:column; gap:1rem; } }
+    </style>
+    <div class="rfooter">
+      <div><strong style="color:#fff;">Product</strong><br>Features<br>Pricing</div>
+      <div><strong style="color:#fff;">Company</strong><br>About<br>Careers</div>
+      <div><strong style="color:#fff;">Legal</strong><br>Privacy<br>Terms</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.rfooter{ display:flex; gap:2rem; }
+@media (max-width:500px){ .rfooter{ flex-direction:column; } }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

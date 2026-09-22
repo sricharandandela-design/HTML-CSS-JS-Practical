@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Variables and Custom Properties</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 18</p>
+    <h1>CSS Variables and Custom Properties</h1>
+    <p class="desc">One variable, declared once on :root, reused by three unrelated elements — change it in one place, everything updates.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .var-demo{ --brand: #3F6C5D; }
+      .var-demo .a{ color: var(--brand); font-weight:600; }
+      .var-demo .b{ background: var(--brand); color:#fff; padding:0.4rem 0.8rem; display:inline-block; }
+      .var-demo .c{ border: 3px solid var(--brand); padding:0.4rem; }
+    </style>
+    <div class="var-demo">
+      <p class="a">Text colour uses --brand</p>
+      <span class="b">Background uses --brand</span>
+      <div class="c">Border uses --brand too</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>:root{ --brand: #3F6C5D; }   /* declared once */
+
+.a{ color: var(--brand); }
+.b{ background: var(--brand); }
+.c{ border: 3px solid var(--brand); }
+/* change --brand in one place and all three update */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

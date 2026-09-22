@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Using sessionStorage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 101</p>
+    <h1>Program Using sessionStorage</h1>
+    <p class="desc">Same idea as localStorage, but cleared automatically once the browser tab is closed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <input type="text" id="ssName101" placeholder="Your name" style="padding:0.5rem;">
+    <button class="btn" onclick="sessionStorage.setItem('tempName101', document.getElementById('ssName101').value); alert('Saved for this tab session!');">Save</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('ssName101').value = sessionStorage.getItem('tempName101') || '';">Load</button>
+    <p style="font-size:0.8rem; color:#55605B; margin-top:0.5rem;">Close this tab and the value disappears — unlike localStorage.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>sessionStorage.setItem('tempName', name);
+sessionStorage.getItem('tempName'); // cleared when the tab/window closes</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

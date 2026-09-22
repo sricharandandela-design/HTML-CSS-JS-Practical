@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequency of Characters in a String</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 63</p>
+    <h1>Frequency of Characters in a String</h1>
+    <p class="desc">Tallies how many times each character appears, using an object as a counter map.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Text</label><input type="text" id="cf63" value="mississippi"></div>
+    <button class="btn" onclick="runCharFreq63()">Count</button>
+    <div class="output-box" id="out63"></div>
+    <script>
+      function runCharFreq63(){
+        const s = document.getElementById('cf63').value;
+        const freq = {};
+        for (const ch of s){ freq[ch] = (freq[ch] || 0) + 1; }
+        document.getElementById('out63').textContent = JSON.stringify(freq);
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const freq = {};
+for (const ch of str){ freq[ch] = (freq[ch] || 0) + 1; }
+console.log(freq); // e.g. { m:1, i:4, s:4, p:2 }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

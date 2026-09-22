@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfect Number Check</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 50</p>
+    <h1>Perfect Number Check</h1>
+    <p class="desc">A number is perfect if the sum of its proper divisors (excluding itself) equals the number.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Number</label><input type="number" id="perf50" value="28"></div>
+    <button class="btn" onclick="runPerfect50()">Check</button>
+    <div class="output-box" id="out50"></div>
+    <script>
+      function isPerfect50(n){
+        let sum = 0;
+        for (let i = 1; i < n; i++) if (n % i === 0) sum += i;
+        return sum === n;
+      }
+      function runPerfect50(){
+        const n = Number(document.getElementById('perf50').value);
+        document.getElementById('out50').textContent = `${n} is ${isPerfect50(n) ? "a Perfect number" : "not a Perfect number"}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function isPerfect(n){
+  let sum = 0;
+  for (let i = 1; i &lt; n; i++) if (n % i === 0) sum += i;
+  return sum === n;
+}
+console.log(isPerfect(28)); // true (1+2+4+7+14 = 28)</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

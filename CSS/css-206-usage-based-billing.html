@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usage-based Billing</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 206</p>
+    <h1>Usage-based Billing</h1>
+    <p class="desc">A bill broken down by metered usage instead of a flat subscription fee.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table style="width:100%; font-size:0.85rem; border-collapse:collapse; max-width:300px;">
+      <tr><td>API calls (12,400 &times; $0.001)</td><td style="text-align:right;">$12.40</td></tr>
+      <tr><td>Storage (8 GB &times; $0.50)</td><td style="text-align:right;">$4.00</td></tr>
+      <tr style="font-weight:700;"><td>Total this month</td><td style="text-align:right;">$16.40</td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.usage-billing td:last-child{ text-align:right; } /* rate x quantity for each metered item */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

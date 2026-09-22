@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Z-index and CSS Stacking Order</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 22</p>
+    <h1>Z-index and CSS Stacking Order</h1>
+    <p class="desc">Three overlapping boxes; the one with the highest z-index renders on top, regardless of source order.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="position:relative; height:150px;">
+      <div style="position:absolute; top:10px; left:10px; width:120px; height:100px; background:var(--pine); z-index:1; color:#fff; padding:0.4rem;">z-index: 1</div>
+      <div style="position:absolute; top:35px; left:60px; width:120px; height:100px; background:var(--amber); z-index:3; padding:0.4rem;">z-index: 3 (on top)</div>
+      <div style="position:absolute; top:60px; left:110px; width:120px; height:100px; background:var(--danger); z-index:2; color:#fff; padding:0.4rem;">z-index: 2</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.back  { position: absolute; z-index: 1; }
+.top   { position: absolute; z-index: 3; } /* highest value renders in front */
+.middle{ position: absolute; z-index: 2; }
+/* z-index only has an effect on positioned elements (not position: static) */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

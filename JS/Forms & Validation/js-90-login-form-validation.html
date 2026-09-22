@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Form with Username and Password Validation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 90</p>
+    <h1>Login Form with Username and Password Validation</h1>
+    <p class="desc">Requires both a username and a minimum-length password before submitting.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <form onsubmit="return validateLoginForm90();">
+      <div class="field"><label>Username</label><input type="text" id="login90user"></div>
+      <div class="field"><label>Password</label><input type="password" id="login90pass"></div>
+      <p class="error-text" id="login90err"></p>
+      <button class="btn" type="submit">Log in</button>
+    </form>
+    <script>
+      function validateLoginForm90(){
+        const user = document.getElementById('login90user').value.trim();
+        const pass = document.getElementById('login90pass').value;
+        const err = document.getElementById('login90err');
+        if (!user){ err.textContent = 'Username is required.'; return false; }
+        if (pass.length < 6){ err.textContent = 'Password must be at least 6 characters.'; return false; }
+        err.textContent = ''; alert('Logged in!'); return false;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>if (!username.value.trim()) return showError('Username required.');
+if (password.value.length &lt; 6) return showError('Min 6 characters.');</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

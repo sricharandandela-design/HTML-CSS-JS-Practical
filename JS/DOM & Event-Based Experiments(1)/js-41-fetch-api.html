@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fetch Data from an API Using Fetch API</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 41</p>
+    <h1>Fetch Data from an API Using Fetch API</h1>
+    <p class="desc">Uses the browser's fetch() to request public JSON data and shows the raw result.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runFetch41()">Fetch data</button>
+    <div class="output-box" id="out41">Click to fetch a sample post from a public test API.</div>
+    <script>
+      function runFetch41(){
+        document.getElementById('out41').textContent = "Loading...";
+        fetch('https://jsonplaceholder.typicode.com/posts/1')
+          .then(response => response.json())
+          .then(data => { document.getElementById('out41').textContent = JSON.stringify(data, null, 2); })
+          .catch(err => { document.getElementById('out41').textContent = "Fetch failed: " + err; });
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.error(err));</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perform Arithmetic Operations</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 02</p>
+    <h1>Perform Arithmetic Operations</h1>
+    <p class="desc">Takes two numbers and shows the result of +, -, *, / and % (modulus).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label for="a1">First number</label><input type="number" id="a1" value="12"></div>
+    <div class="field"><label for="a2">Second number</label><input type="number" id="a2" value="5"></div>
+    <button class="btn" onclick="runArith()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function runArith(){
+        const a = Number(document.getElementById('a1').value);
+        const b = Number(document.getElementById('a2').value);
+        document.getElementById('out').textContent =
+          `Sum: ${a + b}  |  Difference: ${a - b}  |  Product: ${a * b}  |  ` +
+          `Quotient: ${(a / b).toFixed(2)}  |  Remainder: ${a % b}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function arithmetic(a, b){
+  return {
+    sum: a + b,
+    difference: a - b,
+    product: a * b,
+    quotient: a / b,
+    remainder: a % b
+  };
+}
+
+console.log(arithmetic(12, 5));
+// { sum: 17, difference: 7, product: 60, quotient: 2.4, remainder: 2 }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

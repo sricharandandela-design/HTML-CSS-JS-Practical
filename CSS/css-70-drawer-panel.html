@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Drawer and Slide-out Panel</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 70</p>
+    <h1>Drawer and Slide-out Panel</h1>
+    <p class="desc">A panel that slides in from the right edge of the screen, used for filters or detail views.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .sp-wrap{ position:relative; height:220px; border:1px solid var(--rule); overflow:hidden; border-radius:8px; }
+      .sp-panel{ position:absolute; top:0; right:0; height:100%; width:220px; background:#fff; border-left:1px solid var(--rule);
+                 padding:1rem; transform:translateX(100%); transition:transform 0.3s ease; box-shadow:-4px 0 12px rgba(0,0,0,0.08); }
+      .sp-panel.open{ transform:translateX(0); }
+    </style>
+    <div class="sp-wrap">
+      <div style="padding:1rem;"><button class="btn" onclick="document.getElementById('spPanel').classList.toggle('open')">Open filters</button></div>
+      <div class="sp-panel" id="spPanel">
+        <h3 style="margin-top:0;">Filters</h3>
+        <label style="display:block; font-size:0.85rem; margin-bottom:0.4rem;"><input type="checkbox"> Active only</label>
+        <label style="display:block; font-size:0.85rem;"><input type="checkbox"> Has attachments</label>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.slide-panel{
+  position:absolute; top:0; right:0; height:100%;
+  transform: translateX(100%);  /* hidden past the right edge */
+  transition: transform 0.3s ease;
+}
+.slide-panel.open{ transform: translateX(0); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

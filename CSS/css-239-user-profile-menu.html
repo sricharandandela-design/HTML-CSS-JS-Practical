@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS User Profile Menu</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 239</p>
+    <h1>SaaS User Profile Menu</h1>
+    <p class="desc">A dropdown menu opened from the user's avatar in the top navbar.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="position:relative; display:inline-block;">
+      <img src="https://placehold.co/36x36/3F6C5D/ffffff?text=AR" style="border-radius:50%; cursor:pointer;" onclick="document.getElementById('umenu').classList.toggle('open')">
+      <div id="umenu" style="display:none; position:absolute; top:110%; right:0; background:#fff; border:1px solid var(--rule); border-radius:8px;
+                              width:160px; box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+        <a href="#" style="display:block; padding:0.6rem 0.9rem; font-size:0.85rem; color:var(--ink);">Profile</a>
+        <a href="#" style="display:block; padding:0.6rem 0.9rem; font-size:0.85rem; color:var(--ink);">Settings</a>
+        <a href="#" style="display:block; padding:0.6rem 0.9rem; font-size:0.85rem; color:var(--danger);">Sign out</a>
+      </div>
+      <style>#umenu.open{ display:block; }</style>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>avatar.onclick = () =&gt; menu.classList.toggle('open');</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

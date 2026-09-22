@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate the Navigator Object</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 97</p>
+    <h1>Demonstrate the Navigator Object</h1>
+    <p class="desc">Reads browser and system info exposed through navigator.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runNavigatorDemo97()">Show browser info</button>
+    <div class="output-box" id="out97"></div>
+    <script>
+      function runNavigatorDemo97(){
+        document.getElementById('out97').textContent =
+          `Language: ${navigator.language}\nPlatform: ${navigator.platform}\nOnline: ${navigator.onLine}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>navigator.language;   // e.g. "en-US"
+navigator.platform;   // e.g. "Win32"
+navigator.onLine;     // true/false</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slideshow/Carousel Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 80</p>
+    <h1>Image Slideshow/Carousel Using JavaScript</h1>
+    <p class="desc">Cycles through a set of images automatically, with manual prev/next controls too.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:260px;">
+      <img id="carouselImg80" src="https://placehold.co/260x150/3F6C5D/ffffff?text=Slide+1" style="width:100%; border-radius:6px;">
+      <div style="display:flex; justify-content:space-between; margin-top:0.5rem;">
+        <button class="btn" onclick="moveSlide80(-1)">&larr; Prev</button>
+        <button class="btn" onclick="moveSlide80(1)">Next &rarr;</button>
+      </div>
+    </div>
+    <script>
+      const slides80 = [
+        'https://placehold.co/260x150/3F6C5D/ffffff?text=Slide+1',
+        'https://placehold.co/260x150/E8A33D/1A2332?text=Slide+2',
+        'https://placehold.co/260x150/B14B3F/ffffff?text=Slide+3'
+      ];
+      let slideIdx80 = 0;
+      function moveSlide80(dir){
+        slideIdx80 = (slideIdx80 + dir + slides80.length) % slides80.length;
+        document.getElementById('carouselImg80').src = slides80[slideIdx80];
+      }
+      setInterval(() => moveSlide80(1), 4000); // auto-advance every 4 seconds
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function moveSlide(direction){
+  index = (index + direction + slides.length) % slides.length; // wraps both directions
+  imgEl.src = slides[index];
+}
+setInterval(() =&gt; moveSlide(1), 4000); // auto-advance</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

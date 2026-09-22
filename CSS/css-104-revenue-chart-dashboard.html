@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Revenue Chart Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 104</p>
+    <h1>Revenue Chart Dashboard</h1>
+    <p class="desc">A month-by-month revenue trend rendered as an inline SVG line chart.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <svg viewBox="0 0 300 120" width="100%" style="max-width:340px;">
+      <polyline fill="none" stroke="#3F6C5D" stroke-width="3"
+        points="10,90 60,70 110,80 160,50 210,55 260,20 290,30" />
+      <circle cx="290" cy="30" r="4" fill="#E8A33D"/>
+      <text x="0" y="115" font-size="9" fill="#55605B">Jan</text>
+      <text x="270" y="115" font-size="9" fill="#55605B">Jul</text>
+    </svg>
+    <p style="font-size:0.85rem; color:#55605B;">Revenue trended up from $40k in January to $86k by July.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;svg viewBox="0 0 300 120"&gt;
+  &lt;polyline fill="none" stroke="#3F6C5D" stroke-width="3"
+    points="10,90 60,70 110,80 160,50 210,55 260,20 290,30" /&gt;
+&lt;/svg&gt;
+&lt;!-- each x,y pair is one month's plotted revenue point --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

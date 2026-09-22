@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Report and Export Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 115</p>
+    <h1>Analytics Report and Export Interface</h1>
+    <p class="desc">A list of generated reports with export actions that show a quick confirmation message.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .report-row{ display:flex; justify-content:space-between; align-items:center; padding:0.6rem 0; border-bottom:1px solid var(--rule); }
+    </style>
+    <div class="report-row">
+      <span>Monthly Revenue Report</span>
+      <span>
+        <button class="btn" style="padding:0.3rem 0.7rem; font-size:0.8rem;" onclick="exportMsg('CSV')">Export CSV</button>
+        <button class="btn amber" style="padding:0.3rem 0.7rem; font-size:0.8rem;" onclick="exportMsg('PDF')">Export PDF</button>
+      </span>
+    </div>
+    <p id="exportOut" style="font-size:0.85rem; color:var(--pine); margin-top:0.6rem;"></p>
+    <script>
+      function exportMsg(type){
+        document.getElementById('exportOut').textContent = `Report exported as ${type}.`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function exportMsg(type){
+  statusEl.textContent = `Report exported as ${type}.`;
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

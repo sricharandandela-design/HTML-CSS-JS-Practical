@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Guessing Game (Mini Project)</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 111</p>
+    <h1>Number Guessing Game (Mini Project)</h1>
+    <p class="desc">Builds on program 28 by limiting the player to 5 attempts and tracking attempts remaining.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Guess (1-100)</label><input type="number" id="guess111" min="1" max="100"></div>
+    <button class="btn" onclick="checkGuess111()">Guess</button>
+    <div class="output-box" id="out111">You have 5 attempts. Good luck!</div>
+    <script>
+      let secret111 = Math.floor(Math.random() * 100) + 1;
+      let attempts111 = 5;
+      function checkGuess111(){
+        const g = Number(document.getElementById('guess111').value);
+        const out = document.getElementById('out111');
+        if (attempts111 <= 0){ out.textContent = `Game over! The number was ${secret111}.`; return; }
+        attempts111--;
+        if (g === secret111){ out.textContent = `Correct! You win with ${attempts111} attempts left.`; }
+        else if (attempts111 === 0){ out.textContent = `Out of attempts! The number was ${secret111}.`; }
+        else { out.textContent = (g < secret111 ? 'Too low.' : 'Too high.') + ` Attempts left: ${attempts111}`; }
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>let attempts = 5;
+if (guess === secret) win();
+else if (--attempts === 0) gameOver();
+else hint(guess &lt; secret ? "Too low" : "Too high");</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

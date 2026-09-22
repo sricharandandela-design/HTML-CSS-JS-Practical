@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Width, Height, Min-width, Max-width, Min-height, and Max-height</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 11</p>
+    <h1>Width, Height, Min-width, Max-width, Min-height, and Max-height</h1>
+    <p class="desc">A box constrained so it never shrinks below or grows past chosen limits — try resizing the browser window.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .limit-box{ width:60%; min-width:180px; max-width:420px; min-height:60px; max-height:160px;
+                  background:var(--paper-raised); border:1px solid var(--rule); padding:1rem; overflow:auto; }
+    </style>
+    <div class="limit-box">
+      This box has <code>width:60%</code>, but is clamped between
+      <code>min-width:180px</code> and <code>max-width:420px</code>, so it never gets
+      too small on narrow screens or too wide on huge ones. Resize your browser to see it stop growing/shrinking.
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.limit-box{
+  width: 60%;
+  min-width: 180px;
+  max-width: 420px;
+  min-height: 60px;
+  max-height: 160px;
+  overflow: auto; /* scrolls if content exceeds max-height */
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display Properties: block, inline, inline-block, flex, grid, and none</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 13</p>
+    <h1>Display Properties: block, inline, inline-block, flex, grid, and none</h1>
+    <p class="desc">The same six &lt;span&gt; elements, each given a different display value.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .disp span{ background:var(--paper-raised); border:1px solid var(--rule); padding:0.3rem 0.6rem; margin:2px; }
+      .d-block{ display:block; }
+      .d-inline{ display:inline; }
+      .d-inlineblock{ display:inline-block; width:120px; }
+      .d-none{ display:none; }
+    </style>
+    <div class="disp">
+      <span class="d-block">display: block (own line)</span>
+      <span class="d-inline">display: inline</span>
+      <span class="d-inline">flows with text</span>
+      <span class="d-inlineblock">inline-block: has width</span>
+      <span class="d-none">display: none (never shows)</span>
+    </div>
+    <div style="display:flex; gap:0.5rem; margin-top:0.6rem;">
+      <div style="background:var(--pine); color:#fff; padding:0.5rem;">flex item 1</div>
+      <div style="background:var(--pine); color:#fff; padding:0.5rem;">flex item 2</div>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0.5rem; margin-top:0.6rem;">
+      <div style="background:var(--amber); padding:0.5rem;">grid 1</div>
+      <div style="background:var(--amber); padding:0.5rem;">grid 2</div>
+      <div style="background:var(--amber); padding:0.5rem;">grid 3</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.a{ display: block; }        /* own line, full width available   */
+.b{ display: inline; }       /* flows inside a line of text      */
+.c{ display: inline-block; } /* flows inline but accepts width   */
+.d{ display: none; }         /* removed from layout entirely     */
+.e{ display: flex; }         /* children laid out in a flex row  */
+.f{ display: grid; grid-template-columns: 1fr 1fr 1fr; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

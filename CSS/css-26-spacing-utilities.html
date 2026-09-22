@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margin, Padding, and Spacing Utility Classes</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 26</p>
+    <h1>Margin, Padding, and Spacing Utility Classes</h1>
+    <p class="desc">A small set of reusable spacing utility classes, the way many CSS frameworks name them (m-1, p-2, etc.).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .u-m1{ margin:0.25rem; } .u-m2{ margin:0.5rem; } .u-m3{ margin:1rem; }
+      .u-p1{ padding:0.25rem; } .u-p2{ padding:0.5rem; } .u-p3{ padding:1rem; }
+      .u-box{ background:var(--paper-raised); border:1px solid var(--rule); display:inline-block; }
+    </style>
+    <div class="u-box u-p1">.p-1 (small padding)</div>
+    <div class="u-box u-p3">.p-3 (large padding)</div><br>
+    <div class="u-box u-m3 u-p2">.m-3.p-2 combined</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.m-1{ margin: 0.25rem; }  .p-1{ padding: 0.25rem; }
+.m-2{ margin: 0.5rem;  }  .p-2{ padding: 0.5rem;  }
+.m-3{ margin: 1rem;    }  .p-3{ padding: 1rem;    }
+/* small, composable classes instead of repeating spacing values everywhere */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Border-radius for Rounded Cards, Circles, Pills, and Custom Shapes</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 16</p>
+    <h1>Border-radius for Rounded Cards, Circles, Pills, and Custom Shapes</h1>
+    <p class="desc">One property, four very different looks depending on the values and the box's aspect ratio.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+      <div style="width:120px; height:80px; background:var(--pine); border-radius:10px; color:#fff;
+                  display:flex; align-items:center; justify-content:center;">card: 10px</div>
+      <div style="width:80px; height:80px; background:var(--amber); border-radius:50%;
+                  display:flex; align-items:center; justify-content:center;">circle: 50%</div>
+      <div style="padding:0.6rem 1.4rem; background:var(--ink); color:#fff; border-radius:999px;">pill: 999px</div>
+      <div style="width:100px; height:100px; background:var(--danger); color:#fff;
+                  border-radius:50% 10% 50% 10%; display:flex; align-items:center; justify-content:center;">blob</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.card  { border-radius: 10px; }
+.circle{ width: 80px; height: 80px; border-radius: 50%; }   /* equal w/h + 50% = circle */
+.pill  { border-radius: 999px; }                             /* radius bigger than half height */
+.blob  { border-radius: 50% 10% 50% 10%; }                   /* different value per corner */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

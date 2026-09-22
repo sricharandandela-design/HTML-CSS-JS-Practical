@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Workflow</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 154</p>
+    <h1>AI Agent Workflow</h1>
+    <p class="desc">A simple flow diagram showing the steps an agent follows, connected by arrows.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .flow-step{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.6rem 1rem; font-size:0.85rem; display:inline-block; }
+      .flow-arrow{ display:inline-block; margin:0 0.4rem; color:#8A9089; }
+    </style>
+    <div class="flow-step">Receive ticket</div><span class="flow-arrow">&#8594;</span>
+    <div class="flow-step">Classify urgency</div><span class="flow-arrow">&#8594;</span>
+    <div class="flow-step">Route to team</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.flow-step{ display:inline-block; }
+.flow-arrow{ color:#8A9089; } /* connects each step to the next */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+<select id="country" onchange="loadStates()">
+<option value="">Select Country</option>
+<option value="india">India</option>
+<option value="usa">USA</option>
+</select>
+<select id="state" onchange="loadCities()"><option>Select State</option></select>
+<select id="city"><option>Select City</option></select>
+<script>
+const data = {
+    india: { AndhraPradesh:["Vijayawada","Kadapa"], TamilNadu:["Chennai","Coimbatore"] },
+    usa: { California:["Los Angeles","San Diego"], Texas:["Houston","Dallas"] }
+};
+function fill(id, values) {
+    const select = document.getElementById(id);
+    select.innerHTML = '<option value="">Select</option>';
+    values.forEach(v => select.add(new Option(v,v)));
+}
+function loadStates() {
+    const country = document.getElementById("country").value;
+    document.getElementById("city").innerHTML = '<option>Select City</option>';
+    fill("state", country ? Object.keys(data[country]) : []);
+}
+function loadCities() {
+    const country = document.getElementById("country").value;
+    const state = document.getElementById("state").value;
+    fill("city", country && state ? data[country][state] : []);
+}
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body>
+</html>

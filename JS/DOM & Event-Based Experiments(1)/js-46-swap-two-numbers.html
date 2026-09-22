@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swap Two Numbers</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 46</p>
+    <h1>Swap Two Numbers</h1>
+    <p class="desc">Swaps two values using a temporary variable, and shows the no-temp destructuring trick too.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>A</label><input type="number" id="sw46a" value="5"></div>
+    <div class="field"><label>B</label><input type="number" id="sw46b" value="9"></div>
+    <button class="btn" onclick="runSwap46()">Swap</button>
+    <div class="output-box" id="out46"></div>
+    <script>
+      function runSwap46(){
+        let a = Number(document.getElementById('sw46a').value);
+        let b = Number(document.getElementById('sw46b').value);
+        [a, b] = [b, a]; // destructuring swap, no temp variable needed
+        document.getElementById('out46').textContent = `After swap: a=${a}, b=${b}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>let temp = a; a = b; b = temp;  // classic temp-variable swap
+[a, b] = [b, a];                // modern destructuring swap</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

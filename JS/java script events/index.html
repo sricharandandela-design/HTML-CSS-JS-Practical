@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Java Script Events - JavaScript Programs</title>
+
+    
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+header {
+    background: #172033;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+    color: #d1d5db;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.program {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    margin-bottom: 10px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.program-name {
+    font-weight: bold;
+    word-break: break-word;
+}
+
+.open-btn {
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 9px 16px;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+.open-btn:hover {
+    background: #1d4ed8;
+}
+
+.home {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.home a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.folder-box {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+}
+
+.folder-box h3 {
+    color: #172033;
+    margin-bottom: 8px;
+}
+
+.file-type {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 3px 7px;
+    border-radius: 5px;
+    background: #e5e7eb;
+    font-size: 12px;
+    color: #444;
+}
+
+@media (max-width: 650px) {
+
+    .program {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .open-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<header>
+
+    <h1>Java Script Events</h1>
+
+    <p>
+        JavaScript Practical Programs
+    </p>
+
+</header>
+
+
+<div class="container">
+
+
+    <div class="card">
+
+        <h2>
+            30 Programs
+        </h2>
+
+        <p>
+            Select a program or topic below.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h2>
+            Program List
+        </h2>
+
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                1. 01 Onclick
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="01_onclick.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                2. 02 Ondblclick
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="02_ondblclick.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                3. 03 Mouseover Mouseout
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="03_mouseover_mouseout.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                4. 04 Mousedown Mouseup
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="04_mousedown_mouseup.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                5. 05 Onmousemove
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="05_onmousemove.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                6. 06 Keydown
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="06_keydown.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                7. 07 Keyup
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="07_keyup.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                8. 08 Display Key Pressed
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="08_display_key_pressed.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                9. 09 Keyboard Press Counter
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="09_keyboard_press_counter.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                10. 10 Focus Blur
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="10_focus_blur.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                11. 11 Change Event
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="11_change_event.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                12. 12 Input Event
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="12_input_event.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                13. 13 Submit Event
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="13_submit_event.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                14. 14 Reset Event
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="14_reset_event.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                15. 15 Background Color Button
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="15_background_color_button.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                16. 16 Dynamic Font Size
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="16_dynamic_font_size.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                17. 17 Multiple Buttons Events
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="17_multiple_buttons_events.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                18. 18 Addeventlistener
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="18_addEventListener.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                19. 19 Multiple Event Listeners
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="19_multiple_event_listeners.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                20. 20 Removeeventlistener
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="20_removeEventListener.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                21. 21 Event Bubbling
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="21_event_bubbling.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                22. 22 Event Capturing
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="22_event_capturing.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                23. 23 Event Delegation
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="23_event_delegation.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                24. 24 Drag And Drop
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="24_drag_and_drop.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                25. 25 Mouse Coordinate Tracker
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="25_mouse_coordinate_tracker.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                26. 26 Keyboard Controlled Object
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="26_keyboard_controlled_object.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                27. 27 Click Counter
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="27_click_counter.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                28. 28 Double Click Counter
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="28_double_click_counter.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                29. 29 Reaction Time Game
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="29_reaction_time_game.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                30. 30 Keyboard Typing Test
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="30_keyboard_typing_test.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+        <div class="program">
+
+            <span class="program-name">
+
+                31. Index
+
+                <span class="file-type">
+                    .HTML
+                </span>
+
+            </span>
+
+            <a class="open-btn"
+               href="index.html">
+
+                Open
+
+            </a>
+
+        </div>
+        
+
+    </div>
+
+
+    <div class="home">
+
+        <a href="../index.html">
+            ← Back to Parent
+        </a>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>

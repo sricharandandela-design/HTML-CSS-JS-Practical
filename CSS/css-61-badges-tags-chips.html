@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badges, Labels, Tags, and Chips</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 61</p>
+    <h1>Badges, Labels, Tags, and Chips</h1>
+    <p class="desc">Small pieces of metadata shown as compact rounded pieces, in a few common colour treatments.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .chip{ display:inline-block; padding:0.25rem 0.7rem; border-radius:999px; font-size:0.8rem; font-weight:600; margin:0.2rem; }
+      .chip.success{ background:#DCEEE3; color:#2C5142; }
+      .chip.warning{ background:#FBEBD1; color:#8A5A12; }
+      .chip.danger{ background:#F6DEDA; color:#8A3327; }
+      .chip.neutral{ background:var(--paper); color:var(--ink); border:1px solid var(--rule); }
+      .chip.removable{ background:var(--paper); color:var(--ink); }
+    </style>
+    <span class="chip success">Active</span>
+    <span class="chip warning">Pending</span>
+    <span class="chip danger">Failed</span>
+    <span class="chip neutral">v2.1.0</span>
+    <span class="chip removable">React &times;</span>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.chip.success{ background:#DCEEE3; color:#2C5142; }
+.chip.warning{ background:#FBEBD1; color:#8A5A12; }
+.chip.danger { background:#F6DEDA; color:#8A3327; }
+.chip{ border-radius:999px; padding:0.25rem 0.7rem; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate the History Object</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 99</p>
+    <h1>Demonstrate the History Object</h1>
+    <p class="desc">Buttons that call the browser's back, forward, and reload actions via the history object.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="history.back()">&larr; Back</button>
+    <button class="btn" onclick="history.forward()">Forward &rarr;</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="location.reload()">Reload</button>
+    <p style="font-size:0.8rem; color:#55605B; margin-top:0.5rem;">History length: <span id="histLen99"></span></p>
+    <script>document.getElementById('histLen99').textContent = history.length;</script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>history.back();     // go to the previous page
+history.forward();  // go to the next page
+history.length;     // number of entries in the session history</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

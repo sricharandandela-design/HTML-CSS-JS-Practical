@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark-mode SaaS Interface Using CSS Variables</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 232</p>
+    <h1>Dark-mode SaaS Interface Using CSS Variables</h1>
+    <p class="desc">The same panel themed with CSS variables that swap values under a .dark class.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .theme-demo{ --bg:#fff; --fg:#1A2332; background:var(--bg); color:var(--fg); border:1px solid var(--rule);
+                   border-radius:8px; padding:1rem; transition:all 0.2s; }
+      .theme-demo.dark{ --bg:#1A2332; --fg:#EDEFE9; }
+    </style>
+    <div class="theme-demo" id="darkDemo">
+      <p>This panel's colours come from CSS variables.</p>
+      <button class="btn" onclick="document.getElementById('darkDemo').classList.toggle('dark')">Toggle dark mode</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>:root{ --bg:#fff; --fg:#1A2332; }
+.dark{ --bg:#1A2332; --fg:#EDEFE9; } /* same elements, variables swap the values */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Switcher (Light/Dark Mode) Using localStorage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 103</p>
+    <h1>Theme Switcher (Light/Dark Mode) Using localStorage</h1>
+    <p class="desc">Remembers the chosen theme in localStorage so it's still applied after a page reload.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="themeBox103" style="padding:1rem; border:1px solid var(--rule); border-radius:8px;">
+      <button class="btn" onclick="setTheme103('light')">Light</button>
+      <button class="btn" style="background:var(--ink);" onclick="setTheme103('dark')">Dark</button>
+      <p style="margin-top:0.6rem;">Current theme is applied and saved for next time.</p>
+    </div>
+    <script>
+      function setTheme103(theme){
+        const box = document.getElementById('themeBox103');
+        if (theme === 'dark'){ box.style.background = 'var(--ink)'; box.style.color = '#fff'; }
+        else { box.style.background = '#fff'; box.style.color = 'var(--ink)'; }
+        localStorage.setItem('theme103', theme);
+      }
+      const saved103 = localStorage.getItem('theme103');
+      if (saved103) setTheme103(saved103);
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function setTheme(theme){
+  applyStyles(theme);
+  localStorage.setItem('theme', theme);
+}
+const saved = localStorage.getItem('theme');
+if (saved) setTheme(saved); // restores the theme on page load</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

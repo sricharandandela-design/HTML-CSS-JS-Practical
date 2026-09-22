@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text-to-chart Analytics Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 137</p>
+    <h1>Text-to-chart Analytics Interface</h1>
+    <p class="desc">Typing a plain-English request and clicking Generate renders a matching chart below.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:340px;">
+      <input type="text" id="t2cInput" value="revenue by quarter" style="width:100%; padding:0.5rem; border:1px solid var(--rule); border-radius:6px;">
+      <button class="btn amber" style="margin-top:0.5rem;" onclick="document.getElementById('t2cChart').style.display='flex'">Generate chart</button>
+      <div id="t2cChart" style="display:none; align-items:flex-end; gap:6px; height:70px; margin-top:0.8rem;">
+        <div style="flex:1; background:var(--pine); height:50%;"></div>
+        <div style="flex:1; background:var(--pine); height:70%;"></div>
+        <div style="flex:1; background:var(--pine); height:60%;"></div>
+        <div style="flex:1; background:var(--pine); height:90%;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>generateBtn.onclick = () =&gt; { chartEl.style.display = "flex"; renderChart(parseQuery(input.value)); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Calculator (Mini Project)</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 104</p>
+    <h1>Digital Calculator (Mini Project)</h1>
+    <p class="desc">A fuller calculator than program 27: it also keeps a running history of past calculations.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .calc104{ max-width:220px; }
+      .calc104 input{ width:100%; padding:0.5rem; font-size:1.2rem; text-align:right; margin-bottom:0.4rem; font-family:var(--font-mono); }
+      .calc104 .row{ display:grid; grid-template-columns:repeat(4,1fr); gap:4px; margin-bottom:0.6rem; }
+      .calc104 button{ padding:0.6rem; font-size:1rem; border:1px solid var(--rule); background:#fff; cursor:pointer; }
+    </style>
+    <div class="calc104">
+      <input type="text" id="calcDisplay104" readonly>
+      <div class="row">
+        <button onclick="ci104('7')">7</button><button onclick="ci104('8')">8</button><button onclick="ci104('9')">9</button><button onclick="ci104('/')">/</button>
+        <button onclick="ci104('4')">4</button><button onclick="ci104('5')">5</button><button onclick="ci104('6')">6</button><button onclick="ci104('*')">&times;</button>
+        <button onclick="ci104('1')">1</button><button onclick="ci104('2')">2</button><button onclick="ci104('3')">3</button><button onclick="ci104('-')">-</button>
+        <button onclick="cc104()">C</button><button onclick="ci104('0')">0</button><button onclick="ce104()">=</button><button onclick="ci104('+')">+</button>
+      </div>
+      <div id="calcHistory104" style="font-size:0.8rem; color:#55605B;"></div>
+    </div>
+    <script>
+      const history104 = [];
+      function ci104(v){ document.getElementById('calcDisplay104').value += v; }
+      function cc104(){ document.getElementById('calcDisplay104').value = ''; }
+      function ce104(){
+        const disp = document.getElementById('calcDisplay104');
+        try{
+          const result = eval(disp.value);
+          history104.unshift(`${disp.value} = ${result}`);
+          disp.value = result;
+          document.getElementById('calcHistory104').innerHTML = history104.slice(0,4).join('<br>');
+        } catch(e){ disp.value = 'Error'; }
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function calcEquals(){
+  const result = eval(display.value);
+  history.unshift(`${display.value} = ${result}`); // keep a running log
+  display.value = result;
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

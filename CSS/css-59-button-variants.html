@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Primary, Secondary, Outline, and Destructive Buttons</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 59</p>
+    <h1>Primary, Secondary, Outline, and Destructive Buttons</h1>
+    <p class="desc">Four button styles that communicate different levels of importance and intent.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .btn-set{ display:flex; gap:0.8rem; flex-wrap:wrap; }
+      .b-primary{ background:var(--pine); color:#fff; border:none; }
+      .b-secondary{ background:var(--paper); color:var(--ink); border:1px solid var(--rule); }
+      .b-outline{ background:transparent; color:var(--pine); border:2px solid var(--pine); }
+      .b-destructive{ background:var(--danger); color:#fff; border:none; }
+      .btn-set button{ padding:0.6rem 1.1rem; border-radius:6px; font-weight:600; cursor:pointer; font-family:var(--font-body); }
+    </style>
+    <div class="btn-set">
+      <button class="b-primary">Primary</button>
+      <button class="b-secondary">Secondary</button>
+      <button class="b-outline">Outline</button>
+      <button class="b-destructive">Delete account</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.btn-primary    { background:#3F6C5D; color:#fff; border:none; }
+.btn-secondary  { background:#EDEFE9; color:#1A2332; border:1px solid #C9C2AE; }
+.btn-outline    { background:transparent; color:#3F6C5D; border:2px solid #3F6C5D; }
+.btn-destructive{ background:#B14B3F; color:#fff; border:none; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

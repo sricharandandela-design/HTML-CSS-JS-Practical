@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demonstrate the Location Object</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 98</p>
+    <h1>Demonstrate the Location Object</h1>
+    <p class="desc">Reads the current page's URL, broken into its parts.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runLocationDemo98()">Show URL info</button>
+    <div class="output-box" id="out98"></div>
+    <script>
+      function runLocationDemo98(){
+        document.getElementById('out98').textContent =
+          `href: ${location.href}\nhostname: ${location.hostname}\nprotocol: ${location.protocol}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>location.href;      // full current URL
+location.hostname;  // domain only
+location.protocol;  // "https:" etc.
+// location.assign("https://example.com"); // navigates to a new page</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

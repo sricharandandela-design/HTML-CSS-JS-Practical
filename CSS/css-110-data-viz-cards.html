@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data Visualization Cards</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 110</p>
+    <h1>Data Visualization Cards</h1>
+    <p class="desc">Three small cards, each pairing one metric with a different mini chart type.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .viz-row{ display:flex; gap:1rem; flex-wrap:wrap; }
+      .viz-card{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.8rem; width:140px; }
+      .viz-bars{ display:flex; align-items:flex-end; gap:3px; height:40px; margin-top:0.5rem; }
+      .viz-bars div{ flex:1; background:var(--pine); }
+      .viz-donut{ width:50px; height:50px; border-radius:50%; margin-top:0.5rem;
+                  background:conic-gradient(var(--amber) 0% 62%, #E4E2D8 62% 100%); }
+    </style>
+    <div class="viz-row">
+      <div class="viz-card"><div style="font-size:0.75rem; color:#55605B;">Signups</div>
+        <div class="viz-bars"><div style="height:40%"></div><div style="height:70%"></div><div style="height:55%"></div></div></div>
+      <div class="viz-card"><div style="font-size:0.75rem; color:#55605B;">Goal reached</div><div class="viz-donut"></div></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.viz-card{ width:140px; } /* each card pairs one metric label with one mini chart */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

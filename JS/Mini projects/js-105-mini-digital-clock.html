@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Clock (Mini Project)</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 105</p>
+    <h1>Digital Clock (Mini Project)</h1>
+    <p class="desc">Adds a date line and a 12/24-hour toggle on top of the basic clock from program 26.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="clockOut105" style="font-family:var(--font-mono); font-size:2rem;"></div>
+    <div id="dateOut105" style="font-size:0.9rem; color:#55605B; margin-bottom:0.5rem;"></div>
+    <button class="btn" onclick="format24_105 = !format24_105;">Toggle 12h/24h</button>
+    <script>
+      let format24_105 = false;
+      function tickClock105(){
+        const now = new Date();
+        document.getElementById('clockOut105').textContent = now.toLocaleTimeString([], { hour12: !format24_105 });
+        document.getElementById('dateOut105').textContent = now.toDateString();
+      }
+      tickClock105();
+      setInterval(tickClock105, 1000);
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>now.toLocaleTimeString([], { hour12: !format24 }); // switches 12h/24h display
+now.toDateString(); // e.g. "Wed Sep 16 2026"</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

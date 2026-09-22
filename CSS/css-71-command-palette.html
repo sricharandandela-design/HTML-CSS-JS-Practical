@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Command Palette Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 71</p>
+    <h1>Command Palette Interface</h1>
+    <p class="desc">A search-driven action list, the pattern popularised by apps like Notion and Linear (press the button, or Ctrl+K).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cmdk-panel{ background:var(--ink); color:#fff; border-radius:10px; padding:0.8rem; max-width:360px; }
+      .cmdk-panel input{ width:100%; padding:0.6rem; border-radius:6px; border:none; margin-bottom:0.6rem; font-size:0.95rem; }
+      .cmdk-panel .item{ padding:0.5rem 0.6rem; border-radius:6px; font-size:0.9rem; cursor:pointer; }
+      .cmdk-panel .item:hover, .cmdk-panel .item.sel{ background:rgba(255,255,255,0.1); }
+      .cmdk-panel .item span{ color:#8A9089; float:right; font-size:0.75rem; }
+    </style>
+    <div class="cmdk-panel">
+      <input type="text" placeholder="Type a command or search..." autocomplete="off">
+      <div class="item sel">Create new project <span>Ctrl+N</span></div>
+      <div class="item">Go to Settings <span>Ctrl+,</span></div>
+      <div class="item">Invite teammate</div>
+      <div class="item">Search documentation</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.cmdk-panel{ background:#1A2332; color:#fff; border-radius:10px; }
+.cmdk-panel input{ width:100%; border:none; border-radius:6px; }
+.cmdk-panel .item.sel{ background:rgba(255,255,255,0.1); } /* keyboard-highlighted row */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

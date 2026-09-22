@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 186</p>
+    <h1>User Management</h1>
+    <p class="desc">An admin table of all users with a status column and a suspend action.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table style="width:100%; font-size:0.85rem; border-collapse:collapse; max-width:340px;">
+      <tr style="color:#55605B;"><td>User</td><td>Status</td><td></td></tr>
+      <tr><td>Ananya Rao</td><td style="color:var(--pine);">Active</td><td><button class="btn" style="padding:0.2rem 0.5rem; font-size:0.75rem;">Suspend</button></td></tr>
+      <tr><td>Karan Shah</td><td style="color:var(--danger);">Suspended</td><td><button class="btn" style="padding:0.2rem 0.5rem; font-size:0.75rem;">Reinstate</button></td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.status.active   { color:#3F6C5D; }
+.status.suspended{ color:#B14B3F; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Feed Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 55</p>
+    <h1>Activity Feed Card Component</h1>
+    <p class="desc">A vertical list of timestamped events, connected by a thin line.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .feed{ background:#fff; border:1px solid var(--rule); border-radius:8px; padding:1rem; max-width:340px; }
+      .feed-item{ display:flex; gap:0.7rem; padding-bottom:1rem; position:relative; }
+      .feed-item:not(:last-child)::before{ content:""; position:absolute; left:5px; top:16px; bottom:0; width:2px; background:var(--rule); }
+      .feed-dot{ width:12px; height:12px; border-radius:50%; background:var(--pine); flex-shrink:0; margin-top:4px; }
+    </style>
+    <div class="feed">
+      <div class="feed-item"><span class="feed-dot"></span><div><strong>Invoice paid</strong><br><span style="font-size:0.8rem; color:#8A9089;">Today, 9:14 AM</span></div></div>
+      <div class="feed-item"><span class="feed-dot"></span><div><strong>New team member added</strong><br><span style="font-size:0.8rem; color:#8A9089;">Yesterday</span></div></div>
+      <div class="feed-item"><span class="feed-dot"></span><div><strong>Project archived</strong><br><span style="font-size:0.8rem; color:#8A9089;">3 days ago</span></div></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.feed-item{ position:relative; padding-bottom:1rem; }
+.feed-item::before{ content:""; position:absolute; left:5px; top:16px; bottom:0; width:2px; background:#C9C2AE; }
+.feed-dot{ width:12px; height:12px; border-radius:50%; background:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

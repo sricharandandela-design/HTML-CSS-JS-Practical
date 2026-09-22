@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Hover Effects and Micro-interactions</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 228</p>
+    <h1>CSS Hover Effects and Micro-interactions</h1>
+    <p class="desc">Four small hover interactions: lift, glow, underline reveal, and icon shift.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .mi-lift{ transition:transform 0.15s; } .mi-lift:hover{ transform:translateY(-4px); }
+      .mi-glow{ transition:box-shadow 0.2s; } .mi-glow:hover{ box-shadow:0 0 0 4px rgba(232,163,61,0.3); }
+      .mi-underline{ position:relative; } .mi-underline::after{ content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px; background:var(--pine); transition:width 0.2s; }
+      .mi-underline:hover::after{ width:100%; }
+      .mi-arrow span{ display:inline-block; transition:transform 0.15s; }
+      .mi-arrow:hover span{ transform:translateX(4px); }
+    </style>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+      <button class="btn mi-lift">Lift</button>
+      <button class="btn mi-glow">Glow</button>
+      <a href="#" class="mi-underline">Underline reveal</a>
+      <a href="#" class="mi-arrow">Learn more <span>&rarr;</span></a>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.mi-lift:hover{ transform: translateY(-4px); }
+.mi-glow:hover{ box-shadow: 0 0 0 4px rgba(232,163,61,0.3); }
+.mi-underline::after{ width:0; transition:width 0.2s; }
+.mi-underline:hover::after{ width:100%; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

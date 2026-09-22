@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sort an Array</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 13</p>
+    <h1>Sort an Array</h1>
+    <p class="desc">Uses Array.prototype.sort with a numeric comparator, since the default sort compares as text.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label for="arr">Comma-separated numbers</label>
+      <input type="text" id="arr" value="40, 5, 100, 25, 3"></div>
+    <button class="btn" onclick="runSort()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function runSort(){
+        const numbers = document.getElementById('arr').value.split(",").map(Number);
+        const ascending = [...numbers].sort((a, b) => a - b);
+        const descending = [...numbers].sort((a, b) => b - a);
+        document.getElementById('out').textContent =
+          `Ascending: ${ascending.join(", ")}  |  Descending: ${descending.join(", ")}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const numbers = [40, 5, 100, 25, 3];
+
+// A numeric comparator is required - without it, sort() compares as strings
+const ascending = [...numbers].sort((a, b) =&gt; a - b);
+const descending = [...numbers].sort((a, b) =&gt; b - a);
+
+console.log(ascending);  // [3, 5, 25, 40, 100]
+console.log(descending); // [100, 40, 25, 5, 3]</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

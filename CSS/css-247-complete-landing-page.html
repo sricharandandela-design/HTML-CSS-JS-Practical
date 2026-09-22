@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Complete SaaS Landing Page</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 247</p>
+    <h1>Complete SaaS Landing Page</h1>
+    <p class="desc">A full landing page combining a navbar, hero, feature cards, pricing teaser, and footer.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .lp-nav{ display:flex; justify-content:space-between; padding:0.8rem 0; }
+      .lp-hero{ background:var(--ink); color:#fff; text-align:center; padding:2rem 1rem; border-radius:10px; margin-bottom:1.2rem; }
+      .lp-hero h1{ color:#fff; }
+      .lp-features{ display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:1.2rem; }
+      .lp-features div{ flex:1; min-width:130px; background:#fff; border:1px solid var(--rule); border-radius:8px; padding:0.9rem; }
+      .lp-footer{ border-top:1px solid var(--rule); padding-top:0.8rem; font-size:0.8rem; color:#55605B; }
+    </style>
+    <div class="lp-nav"><strong>Flowbase</strong><a class="btn" href="#">Sign in</a></div>
+    <div class="lp-hero"><h1>Ship products faster</h1><p style="color:#C9C2AE;">Everything your team needs, in one workspace.</p><a class="btn amber" href="#">Start free trial</a></div>
+    <div class="lp-features"><div>Fast setup</div><div>Team collaboration</div><div>Powerful analytics</div></div>
+    <div class="lp-footer">&copy; 2026 Flowbase Inc.</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.landing-page{ /* navbar + hero + features + footer, composed together */ }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

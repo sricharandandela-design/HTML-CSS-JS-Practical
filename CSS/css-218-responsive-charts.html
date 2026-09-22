@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Charts and Data Visualization</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 218</p>
+    <h1>Responsive Charts and Data Visualization</h1>
+    <p class="desc">An SVG chart with viewBox instead of fixed width/height, so it scales fluidly with its container.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:400px; border:1px solid var(--rule); padding:0.5rem;">
+      <svg viewBox="0 0 300 100" width="100%">
+        <polyline fill="none" stroke="#3F6C5D" stroke-width="2.5" points="10,80 80,50 150,65 220,30 290,45" />
+      </svg>
+    </div>
+    <p style="font-size:0.8rem; color:#55605B;">viewBox lets the chart resize fluidly with its container.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;svg viewBox="0 0 300 100" width="100%"&gt; ... &lt;/svg&gt;
+/* width:100% + viewBox = scales responsively, unlike a fixed-pixel width/height */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Bubbling and Event Capturing</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 85</p>
+    <h1>Event Bubbling and Event Capturing</h1>
+    <p class="desc">Clicking the inner box shows both phases firing: capturing (outer to inner) then bubbling (inner to outer).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="outer85" style="padding:1.5rem; background:var(--paper-raised); border:1px solid var(--rule);">
+      Outer
+      <div id="inner85" style="padding:1.5rem; background:#fff; border:1px solid var(--rule); margin-top:0.5rem;">Inner (click me)</div>
+    </div>
+    <div class="output-box" id="bubbleOut85"></div>
+    <script>
+      const log85 = [];
+      function addLog85(msg){ log85.push(msg); document.getElementById('bubbleOut85').textContent = log85.join(' \u2192 '); }
+      document.getElementById('outer85').addEventListener('click', () => addLog85('Outer (capturing)'), true);
+      document.getElementById('inner85').addEventListener('click', () => addLog85('Inner (target)'));
+      document.getElementById('outer85').addEventListener('click', () => addLog85('Outer (bubbling)'));
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>outer.addEventListener('click', () =&gt; log('capturing'), true); // true = capture phase
+inner.addEventListener('click', () =&gt; log('target'));
+outer.addEventListener('click', () =&gt; log('bubbling'));               // default = bubble phase</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

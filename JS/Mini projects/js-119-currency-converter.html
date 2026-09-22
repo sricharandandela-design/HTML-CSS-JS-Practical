@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Currency Converter Using an API</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 119</p>
+    <h1>Currency Converter Using an API</h1>
+    <p class="desc">Fetches a live exchange rate and converts an amount between two currencies.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Amount</label><input type="number" id="ccAmount119" value="100"></div>
+    <div class="field"><label>From</label><input type="text" id="ccFrom119" value="USD" style="text-transform:uppercase;"></div>
+    <div class="field"><label>To</label><input type="text" id="ccTo119" value="INR" style="text-transform:uppercase;"></div>
+    <button class="btn" onclick="convertCurrency119()">Convert</button>
+    <div class="output-box" id="out119"></div>
+    <script>
+      async function convertCurrency119(){
+        const amount = Number(document.getElementById('ccAmount119').value);
+        const from = document.getElementById('ccFrom119').value.toUpperCase();
+        const to = document.getElementById('ccTo119').value.toUpperCase();
+        const out = document.getElementById('out119');
+        out.textContent = 'Loading...';
+        try{
+          const res = await fetch(`https://api.exchangerate-api.com/v4/latest/${from}`);
+          const data = await res.json();
+          const rate = data.rates[to];
+          out.textContent = rate ? `${amount} ${from} = ${(amount * rate).toFixed(2)} ${to}` : 'Currency not found.';
+        } catch(e){ out.textContent = 'Could not fetch exchange rate right now.'; }
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const res = await fetch(`https://api.exchangerate-api.com/v4/latest/${from}`);
+const rate = (await res.json()).rates[to];
+console.log(amount * rate);</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

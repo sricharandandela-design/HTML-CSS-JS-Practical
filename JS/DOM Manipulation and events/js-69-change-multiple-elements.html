@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Change Multiple HTML Elements Simultaneously</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 69</p>
+    <h1>Change Multiple HTML Elements Simultaneously</h1>
+    <p class="desc">One button click updates several different elements at once using querySelectorAll.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <p class="multi69">Paragraph one</p>
+    <p class="multi69">Paragraph two</p>
+    <p class="multi69">Paragraph three</p>
+    <button class="btn" onclick="document.querySelectorAll('.multi69').forEach(el => el.style.color = 'var(--pine)')">Turn all green</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>document.querySelectorAll('.multi').forEach(el =&gt; {
+  el.style.color = 'green';
+});</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

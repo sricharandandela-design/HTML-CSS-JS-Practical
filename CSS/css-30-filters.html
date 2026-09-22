@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Filters: Blur, Grayscale, Brightness, Contrast, and Opacity</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 30</p>
+    <h1>CSS Filters: Blur, Grayscale, Brightness, Contrast, and Opacity</h1>
+    <p class="desc">Five filter functions applied to identical placeholder images.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .filt img{ width:110px; height:110px; margin:0.3rem; border-radius:8px; }
+    </style>
+    <div class="filt">
+      <img src="https://placehold.co/220x220/3F6C5D/ffffff?text=normal">
+      <img src="https://placehold.co/220x220/3F6C5D/ffffff?text=blur" style="filter:blur(3px);">
+      <img src="https://placehold.co/220x220/3F6C5D/ffffff?text=gray" style="filter:grayscale(100%);">
+      <img src="https://placehold.co/220x220/3F6C5D/ffffff?text=bright" style="filter:brightness(1.6);">
+      <img src="https://placehold.co/220x220/3F6C5D/ffffff?text=contrast" style="filter:contrast(2);">
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.blur     { filter: blur(3px); }
+.grayscale{ filter: grayscale(100%); }
+.bright   { filter: brightness(1.6); }
+.contrast { filter: contrast(2); }
+.fade     { filter: opacity(50%); } /* similar to the opacity property, but composable with other filters */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

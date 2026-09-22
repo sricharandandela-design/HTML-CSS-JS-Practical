@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Navigation Menu</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 40</p>
+    <h1>Dropdown Navigation Menu</h1>
+    <p class="desc">A menu item that reveals a small panel of links underneath it on click.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .dd-wrap{ position:relative; display:inline-block; }
+      .dd-panel{ display:none; position:absolute; top:110%; left:0; background:#fff; border:1px solid var(--rule);
+                 min-width:160px; box-shadow:0 6px 16px rgba(0,0,0,0.12); border-radius:6px; overflow:hidden; z-index:5; }
+      .dd-panel.open{ display:block; }
+      .dd-panel a{ display:block; padding:0.6rem 0.9rem; color:var(--ink); }
+      .dd-panel a:hover{ background:var(--paper); }
+    </style>
+    <div class="dd-wrap">
+      <button class="btn" onclick="document.getElementById('ddPanel').classList.toggle('open')">Products &#9662;</button>
+      <div class="dd-panel" id="ddPanel">
+        <a href="#">Analytics</a><a href="#">Billing</a><a href="#">Integrations</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.dd-panel{ display:none; position:absolute; top:110%; left:0; }
+.dd-panel.open{ display:block; }
+
+button.onclick = () =&gt; panel.classList.toggle('open');</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Common Elements in Two Arrays</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 58</p>
+    <h1>Common Elements in Two Arrays</h1>
+    <p class="desc">Filters one array down to only the values that also appear in the second array.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Array 1</label><input type="text" id="ce58a" value="1, 2, 3, 4"></div>
+    <div class="field"><label>Array 2</label><input type="text" id="ce58b" value="3, 4, 5, 6"></div>
+    <button class="btn" onclick="runCommon58()">Find common</button>
+    <div class="output-box" id="out58"></div>
+    <script>
+      function runCommon58(){
+        const a = document.getElementById('ce58a').value.split(",").map(s=>s.trim());
+        const b = document.getElementById('ce58b').value.split(",").map(s=>s.trim());
+        const common = a.filter(item => b.includes(item));
+        document.getElementById('out58').textContent = `Common elements: [${common.join(", ")}]`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const common = arr1.filter(item =&gt; arr2.includes(item));
+console.log(common); // elements present in both arrays</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prediction Card</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 140</p>
+    <h1>AI Prediction Card</h1>
+    <p class="desc">A current value paired with a predicted future value and a confidence range.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1rem; max-width:280px;">
+      <div style="font-size:0.8rem; color:#55605B;">Predicted revenue, next month</div>
+      <div style="font-size:1.5rem; font-weight:700; color:var(--pine);">$54,200</div>
+      <p style="font-size:0.8rem; color:#55605B;">Range: $49,800 &ndash; $58,600 (80% confidence)</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.prediction-card .value{ font-size:1.5rem; color:#3F6C5D; }
+.prediction-card .range{ font-size:0.8rem; } /* uncertainty shown, not hidden */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

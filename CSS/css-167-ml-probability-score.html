@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Probability Score Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 167</p>
+    <h1>ML Probability Score Component</h1>
+    <p class="desc">A horizontal bar showing a predicted probability, from 0 to 1.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:280px;">
+      <div style="display:flex; justify-content:space-between; font-size:0.85rem; margin-bottom:0.2rem;"><span>Probability of purchase</span><span>0.73</span></div>
+      <div style="background:var(--paper); border-radius:999px; height:10px;"><div style="width:73%; background:var(--pine); height:100%; border-radius:999px;"></div></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.prob-bar div{ width: calc(score * 100%); background:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

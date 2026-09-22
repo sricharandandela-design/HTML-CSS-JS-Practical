@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anomaly Detection Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 142</p>
+    <h1>Anomaly Detection Dashboard</h1>
+    <p class="desc">A chart with one point flagged as unusual, plus a short alert list.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <svg viewBox="0 0 300 100" width="100%" style="max-width:340px; margin-bottom:0.6rem;">
+      <polyline fill="none" stroke="#3F6C5D" stroke-width="2.5" points="10,70 60,65 110,60 160,20 210,62 260,58" />
+      <circle cx="160" cy="20" r="6" fill="#B14B3F"/>
+    </svg>
+    <div class="alert error" style="padding:0.6rem 0.8rem; background:#F6DEDA; border-left:4px solid #B14B3F; border-radius:6px; font-size:0.85rem;">
+      Anomaly detected on Sep 14 — traffic spiked 340% above baseline.
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;circle cx="160" cy="20" r="6" fill="#B14B3F"/&gt;  &lt;!-- flags the anomalous data point --&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

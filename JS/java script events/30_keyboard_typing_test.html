@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html><body>
+<h2>Keyboard Typing Test</h2>
+<p id="target">JavaScript events make web pages interactive.</p>
+<textarea id="input" rows="5" cols="60" placeholder="Type the sentence above..."></textarea>
+<p>Time: <span id="time">0</span> seconds</p>
+<p id="result"></p>
+<script>
+let seconds=0, timer=null, started=false;
+const input=document.getElementById("input");
+input.addEventListener("input",function(){
+    if(!started){
+        started=true;
+        timer=setInterval(()=>document.getElementById("time").textContent=++seconds,1000);
+    }
+    if(input.value === document.getElementById("target").textContent){
+        clearInterval(timer);
+        document.getElementById("result").textContent="Completed in "+seconds+" seconds!";
+    }
+});
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body></html>

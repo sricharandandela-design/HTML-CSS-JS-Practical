@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Forecasting Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 141</p>
+    <h1>AI Forecasting Dashboard</h1>
+    <p class="desc">A chart where the solid line is historical data and the dashed continuation is the forecast.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <svg viewBox="0 0 300 120" width="100%" style="max-width:340px;">
+      <polyline fill="none" stroke="#3F6C5D" stroke-width="2.5" points="10,90 60,70 110,80 160,50" />
+      <polyline fill="none" stroke="#E8A33D" stroke-width="2.5" stroke-dasharray="6,4" points="160,50 210,40 260,25 290,20" />
+    </svg>
+    <p style="font-size:0.8rem; color:#55605B;">Solid = actual, dashed amber = forecast for the next 3 months.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;polyline stroke="#3F6C5D" points="...actual points..." /&gt;
+&lt;polyline stroke="#E8A33D" stroke-dasharray="6,4" points="...forecast points..." /&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Avatars and Avatar Groups</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 62</p>
+    <h1>User Avatars and Avatar Groups</h1>
+    <p class="desc">Single avatars in different sizes, plus an overlapping group with a '+N more' indicator.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .avatar{ border-radius:50%; }
+      .avatar-group{ display:flex; }
+      .avatar-group img, .avatar-group .more{ border-radius:50%; border:2px solid #fff; margin-left:-10px; }
+      .avatar-group :first-child{ margin-left:0; }
+      .more{ width:36px; height:36px; background:var(--pine); color:#fff; display:flex; align-items:center;
+             justify-content:center; font-size:0.75rem; font-weight:600; }
+    </style>
+    <img class="avatar" src="https://placehold.co/28x28/3F6C5D/ffffff?text=A" style="margin-right:0.5rem;">
+    <img class="avatar" src="https://placehold.co/44x44/3F6C5D/ffffff?text=B" style="margin-right:0.5rem;">
+    <img class="avatar" src="https://placehold.co/60x60/3F6C5D/ffffff?text=C">
+    <div class="avatar-group" style="margin-top:1rem;">
+      <img src="https://placehold.co/36x36/E8A33D/1A2332?text=A" width="36" height="36">
+      <img src="https://placehold.co/36x36/3F6C5D/ffffff?text=B" width="36" height="36">
+      <img src="https://placehold.co/36x36/B14B3F/ffffff?text=C" width="36" height="36">
+      <span class="more">+5</span>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.avatar{ border-radius:50%; }
+.avatar-group img{ margin-left:-10px; border:2px solid #fff; border-radius:50%; }
+.avatar-group .more{ background:#3F6C5D; color:#fff; border-radius:50%; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 89</p>
+    <h1>SaaS Dashboard</h1>
+    <p class="desc">A general SaaS overview: top-line KPIs, a trend chart, and a recent activity list.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1rem; }
+      .kpi-row{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:1rem; }
+      .kpi-tile{ flex:1; min-width:120px; }
+      .kpi-tile .label{ font-size:0.75rem; color:#55605B; }
+      .kpi-tile .value{ font-size:1.3rem; font-weight:700; }
+      .bars{ display:flex; align-items:flex-end; gap:6px; height:80px; }
+      .bars div{ flex:1; background:var(--pine); border-radius:3px 3px 0 0; }
+    </style>
+    <div class="cd">
+      <div class="kpi-row">
+        <div class="kpi-tile"><div class="label">MRR</div><div class="value">$48,210</div></div>
+        <div class="kpi-tile"><div class="label">Active Users</div><div class="value">2,481</div></div>
+        <div class="kpi-tile"><div class="label">Churn</div><div class="value">3.2%</div></div>
+      </div>
+      <div class="bars">
+        <div style="height:40%"></div><div style="height:65%"></div><div style="height:50%"></div>
+        <div style="height:80%"></div><div style="height:70%"></div><div style="height:95%"></div>
+      </div>
+      <p style="font-size:0.8rem; color:#55605B; margin-top:0.6rem;">Recent: 3 new signups, 1 upgrade, 1 cancellation today.</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.dashboard{ display:grid; gap:1rem; }
+.kpi-row{ display:flex; gap:0.8rem; }
+.bars{ display:flex; align-items:flex-end; gap:6px; height:80px; }
+.bars div{ flex:1; background:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

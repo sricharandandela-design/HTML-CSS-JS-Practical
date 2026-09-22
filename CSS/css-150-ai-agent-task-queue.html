@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Task Queue</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 150</p>
+    <h1>AI Agent Task Queue</h1>
+    <p class="desc">A queue of pending tasks waiting for the agent to process them, in order.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .queue-item{ display:flex; justify-content:space-between; padding:0.5rem 0.8rem; border:1px solid var(--rule);
+                   border-radius:6px; margin-bottom:0.4rem; font-size:0.85rem; background:#fff; }
+      .queue-pos{ color:#8A9089; }
+    </style>
+    <div class="queue-item"><span>Ticket #4021 &mdash; Refund request</span><span class="queue-pos">#1</span></div>
+    <div class="queue-item"><span>Ticket #4022 &mdash; Login issue</span><span class="queue-pos">#2</span></div>
+    <div class="queue-item"><span>Ticket #4023 &mdash; Feature question</span><span class="queue-pos">#3</span></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.queue-item{ display:flex; justify-content:space-between; }
+/* processed top-to-bottom, in submission order */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Sliding Card Animation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 230</p>
+    <h1>CSS Sliding Card Animation</h1>
+    <p class="desc">A card that slides in from the side on hover of its container, revealing more detail.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .slide-wrap{ overflow:hidden; border:1px solid var(--rule); border-radius:8px; width:220px; height:100px; position:relative; }
+      .slide-card{ position:absolute; inset:0; background:#fff; padding:0.8rem; transition:transform 0.3s ease; }
+      .slide-detail{ position:absolute; inset:0; background:var(--pine); color:#fff; padding:0.8rem; transform:translateX(100%); transition:transform 0.3s ease; }
+      .slide-wrap:hover .slide-card{ transform:translateX(-100%); }
+      .slide-wrap:hover .slide-detail{ transform:translateX(0); }
+    </style>
+    <div class="slide-wrap">
+      <div class="slide-card">Hover this card&hellip;</div>
+      <div class="slide-detail">&hellip;to reveal detail</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.slide-wrap:hover .slide-card  { transform: translateX(-100%); }
+.slide-wrap:hover .slide-detail{ transform: translateX(0); }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

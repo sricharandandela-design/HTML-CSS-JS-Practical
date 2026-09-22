@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><style>
+#tip{display:none;position:absolute;background:#222;color:#fff;padding:6px}
+</style></head>
+<body>
+<button id="button">Hover me</button>
+<div id="tip">This tooltip was created with DOM manipulation.</div>
+<script>
+const button = document.getElementById("button");
+const tip = document.getElementById("tip");
+button.addEventListener("mouseenter", e => {
+    tip.style.display = "block";
+    tip.style.left = e.pageX + "px";
+    tip.style.top = e.pageY + "px";
+});
+button.addEventListener("mouseleave", () => tip.style.display = "none");
+</script>
+
+<div style="
+    margin: 20px 0;
+    padding: 12px;
+    text-align: center;
+    background: #f4f6f8;
+    border-radius: 10px;
+">
+    <a href="../index.html"
+       style="
+       display:inline-block;
+       margin-right:10px;
+       padding:10px 18px;
+       background:#2563eb;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Home
+    </a>
+
+    <a href="index.html"
+       style="
+       display:inline-block;
+       padding:10px 18px;
+       background:#374151;
+       color:white;
+       text-decoration:none;
+       border-radius:7px;
+       font-weight:bold;
+       ">
+       Back to Programs
+    </a>
+</div>
+
+</body>
+</html>

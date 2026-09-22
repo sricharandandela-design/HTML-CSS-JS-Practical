@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webpage That Responds to Double-click Events</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 84</p>
+    <h1>Webpage That Responds to Double-click Events</h1>
+    <p class="desc">A box changes colour only on a double-click, not a single click.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div id="dblBox84" ondblclick="this.style.background='var(--pine)'; this.style.color='#fff'; this.textContent='Double-clicked!';"
+         style="padding:1.5rem; border:1px solid var(--rule); border-radius:6px; text-align:center; cursor:pointer;">
+      Double-click this box
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>box.addEventListener('dblclick', () =&gt; {
+  box.style.background = 'green';
+});</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

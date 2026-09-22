@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculate the Power of a Number</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 52</p>
+    <h1>Calculate the Power of a Number</h1>
+    <p class="desc">Computed with a loop and compared against JavaScript's built-in ** operator.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>Base</label><input type="number" id="pw52base" value="2"></div>
+    <div class="field"><label>Exponent</label><input type="number" id="pw52exp" value="10"></div>
+    <button class="btn" onclick="runPower52()">Calculate</button>
+    <div class="output-box" id="out52"></div>
+    <script>
+      function powerLoop52(base, exp){
+        let result = 1;
+        for (let i = 0; i < exp; i++) result *= base;
+        return result;
+      }
+      function runPower52(){
+        const base = Number(document.getElementById('pw52base').value);
+        const exp = Number(document.getElementById('pw52exp').value);
+        document.getElementById('out52').textContent = `Loop result: ${powerLoop52(base, exp)}  |  ** operator: ${base ** exp}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function powerLoop(base, exp){
+  let result = 1;
+  for (let i = 0; i &lt; exp; i++) result *= base;
+  return result;
+}
+console.log(base ** exp); // built-in exponent operator, same result</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

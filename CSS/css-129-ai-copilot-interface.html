@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Copilot Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 129</p>
+    <h1>AI Copilot Interface</h1>
+    <p class="desc">Inline suggestions that appear beside your work, the pattern used by code and writing copilots.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:0.8rem; border:1px solid var(--rule); border-radius:8px; overflow:hidden;">
+      <div style="flex:1; padding:0.8rem; font-family:var(--font-mono); font-size:0.85rem; background:#fff;">
+        function total(items) {<br>&nbsp;&nbsp;return items.reduce(
+      </div>
+      <div style="width:150px; background:var(--paper-raised); padding:0.8rem; font-size:0.8rem; border-left:1px dashed var(--rule);">
+        <span style="background:var(--amber); color:var(--ink); font-size:0.65rem; font-weight:700;
+      padding:0.1rem 0.4rem; border-radius:4px; vertical-align:middle;">AI</span><br><em>Suggestion:</em><br>(sum, i) =&gt; sum + i.price, 0)
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.editor{ flex:1; font-family: monospace; }
+.copilot-suggestion{ width:150px; border-left:1px dashed #C9C2AE; } /* inline, non-intrusive */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

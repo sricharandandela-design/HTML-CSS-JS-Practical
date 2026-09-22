@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skeleton-loading Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 77</p>
+    <h1>Skeleton-loading Component</h1>
+    <p class="desc">Grey placeholder shapes that shimmer while real content is still being fetched.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .skel{ background: linear-gradient(90deg, #E4E2D8 25%, #F1EFE6 37%, #E4E2D8 63%);
+             background-size: 400% 100%; animation: shimmer 1.4s ease infinite; border-radius:6px; }
+      @keyframes shimmer{ 0%{ background-position:100% 50%; } 100%{ background-position:0 50%; } }
+      .skel-row{ display:flex; gap:0.8rem; align-items:center; margin-bottom:0.8rem; }
+      .skel-circle{ width:44px; height:44px; border-radius:50%; }
+      .skel-line{ height:14px; }
+    </style>
+    <div class="skel-row">
+      <div class="skel skel-circle"></div>
+      <div style="flex:1;">
+        <div class="skel skel-line" style="width:60%; margin-bottom:6px;"></div>
+        <div class="skel skel-line" style="width:40%;"></div>
+      </div>
+    </div>
+    <div class="skel skel-line" style="width:100%; margin-bottom:6px;"></div>
+    <div class="skel skel-line" style="width:90%;"></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.skeleton{
+  background: linear-gradient(90deg, #E4E2D8 25%, #F1EFE6 37%, #E4E2D8 63%);
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+@keyframes shimmer{
+  0%   { background-position: 100% 50%; }
+  100% { background-position: 0 50%; }
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

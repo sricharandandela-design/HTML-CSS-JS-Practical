@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feedback Form with Validation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 93</p>
+    <h1>Feedback Form with Validation</h1>
+    <p class="desc">Requires a star rating and a non-empty comment before it can be submitted.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <form onsubmit="return validateFeedback93();">
+      <div class="field"><label>Rating (1-5)</label><input type="number" id="fb93rating" min="1" max="5"></div>
+      <div class="field"><label>Comments</label><textarea id="fb93comment" rows="3"></textarea></div>
+      <p class="error-text" id="fb93err"></p>
+      <button class="btn" type="submit">Submit feedback</button>
+    </form>
+    <script>
+      function validateFeedback93(){
+        const rating = Number(document.getElementById('fb93rating').value);
+        const comment = document.getElementById('fb93comment').value.trim();
+        const err = document.getElementById('fb93err');
+        if (!rating || rating < 1 || rating > 5){ err.textContent = 'Please give a rating from 1 to 5.'; return false; }
+        if (!comment){ err.textContent = 'Please add a comment.'; return false; }
+        err.textContent = ''; alert('Thanks for your feedback!'); return false;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>if (rating &lt; 1 || rating &gt; 5) return showError('Rating must be 1-5.');
+if (!comment.value.trim()) return showError('Please add a comment.');</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Find the Sum and Average of Array Elements</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 14</p>
+    <h1>Find the Sum and Average of Array Elements</h1>
+    <p class="desc">Uses Array.prototype.reduce to accumulate the total, then divides by the length.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label for="arr">Comma-separated numbers</label>
+      <input type="text" id="arr" value="10, 20, 30, 40, 50"></div>
+    <button class="btn" onclick="runSumAvg()">Run</button>
+    <div class="output-box" id="out">Output will appear here.</div>
+    <script>
+      function runSumAvg(){
+        const numbers = document.getElementById('arr').value.split(",").map(Number);
+        const sum = numbers.reduce((total, n) => total + n, 0);
+        const average = sum / numbers.length;
+        document.getElementById('out').textContent = `Sum: ${sum}  |  Average: ${average.toFixed(2)}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>const numbers = [10, 20, 30, 40, 50];
+
+const sum = numbers.reduce((total, n) =&gt; total + n, 0);
+const average = sum / numbers.length;
+
+console.log(sum, average); // 150 30</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

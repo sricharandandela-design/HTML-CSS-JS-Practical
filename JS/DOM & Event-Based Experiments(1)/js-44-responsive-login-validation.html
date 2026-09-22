@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Login Form with JavaScript Validation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 44</p>
+    <h1>Responsive Login Form with JavaScript Validation</h1>
+    <p class="desc">A login form that adapts to narrow screens and validates both fields before allowing submit.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .rlf44{ width:100%; max-width:280px; }
+    </style>
+    <form class="rlf44" onsubmit="return validateLogin44();">
+      <div class="field"><input type="email" id="rlf44email" placeholder="Email"></div>
+      <div class="field"><input type="password" id="rlf44pass" placeholder="Password"></div>
+      <p class="error-text" id="rlf44err"></p>
+      <button class="btn" type="submit" style="width:100%;">Sign in</button>
+    </form>
+    <script>
+      function validateLogin44(){
+        const email = document.getElementById('rlf44email').value;
+        const pass = document.getElementById('rlf44pass').value;
+        const err = document.getElementById('rlf44err');
+        if (!email.includes('@')){ err.textContent = 'Enter a valid email.'; return false; }
+        if (pass.length < 6){ err.textContent = 'Password must be at least 6 characters.'; return false; }
+        err.textContent = ''; alert('Signed in!'); return false;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.rlf{ width:100%; max-width:280px; } /* stays narrow on desktop, full-width on mobile */
+function validateLogin(){
+  if (!email.includes('@')) return showError('Enter a valid email.');
+  if (password.length &lt; 6) return showError('Min 6 characters.');
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

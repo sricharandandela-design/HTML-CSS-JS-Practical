@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Display API Data Dynamically on a Webpage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 42</p>
+    <h1>Display API Data Dynamically on a Webpage</h1>
+    <p class="desc">Fetches a small list from a public API and renders each item as a card in the DOM.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="loadUsers42()">Load users</button>
+    <div id="userList42" style="margin-top:0.6rem;"></div>
+    <script>
+      function loadUsers42(){
+        const list = document.getElementById('userList42');
+        list.textContent = "Loading...";
+        fetch('https://jsonplaceholder.typicode.com/users?_limit=3')
+          .then(res => res.json())
+          .then(users => {
+            list.innerHTML = "";
+            users.forEach(u => {
+              const card = document.createElement('div');
+              card.style.cssText = "border:1px solid var(--rule); border-radius:6px; padding:0.6rem; margin-bottom:0.4rem;";
+              card.textContent = `${u.name} — ${u.email}`;
+              list.appendChild(card);
+            });
+          });
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>fetch(apiUrl)
+  .then(res =&gt; res.json())
+  .then(items =&gt; {
+    items.forEach(item =&gt; {
+      const card = document.createElement('div');
+      card.textContent = item.name;
+      list.appendChild(card);
+    });
+  });</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ML Model Version Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 177</p>
+    <h1>ML Model Version Management</h1>
+    <p class="desc">A list of trained model versions, with the currently deployed one flagged.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .ver-row{ display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid var(--rule); max-width:320px; font-size:0.85rem; }
+      .live-badge{ background:var(--pine); color:#fff; font-size:0.7rem; padding:0.1rem 0.4rem; border-radius:4px; }
+    </style>
+    <div class="ver-row"><span>v2.3 <span class="live-badge">LIVE</span></span><span>94.2% acc.</span></div>
+    <div class="ver-row"><span>v2.2</span><span>92.8% acc.</span></div>
+    <div class="ver-row"><span>v2.1</span><span>91.5% acc.</span></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.live-badge{ background:#3F6C5D; color:#fff; } /* flags the currently-deployed version */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

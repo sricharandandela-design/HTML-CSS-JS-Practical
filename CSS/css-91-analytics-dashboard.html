@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Analytics Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 91</p>
+    <h1>Analytics Dashboard</h1>
+    <p class="desc">Website traffic overview: a trend chart plus a top-pages table.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1rem; }
+      .kpi-row{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-bottom:1rem; }
+      .kpi-tile{ flex:1; min-width:120px; }
+      .kpi-tile .label{ font-size:0.75rem; color:#55605B; }
+      .kpi-tile .value{ font-size:1.3rem; font-weight:700; }
+      .bars{ display:flex; align-items:flex-end; gap:6px; height:80px; }
+      .bars div{ flex:1; background:var(--pine); border-radius:3px 3px 0 0; }
+    </style>
+    <div class="cd">
+      <div class="bars" style="margin-bottom:0.8rem;">
+        <div style="height:30%"></div><div style="height:55%"></div><div style="height:45%"></div>
+        <div style="height:70%"></div><div style="height:60%"></div><div style="height:85%"></div><div style="height:75%"></div>
+      </div>
+      <table style="width:100%; font-size:0.85rem; border-collapse:collapse;">
+        <tr style="color:#55605B;"><td>Page</td><td>Views</td></tr>
+        <tr><td>/pricing</td><td>4,210</td></tr>
+        <tr><td>/docs</td><td>3,102</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.analytics-dashboard table{ width:100%; font-size:0.85rem; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

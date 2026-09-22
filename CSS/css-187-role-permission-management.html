@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Role and Permission Management</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 187</p>
+    <h1>Role and Permission Management</h1>
+    <p class="desc">A permission matrix: roles as columns, capabilities as rows, checked where allowed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <table style="border-collapse:collapse; font-size:0.8rem; max-width:320px;">
+      <tr><th></th><th style="padding:0.3rem 0.6rem;">Admin</th><th style="padding:0.3rem 0.6rem;">Editor</th><th style="padding:0.3rem 0.6rem;">Viewer</th></tr>
+      <tr><td>View data</td><td>&#10003;</td><td>&#10003;</td><td>&#10003;</td></tr>
+      <tr><td>Edit data</td><td>&#10003;</td><td>&#10003;</td><td>&mdash;</td></tr>
+      <tr><td>Manage billing</td><td>&#10003;</td><td>&mdash;</td><td>&mdash;</td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.perm-matrix td{ text-align:center; } /* checkmark = allowed, dash = not allowed */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

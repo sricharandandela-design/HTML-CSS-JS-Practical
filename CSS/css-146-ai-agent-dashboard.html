@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Agent Dashboard</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 146</p>
+    <h1>AI Agent Dashboard</h1>
+    <p class="desc">An overview of all running agents, their status, and how many tasks each has completed.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .agent-status{ display:inline-flex; align-items:center; gap:0.3rem; font-size:0.8rem; font-weight:600; padding:0.15rem 0.5rem; border-radius:999px; }
+      .agent-status.running{ background:#DCEEE3; color:#2C5142; }
+      .agent-status.idle{ background:#EDEFE9; color:#55605B; }
+      .agent-status.error{ background:#F6DEDA; color:#8A3327; }
+    </style>
+    <table style="width:100%; font-size:0.85rem; border-collapse:collapse; max-width:360px;">
+      <tr style="color:#55605B;"><td>Agent</td><td>Status</td><td>Tasks done</td></tr>
+      <tr><td>Support Triage</td><td><span class="agent-status running">Running</span></td><td>142</td></tr>
+      <tr><td>Invoice Checker</td><td><span class="agent-status idle">Idle</span></td><td>58</td></tr>
+      <tr><td>Data Sync</td><td><span class="agent-status error">Error</span></td><td>31</td></tr>
+    </table>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.agent-status.running{ background:#DCEEE3; color:#2C5142; }
+.agent-status.idle   { background:#EDEFE9; color:#55605B; }
+.agent-status.error  { background:#F6DEDA; color:#8A3327; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

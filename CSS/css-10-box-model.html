@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The CSS Box Model: Content, Padding, Border, and Margin</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 10</p>
+    <h1>The CSS Box Model: Content, Padding, Border, and Margin</h1>
+    <p class="desc">A single nested-box diagram showing all four layers of the box model at once.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .box-margin{ background:#EFE3C4; padding:20px; display:inline-block; }
+      .box-border{ background:#fff; border:6px solid var(--ink); padding:20px; }
+      .box-padding{ background:var(--paper); padding:20px; }
+      .box-content{ background:var(--pine); color:#fff; padding:0.8rem; text-align:center; }
+    </style>
+    <div class="box-margin">
+      <div class="box-border">
+        <div class="box-padding">
+          <div class="box-content">content</div>
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:1rem;">Outer tan layer = margin, dark ring = border,
+       pale layer = padding, green centre = the actual content.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.box{
+  margin: 20px;   /* space OUTSIDE the border, transparent   */
+  border: 6px solid #1A2332;
+  padding: 20px;  /* space INSIDE the border, around content */
+  /* the content itself sits inside all of the above */
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

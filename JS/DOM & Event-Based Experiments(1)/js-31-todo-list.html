@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-do List Using JavaScript</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 31</p>
+    <h1>To-do List Using JavaScript</h1>
+    <p class="desc">Add tasks, mark them done, and remove them — a classic DOM manipulation exercise.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:flex; gap:0.5rem; margin-bottom:0.6rem;">
+      <input type="text" id="todoInput31" placeholder="New task..." style="flex:1; padding:0.5rem;">
+      <button class="btn" onclick="addTodo31()">Add</button>
+    </div>
+    <ul id="todoList31" style="list-style:none; padding:0;"></ul>
+    <script>
+      function addTodo31(){
+        const input = document.getElementById('todoInput31');
+        if (!input.value.trim()) return;
+        const li = document.createElement('li');
+        li.style.cssText = 'display:flex; justify-content:space-between; padding:0.4rem 0; border-bottom:1px solid var(--rule);';
+        li.innerHTML = `<span onclick="this.style.textDecoration = this.style.textDecoration === 'line-through' ? 'none' : 'line-through'" style="cursor:pointer;">${input.value}</span>
+          <button onclick="this.parentElement.remove()" style="border:none; background:none; cursor:pointer;">&times;</button>`;
+        document.getElementById('todoList31').appendChild(li);
+        input.value = '';
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function addTodo(){
+  const li = document.createElement('li');
+  li.innerHTML = `&lt;span&gt;${taskText}&lt;/span&gt;&lt;button onclick="this.parentElement.remove()"&gt;&amp;times;&lt;/button&gt;`;
+  list.appendChild(li);
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

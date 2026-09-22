@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Box-sizing Property: Content-box and Border-box</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 12</p>
+    <h1>The Box-sizing Property: Content-box and Border-box</h1>
+    <p class="desc">Two boxes with identical width/padding/border — one grows past its set width (content-box), one doesn't (border-box).</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .sizing-row{ display:flex; gap:1rem; }
+      .sizing-box{ width:200px; padding:20px; border:6px solid var(--pine); background:var(--paper-raised); }
+      .cb{ box-sizing: content-box; }
+      .bb{ box-sizing: border-box; }
+    </style>
+    <div class="sizing-row">
+      <div class="sizing-box cb">content-box: renders wider than 200px (padding+border are added on top)</div>
+      <div class="sizing-box bb">border-box: stays exactly 200px total (padding+border eat into it)</div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.content-box{
+  box-sizing: content-box;  /* default: width = content only        */
+  width: 200px; padding: 20px; border: 6px solid #3F6C5D;
+  /* rendered width = 200 + 40(padding) + 12(border) = 252px */
+}
+
+.border-box{
+  box-sizing: border-box;   /* width INCLUDES padding + border      */
+  width: 200px; padding: 20px; border: 6px solid #3F6C5D;
+  /* rendered width stays exactly 200px */
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

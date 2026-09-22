@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 50</p>
+    <h1>Pricing Card Component</h1>
+    <p class="desc">A single plan card with a highlighted 'most popular' badge and a feature list.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .price-card{ background:#fff; border:2px solid var(--pine); border-radius:12px; padding:1.4rem; max-width:280px; position:relative; }
+      .price-card .badge{ position:absolute; top:-12px; right:16px; background:var(--amber); color:var(--ink);
+                           font-size:0.75rem; font-weight:700; padding:0.2rem 0.6rem; border-radius:999px; }
+      .price-card .amount{ font-family:var(--font-display); font-size:2rem; margin:0.5rem 0; }
+      .price-card ul{ list-style:none; padding:0; margin:0.8rem 0; font-size:0.88rem; }
+      .price-card li{ padding:0.25rem 0; }
+      .price-card li::before{ content:"\2713  "; color:var(--pine); }
+    </style>
+    <div class="price-card">
+      <span class="badge">Most popular</span>
+      <h3>Pro</h3>
+      <div class="amount">$29<span style="font-size:1rem; color:#55605B;">/mo</span></div>
+      <ul>
+        <li>Unlimited projects</li>
+        <li>Priority support</li>
+        <li>Advanced analytics</li>
+      </ul>
+      <button class="btn" style="width:100%;">Choose Pro</button>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.price-card{ border:2px solid #3F6C5D; border-radius:12px; }
+.price-card .badge{ position:absolute; top:-12px; right:16px; background:#E8A33D; border-radius:999px; }
+.price-card li::before{ content:"\2713  "; color:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

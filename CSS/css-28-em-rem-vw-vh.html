@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Em, Rem, Vw, Vh, and Percentage Units</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 28</p>
+    <h1>Em, Rem, Vw, Vh, and Percentage Units</h1>
+    <p class="desc">Five text sizes, each defined with a different unit, so you can compare how they scale.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="font-size:20px;">
+      <p style="font-size:1.5em;">1.5em &mdash; 1.5 &times; this element's own parent font-size</p>
+      <p style="font-size:1.5rem;">1.5rem &mdash; 1.5 &times; the root &lt;html&gt; font-size (ignores parent)</p>
+      <p style="font-size:5vw;">5vw &mdash; 5% of the current viewport width</p>
+      <p style="font-size:5vh;">5vh &mdash; 5% of the current viewport height</p>
+      <p style="font-size:150%;">150% &mdash; 1.5 &times; the parent's computed font-size, like em</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.em  { font-size: 1.5em;  } /* relative to the PARENT element's font-size */
+.rem { font-size: 1.5rem; } /* relative to the ROOT (html) font-size, always consistent */
+.vw  { font-size: 5vw;    } /* relative to viewport WIDTH  - shrinks/grows with window */
+.vh  { font-size: 5vh;    } /* relative to viewport HEIGHT */
+.pct { font-size: 150%;   } /* behaves like em, relative to the parent */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

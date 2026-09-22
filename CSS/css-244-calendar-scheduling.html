@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaS Calendar and Scheduling Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 244</p>
+    <h1>SaaS Calendar and Scheduling Interface</h1>
+    <p class="desc">A small week view with one scheduled event block.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:2px; max-width:340px; font-size:0.75rem;">
+      <div style="background:var(--paper); padding:0.3rem; text-align:center;">Mon</div>
+      <div style="background:var(--paper); padding:0.3rem; text-align:center;">Tue</div>
+      <div style="background:var(--paper); padding:0.3rem; text-align:center;">Wed</div>
+      <div style="background:var(--paper); padding:0.3rem; text-align:center;">Thu</div>
+      <div style="background:var(--paper); padding:0.3rem; text-align:center;">Fri</div>
+      <div style="height:60px; border:1px solid var(--rule);"></div>
+      <div style="height:60px; border:1px solid var(--rule); background:var(--pine); color:#fff; padding:2px;">Standup 9am</div>
+      <div style="height:60px; border:1px solid var(--rule);"></div>
+      <div style="height:60px; border:1px solid var(--rule);"></div>
+      <div style="height:60px; border:1px solid var(--rule);"></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.calendar{ display:grid; grid-template-columns:repeat(5,1fr); }
+.event{ background:#3F6C5D; color:#fff; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

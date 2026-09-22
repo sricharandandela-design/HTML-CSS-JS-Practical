@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Remove HTML Elements Dynamically</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 67</p>
+    <h1>Remove HTML Elements Dynamically</h1>
+    <p class="desc">Each list item has its own remove button that deletes just that element.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <ul id="removeList67" style="list-style:none; padding:0;">
+      <li style="padding:0.3rem 0; border-bottom:1px solid var(--rule);">Item A <button onclick="this.parentElement.remove()" style="float:right; border:none; background:none; cursor:pointer;">&times;</button></li>
+      <li style="padding:0.3rem 0; border-bottom:1px solid var(--rule);">Item B <button onclick="this.parentElement.remove()" style="float:right; border:none; background:none; cursor:pointer;">&times;</button></li>
+      <li style="padding:0.3rem 0; border-bottom:1px solid var(--rule);">Item C <button onclick="this.parentElement.remove()" style="float:right; border:none; background:none; cursor:pointer;">&times;</button></li>
+    </ul>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>removeBtn.onclick = () =&gt; { listItem.remove(); }; // removes the element from the DOM entirely</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

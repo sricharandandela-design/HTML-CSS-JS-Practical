@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feature Card Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 49</p>
+    <h1>Feature Card Component</h1>
+    <p class="desc">An icon, a short title, and one line of supporting copy — the pattern used in feature grids.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .cd{ background:#fff; border:1px solid var(--rule); border-radius:10px; padding:1.2rem; max-width:320px;
+           box-shadow:0 2px 8px rgba(26,35,50,0.05); }
+    </style>
+    <div class="cd">
+      <div style="width:44px; height:44px; border-radius:10px; background:var(--amber); color:var(--ink);
+                  display:flex; align-items:center; justify-content:center; font-size:1.3rem; margin-bottom:0.7rem;">&#9889;</div>
+      <h3 style="margin-bottom:0.3rem; font-size:1.05rem;">Fast by default</h3>
+      <p style="font-size:0.88rem; color:#55605B;">Every request is cached at the edge, so pages load
+         in milliseconds without any extra configuration.</p>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.feature-card .icon{ width:44px; height:44px; border-radius:10px; background:#E8A33D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

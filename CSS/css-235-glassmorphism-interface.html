@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glassmorphism SaaS Interface</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 235</p>
+    <h1>Glassmorphism SaaS Interface</h1>
+    <p class="desc">A frosted-glass panel using backdrop-filter over a colourful background.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="background:linear-gradient(135deg,#3F6C5D,#E8A33D); padding:2rem; border-radius:12px;">
+      <div style="background:rgba(255,255,255,0.18); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.3);
+                  border-radius:12px; padding:1.2rem; color:#fff; max-width:260px;">
+        <strong>Glass card</strong>
+        <p style="font-size:0.85rem;">Frosted, semi-transparent, blurred background behind it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.glass-card{
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.3);
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

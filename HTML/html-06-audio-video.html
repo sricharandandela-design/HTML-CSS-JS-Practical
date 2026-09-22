@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio and Video Elements</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to HTML Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">HTML Program 06</p>
+    <h1>Audio and Video Elements</h1>
+    <p class="desc">Embedding media with the native &lt;audio&gt; and &lt;video&gt; elements and their built-in controls.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <h2>Video</h2>
+    <video controls width="480" poster="https://placehold.co/480x270/1A2332/EDEFE9?text=Video+Poster">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm" type="video/webm">
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+      Your browser does not support the video element.
+    </video>
+
+    <h2>Audio</h2>
+    <audio controls>
+      <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <p>If the media above does not load, replace the <code>src</code> attributes with a
+       local file, such as <code>assets/media/clip.mp4</code>.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>&lt;video controls width="480" poster="poster.jpg"&gt;
+  &lt;source src="clip.webm" type="video/webm"&gt;
+  &lt;source src="clip.mp4" type="video/mp4"&gt;
+  Your browser does not support the video element.
+&lt;/video&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to HTML Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

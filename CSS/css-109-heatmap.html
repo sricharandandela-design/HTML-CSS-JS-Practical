@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heatmap Analytics Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 109</p>
+    <h1>Heatmap Analytics Component</h1>
+    <p class="desc">A GitHub-style contribution heatmap: a grid of cells shaded by activity level.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .heatmap{ display:grid; grid-template-columns:repeat(14,16px); gap:3px; }
+      .heatmap div{ width:16px; height:16px; border-radius:3px; background:#E4E2D8; }
+      .h1{ background:#B9D9C6 !important; } .h2{ background:#7CB79A !important; }
+      .h3{ background:#4C8E6E !important; } .h4{ background:#2C5142 !important; }
+    </style>
+    <div class="heatmap" id="heatGrid"></div>
+    <script>
+      const grid = document.getElementById('heatGrid');
+      const levels = ['', 'h1', 'h2', 'h3', 'h4'];
+      for (let i = 0; i < 70; i++){
+        const cell = document.createElement('div');
+        cell.className = levels[Math.floor(Math.random() * levels.length)];
+        grid.appendChild(cell);
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.heatmap{ display:grid; grid-template-columns:repeat(14,16px); gap:3px; }
+.h1{ background:#B9D9C6; } .h2{ background:#7CB79A; }
+.h3{ background:#4C8E6E; } .h4{ background:#2C5142; } /* darker = more activity */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

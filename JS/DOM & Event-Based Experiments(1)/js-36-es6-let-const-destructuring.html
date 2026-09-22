@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ES6 let, const, Template Literals, and Destructuring</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 36</p>
+    <h1>ES6 let, const, Template Literals, and Destructuring</h1>
+    <p class="desc">Four core ES6 features demonstrated together.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <button class="btn" onclick="runEs36()">Run</button>
+    <div class="output-box" id="out36"></div>
+    <script>
+      function runEs36(){
+        let age = 21;                      // let: block-scoped, reassignable
+        const name = "Priya";               // const: block-scoped, cannot be reassigned
+        const greeting = `Hi, I'm ${name} and I'm ${age}.`;  // template literal
+        const { a, b } = { a: 1, b: 2 };    // destructuring an object
+        const [first, second] = [10, 20];   // destructuring an array
+        document.getElementById('out36').textContent =
+          `${greeting}\nDestructured object: a=${a}, b=${b}\nDestructured array: first=${first}, second=${second}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>let age = 21;
+const name = "Priya";
+const greeting = `Hi, I'm ${name} and I'm ${age}.`; // template literal
+
+const { a, b } = { a: 1, b: 2 };   // object destructuring
+const [first, second] = [10, 20]; // array destructuring</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

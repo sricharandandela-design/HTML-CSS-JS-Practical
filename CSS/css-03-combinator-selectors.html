@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Descendant, Child, Adjacent Sibling, and General Sibling Selectors</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 03</p>
+    <h1>Descendant, Child, Adjacent Sibling, and General Sibling Selectors</h1>
+    <p class="desc">Four combinators that relate one selector to another, instead of matching in isolation.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .comb ul p{ color: var(--danger); }              /* descendant: any depth */
+      .comb > p{ font-weight:600; }                    /* direct child of .comb */
+      .comb h4 + p{ color: var(--pine); }               /* adjacent sibling      */
+      .comb h4 ~ span{ background: var(--amber); padding:0 0.3rem; }  /* general sibling */
+    </style>
+    <div class="comb">
+      <p>Direct child of .comb &rarr; bold (child combinator).</p>
+      <h4>Heading</h4>
+      <p>Immediately after the heading &rarr; green (adjacent sibling).</p>
+      <span>Any later sibling of the heading &rarr; highlighted (general sibling).</span>
+      <ul><li><p>Nested inside a list &rarr; red (descendant combinator).</p></li></ul>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.comb ul p{ color: red; }        /* descendant  - any depth inside      */
+.comb &gt; p{ font-weight: bold; }  /* child       - direct children only  */
+.comb h4 + p{ color: green; }    /* adjacent    - the very next sibling  */
+.comb h4 ~ span{ background: yellow; } /* general - any later sibling   */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

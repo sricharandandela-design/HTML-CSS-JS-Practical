@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Prompt Suggestions</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 123</p>
+    <h1>AI Prompt Suggestions</h1>
+    <p class="desc">Clickable suggestion chips that fill the prompt box when clicked.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="max-width:340px;">
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:0.6rem;">
+        <button class="chip-btn" onclick="fillPrompt(this)">Summarize this page</button>
+        <button class="chip-btn" onclick="fillPrompt(this)">Write a follow-up email</button>
+        <button class="chip-btn" onclick="fillPrompt(this)">Explain this chart</button>
+      </div>
+      <input type="text" id="promptInput" style="width:100%; padding:0.5rem; border:1px solid var(--rule); border-radius:6px;">
+      <style>.chip-btn{ background:var(--paper-raised); border:1px solid var(--rule); border-radius:999px;
+             padding:0.35rem 0.8rem; font-size:0.8rem; cursor:pointer; }</style>
+      <script>
+        function fillPrompt(btn){ document.getElementById('promptInput').value = btn.textContent; }
+      </script>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>chip.onclick = () =&gt; { promptInput.value = chip.textContent; };</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

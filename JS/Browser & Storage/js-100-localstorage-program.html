@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Program Using localStorage</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 100</p>
+    <h1>Program Using localStorage</h1>
+    <p class="desc">Saves and clears a note in localStorage, which persists even after closing the browser.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <textarea id="lsNote100" rows="3" style="width:100%; padding:0.5rem;" placeholder="Write a note..."></textarea>
+    <button class="btn" onclick="localStorage.setItem('note100', document.getElementById('lsNote100').value); alert('Saved!');">Save note</button>
+    <button class="btn" style="background:var(--paper); color:var(--ink);" onclick="document.getElementById('lsNote100').value = localStorage.getItem('note100') || '';">Load note</button>
+    <button class="btn" style="background:var(--danger);" onclick="localStorage.removeItem('note100'); document.getElementById('lsNote100').value='';">Clear</button>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>localStorage.setItem('note', text);
+localStorage.getItem('note');
+localStorage.removeItem('note'); // data survives page reloads and browser restarts</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

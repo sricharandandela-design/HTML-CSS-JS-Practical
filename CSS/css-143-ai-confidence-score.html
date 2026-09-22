@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Confidence Score Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 143</p>
+    <h1>AI Confidence Score Component</h1>
+    <p class="desc">A small gauge-style badge communicating how confident the AI is in its answer.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .conf-badge{ display:inline-flex; align-items:center; gap:0.4rem; padding:0.4rem 0.8rem; border-radius:999px; font-size:0.85rem; font-weight:600; }
+      .conf-high{ background:#DCEEE3; color:#2C5142; }
+      .conf-med{ background:#FBEBD1; color:#8A5A12; }
+      .conf-low{ background:#F6DEDA; color:#8A3327; }
+    </style>
+    <span class="conf-badge conf-high">92% confident</span>
+    <span class="conf-badge conf-med">61% confident</span>
+    <span class="conf-badge conf-low">28% confident</span>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.conf-high{ background:#DCEEE3; color:#2C5142; } /* &gt;80% */
+.conf-med { background:#FBEBD1; color:#8A5A12; } /* 40-80% */
+.conf-low { background:#F6DEDA; color:#8A3327; } /* &lt;40% */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

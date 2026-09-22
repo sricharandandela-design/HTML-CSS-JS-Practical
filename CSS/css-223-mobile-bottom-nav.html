@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Bottom Navigation</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 223</p>
+    <h1>Mobile Bottom Navigation</h1>
+    <p class="desc">A fixed bottom tab bar, the standard mobile app navigation pattern.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="position:relative; height:140px; border:1px solid var(--rule); border-radius:8px; overflow:hidden;">
+      <div style="padding:1rem;">Page content</div>
+      <div style="position:absolute; bottom:0; left:0; right:0; display:flex; background:#fff; border-top:1px solid var(--rule);">
+        <div style="flex:1; text-align:center; padding:0.6rem; color:var(--pine); font-size:0.75rem;">&#8962;<br>Home</div>
+        <div style="flex:1; text-align:center; padding:0.6rem; color:#8A9089; font-size:0.75rem;">&#128202;<br>Reports</div>
+        <div style="flex:1; text-align:center; padding:0.6rem; color:#8A9089; font-size:0.75rem;">&#9881;<br>Settings</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.bottom-nav{ position:fixed; bottom:0; left:0; right:0; display:flex; }
+.bottom-nav .active{ color:#3F6C5D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Greatest Common Divisor (GCD) of Two Numbers</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to JavaScript Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">JavaScript Program 47</p>
+    <h1>Greatest Common Divisor (GCD) of Two Numbers</h1>
+    <p class="desc">Uses the Euclidean algorithm: repeatedly replace (a,b) with (b, a mod b) until b is 0.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div class="field"><label>A</label><input type="number" id="gcd47a" value="48"></div>
+    <div class="field"><label>B</label><input type="number" id="gcd47b" value="18"></div>
+    <button class="btn" onclick="runGcd47()">Find GCD</button>
+    <div class="output-box" id="out47"></div>
+    <script>
+      function gcd47(a, b){ return b === 0 ? a : gcd47(b, a % b); }
+      function runGcd47(){
+        const a = Number(document.getElementById('gcd47a').value);
+        const b = Number(document.getElementById('gcd47b').value);
+        document.getElementById('out47').textContent = `GCD(${a}, ${b}) = ${gcd47(a, b)}`;
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>function gcd(a, b){
+  return b === 0 ? a : gcd(b, a % b); // Euclidean algorithm
+}
+console.log(gcd(48, 18)); // 6</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to JavaScript Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

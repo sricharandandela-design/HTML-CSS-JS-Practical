@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D Transformations and Perspective Effects</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 33</p>
+    <h1>3D Transformations and Perspective Effects</h1>
+    <p class="desc">A card that tilts in 3D space using rotateX/rotateY, viewed through a perspective on its container.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .persp{ perspective: 600px; }
+      .card3d{ width:160px; height:100px; background:var(--pine); color:#fff; display:flex;
+               align-items:center; justify-content:center; transition: transform 0.4s ease; }
+      .card3d:hover{ transform: rotateY(25deg) rotateX(10deg); }
+    </style>
+    <div class="persp"><div class="card3d">hover to tilt in 3D</div></div>
+    <p>The parent's <code>perspective: 600px</code> gives the rotated card depth instead of looking flat.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.container{ perspective: 600px; } /* sets the "camera distance" for children */
+
+.card{ transition: transform 0.4s ease; }
+.card:hover{ transform: rotateY(25deg) rotateX(10deg); } /* tilts in 3D space */</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

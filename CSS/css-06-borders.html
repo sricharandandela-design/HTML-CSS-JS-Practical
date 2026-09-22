@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Border Styles, Widths, Colors, and Border-radius</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 06</p>
+    <h1>Border Styles, Widths, Colors, and Border-radius</h1>
+    <p class="desc">Five border styles and a rounded-corner variant, all on the same-sized box.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .bd{ display:inline-block; width:110px; height:60px; margin:0.4rem; background:#fff;
+           display:flex; align-items:center; justify-content:center; font-size:0.8rem; }
+      .bd1{ border: 3px solid var(--pine); }
+      .bd2{ border: 3px dashed var(--amber); }
+      .bd3{ border: 3px dotted var(--danger); }
+      .bd4{ border: 4px double var(--ink); }
+      .bd5{ border: 3px solid var(--pine); border-radius: 12px; }
+      .bd6{ border: 3px solid var(--pine); border-radius: 50%; width:70px; height:70px; }
+    </style>
+    <div class="bd bd1">solid</div>
+    <div class="bd bd2">dashed</div>
+    <div class="bd bd3">dotted</div>
+    <div class="bd bd4">double</div>
+    <div class="bd bd5">radius: 12px</div>
+    <div class="bd bd6">radius: 50%</div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.solid  { border: 3px solid  #3F6C5D; }
+.dashed { border: 3px dashed #E8A33D; }
+.dotted { border: 3px dotted #B14B3F; }
+.double { border: 4px double #1A2332; }
+.rounded{ border: 3px solid #3F6C5D; border-radius: 12px; }
+.circle { border: 3px solid #3F6C5D; border-radius: 50%; width: 70px; height: 70px; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

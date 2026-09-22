@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tab Navigation Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 43</p>
+    <h1>Tab Navigation Component</h1>
+    <p class="desc">Click a tab to show its panel and hide the others.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .tabs-demo{ border-bottom:2px solid var(--rule); display:flex; gap:1.2rem; margin-bottom:1rem; }
+      .tabs-demo button{ background:none; border:none; padding:0.6rem 0; font-family:var(--font-body); font-weight:600;
+                          color:#8A9089; cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; }
+      .tabs-demo button.active{ color:var(--pine); border-color:var(--pine); }
+      .tab-panel{ display:none; } .tab-panel.active{ display:block; }
+    </style>
+    <div class="tabs-demo">
+      <button class="active" onclick="showTab(this,'overview')">Overview</button>
+      <button onclick="showTab(this,'usage')">Usage</button>
+      <button onclick="showTab(this,'billing')">Billing</button>
+    </div>
+    <div class="tab-panel active" id="overview">Overview panel content.</div>
+    <div class="tab-panel" id="usage">Usage panel content.</div>
+    <div class="tab-panel" id="billing">Billing panel content.</div>
+    <script>
+      function showTab(btn, id){
+        document.querySelectorAll('.tabs-demo button').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(id).classList.add('active');
+      }
+    </script>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.tabs button.active{ color:#3F6C5D; border-bottom:2px solid #3F6C5D; }
+.tab-panel{ display:none; }
+.tab-panel.active{ display:block; }
+
+function showTab(btn, id){
+  // deactivate all buttons/panels, then activate just the clicked one
+}</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

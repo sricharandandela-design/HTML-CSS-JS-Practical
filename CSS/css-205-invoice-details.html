@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice Details</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 205</p>
+    <h1>Invoice Details</h1>
+    <p class="desc">A single invoice's line items and total, formatted like a printable receipt.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <div style="background:#fff; border:1px solid var(--rule); border-radius:8px; padding:1rem; max-width:300px; font-size:0.85rem;">
+      <strong>Invoice #INV-0231</strong>
+      <div style="display:flex; justify-content:space-between; margin:0.6rem 0 0.2rem;"><span>Pro plan (monthly)</span><span>$29.00</span></div>
+      <div style="display:flex; justify-content:space-between; color:#55605B;"><span>Tax</span><span>$1.50</span></div>
+      <hr style="border:none; border-top:1px solid var(--rule); margin:0.5rem 0;">
+      <div style="display:flex; justify-content:space-between; font-weight:700;"><span>Total</span><span>$30.50</span></div>
+    </div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.invoice-line{ display:flex; justify-content:space-between; }
+.invoice-total{ font-weight:700; border-top:1px solid #C9C2AE; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

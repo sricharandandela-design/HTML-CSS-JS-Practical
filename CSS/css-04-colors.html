@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Colors for Text, Backgrounds, Borders, and UI Elements</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 04</p>
+    <h1>CSS Colors for Text, Backgrounds, Borders, and UI Elements</h1>
+    <p class="desc">The same colour value written four ways: named, hex, rgb() and hsl().</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .swatch{ display:inline-block; width:90px; height:60px; margin:0.3rem; color:#fff;
+               display:flex; align-items:center; justify-content:center; font-size:0.8rem; }
+    </style>
+    <div class="swatch" style="background:teal;">named: teal</div>
+    <div class="swatch" style="background:#3F6C5D;">hex: #3F6C5D</div>
+    <div class="swatch" style="background:rgb(63,108,93);">rgb(63,108,93)</div>
+    <div class="swatch" style="background:hsl(155,26%,33%);">hsl(155,26%,33%)</div>
+    <p style="color:#B14B3F; border:2px solid #E8A33D; padding:0.5rem;">
+      Text colour, and a border colour, set independently of the background.</p>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.text{ color: #B14B3F; }
+.bg-named{ background: teal; }
+.bg-hex{ background: #3F6C5D; }
+.bg-rgb{ background: rgb(63, 108, 93); }
+.bg-hsl{ background: hsl(155, 26%, 33%); }
+.border{ border: 2px solid #E8A33D; }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Progress Bar Component</title>
+<link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="site-nav">
+  <span class="brand">Practical Programs Lab</span>
+  <a href="../index.html">Home</a>
+  <a href="index.html">Back to CSS Programs</a>
+</nav>
+
+<main>
+  <header class="program-head">
+    <p class="kicker">CSS Program 78</p>
+    <h1>Progress Bar Component</h1>
+    <p class="desc">A determinate progress bar showing a percentage, and an indeterminate one for unknown durations.</p>
+  </header>
+
+  <section class="panel">
+    <h3>Demo</h3>
+    <style>
+      .pbar{ background:var(--paper); border-radius:999px; height:10px; overflow:hidden; margin-bottom:1rem; }
+      .pbar-fill{ height:100%; background:var(--pine); border-radius:999px; }
+      .pbar-indeterminate .pbar-fill{ width:40%; animation:pbar-move 1.2s ease-in-out infinite; }
+      @keyframes pbar-move{ 0%{ margin-left:-40%; } 100%{ margin-left:100%; } }
+    </style>
+    <p style="font-size:0.85rem;">Upload progress: 72%</p>
+    <div class="pbar"><div class="pbar-fill" style="width:72%;"></div></div>
+    <p style="font-size:0.85rem;">Processing (unknown duration)</p>
+    <div class="pbar pbar-indeterminate"><div class="pbar-fill"></div></div>
+  </section>
+
+  <section class="panel code-panel">
+    <h3>Source</h3>
+    <pre><code>.progress-bar{ background:#EDEFE9; border-radius:999px; height:10px; overflow:hidden; }
+.progress-fill{ height:100%; background:#3F6C5D; width:72%; }  /* set width = percentage */
+
+.indeterminate .progress-fill{ width:40%; animation: move 1.2s ease-in-out infinite; }
+@keyframes move{ 0%{ margin-left:-40%; } 100%{ margin-left:100%; } }</code></pre>
+  </section>
+
+  <nav class="page-links">
+    <a href="../index.html">Home</a>
+    <a href="index.html">Back to CSS Programs</a>
+  </nav>
+</main>
+
+</body>
+</html>
